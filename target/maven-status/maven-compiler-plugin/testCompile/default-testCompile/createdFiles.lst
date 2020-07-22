@@ -1,0 +1,16 @@
+cigniti\automation\utilities\BrowserTypes.class
+cigniti\automation\utilities\CommonUtil.class
+ui\automation\stepdef\Hooks.class
+cigniti\automation\utilities\Driver$1.class
+ui\automation\stepdef\Elsevier.class
+ui\automation\pages\Elsevier_Home_Page.class
+ui\automation\pages\Elsevier_Home_Page_Validator.class
+cigniti\base\ExtentReportUtil.class
+ui\automation\testrunner\testrunner.class
+ui\automation\pages\BasePageValidator.class
+cigniti\automation\utilities\Selenide.class
+ui\automation\listeners\ITestListernerImpl.class
+ui\automation\pages\BasePageElementMap.class
+cigniti\base\BaseUtil.class
+cigniti\automation\utilities\Driver.class
+cigniti\automation\utilities\PropertiesFileReader.class
