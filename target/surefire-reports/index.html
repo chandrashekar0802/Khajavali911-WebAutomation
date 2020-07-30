@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Automation_Test_Report">
-              <span class="suite-name border-skipped">Automation Test Report</span>
+              <span class="suite-name border-failed">Automation Test Report</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Automation_Test_Report">
-                    <span>C:\Walmart\POC\WebAutomation\testng.xml</span>
+                    <span>E:\SalesforceCigniti\WebAutomation\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,  1 skipped,  </span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Automation_Test_Report" class="hide-methods skipped suite-Automation_Test_Report"> (hide)</a> <!-- hide-methods skipped suite-Automation_Test_Report -->
-                      <a href="#" panel-name="suite-Automation_Test_Report" class="show-methods skipped suite-Automation_Test_Report"> (show)</a> <!-- show-methods skipped suite-Automation_Test_Report -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Automation_Test_Report" class="hide-methods failed suite-Automation_Test_Report"> (hide)</a> <!-- hide-methods failed suite-Automation_Test_Report -->
+                      <a href="#" panel-name="suite-Automation_Test_Report" class="show-methods failed suite-Automation_Test_Report"> (show)</a> <!-- show-methods failed suite-Automation_Test_Report -->
                     </span>
-                    <div class="method-list-content skipped suite-Automation_Test_Report">
+                    <div class="method-list-content failed suite-Automation_Test_Report">
                       <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Automation_Test_Report" title="ui.automation.testrunner.testrunner" hash-for-method="feature(&quot;Title of your scenario&quot;, &quot;Title of your feature&quot;)">feature("Title of your scenario", "Title of your feature")</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Automation_Test_Report" title="ui.automation.testrunner.testrunner" hash-for-method="feature(&quot;Testing Opportunity record creation&quot;, &quot;Testing Opportunity tab&quot;)">feature("Testing Opportunity record creation", "Testing Opportunity tab")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Automation_Test_Report -->
+                    </div> <!-- method-list-content failed suite-Automation_Test_Report -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,33 +117,46 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Automation_Test_Report" class="panel Automation_Test_Report">
-          <div class="suite-Automation_Test_Report-class-skipped">
+          <div class="suite-Automation_Test_Report-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="failed.png"/>
               <span class="class-name">ui.automation.testrunner.testrunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="feature(&quot;Title of your scenario&quot;, &quot;Title of your feature&quot;)">
-                  </a> <!-- feature("Title of your scenario", "Title of your feature") -->
+                  <a name="feature(&quot;Testing Opportunity record creation&quot;, &quot;Testing Opportunity tab&quot;)">
+                  </a> <!-- feature("Testing Opportunity record creation", "Testing Opportunity tab") -->
                   <span class="method-name">feature</span>
-                  <span class="parameters">("Title of your scenario", "Title of your feature")</span>
-                  <div class="stack-trace">org.testng.SkipException: There are undefined steps
-	at cucumber.api.testng.TestCaseResultListener.getError(TestCaseResultListener.java:60)
-	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:72)
-	at ui.automation.testrunner.testrunner.feature(testrunner.java:47)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-... Removed 31 stack frames
+                  <span class="parameters">("Testing Opportunity record creation", "Testing Opportunity tab")</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div title=&quot;...&quot; data-aura-rendered-by=&quot;1216:0&quot;&gt;New&lt;/div&gt; is not clickable at point (1304, 170). Other element would receive the click: &lt;div class=&quot;panel slds-modal slds-fade-in-open&quot; aria-labelledby=&quot;title_1243:0&quot; aria-describedby=&quot;content_1243:0&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-modal=&quot;true&quot; data-aura-rendered-by=&quot;1258:0&quot; style=&quot;opacity: 1;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=84.0.4147.89)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;WFH-E004150&apos;, ip: &apos;192.168.1.5&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_261&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.89, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\VIJJU\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50435}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 3d664e07e25ecbb66f731a81e7acdc8e
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at ui.automation.pages.Opportunity_Page_Validator.click_New_Button(Opportunity_Page_Validator.java:9)
+	at ui.automation.stepdef.Opportunity_Steps.user_Click_s_on_Save_button(Opportunity_Steps.java:120)
+	at ✽.user Click&apos;s on Save button(./features/Opportunity.feature:16)
+... Removed 4 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Automation_Test_Report-class-skipped -->
+          </div> <!-- suite-Automation_Test_Report-class-failed -->
         </div> <!-- panel Automation_Test_Report -->
         <div panel-name="test-xml-Automation_Test_Report" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Walmart\POC\WebAutomation\testng.xml</span>
+            <span class="header-content">E:\SalesforceCigniti\WebAutomation\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -196,12 +209,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'feature')
 data.setCell(0, 2, 'ui.automation.testrunner.testrunner')
-data.setCell(0, 3, 22243);
+data.setCell(0, 3, 73031);
 window.suiteTableData['Automation_Test_Report']= { tableData: data, tableDiv: 'times-div-Automation_Test_Report'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 22 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Automation_Test_Report">
               </div> <!-- times-div-Automation_Test_Report -->
             </div> <!-- times-div -->
@@ -233,12 +246,14 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">feature("Title of your scenario", "Title of your feature")</span>
-                <span class="method-start">10950 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">feature("Testing Opportunity record creation", "Testing Opportunity tab")</span>
+                <span class="method-start">11807 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
-                <span class="method-name">tearDownClass(org.testng.TestRunner@ec2bf82)</span>
-                <span class="method-start">33198 ms</span>
+                <span class="method-name">tearDownClass(org.testng.TestRunner@652ab8d9)</span>
+                <span class="method-start">85953 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

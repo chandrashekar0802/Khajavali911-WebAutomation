@@ -5,6 +5,7 @@ import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -34,10 +35,12 @@ public class Driver {
             case InternetExplorer:
                 break;
             case Chrome:
-            	System.setProperty("webdriver.chrome.driver", "C:\\Walmart\\chromedriver_win32\\chromedriver.exe");
-            	Driver.browser = new ChromeDriver();
+            	ChromeOptions options = new ChromeOptions();
+            	options.addArguments("--disable-notifications");
+            	System.setProperty("webdriver.chrome.driver", "E:\\dowloads\\Seleniumjars\\chromedriver_win32\\chromedriver.exe");
+            	Driver.browser = new ChromeDriver(options);
             	browserWait = new WebDriverWait(Driver.browser, defaultTimeOut);
-                browser.manage().deleteAllCookies();
+                //browser.manage().deleteAllCookies();
         		browser.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         		browser.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         		browser.manage().window().maximize();	

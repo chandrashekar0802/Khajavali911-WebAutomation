@@ -1,5 +1,8 @@
 package cigniti.automation.utilities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
@@ -42,7 +45,7 @@ public class Selenide extends BaseUtil{
 				//BaseUtil.scenarioDef.pass("entered text as khaja");
 			} else {
 				//reporter.SuccessReport("Click : " + locatorName, msgClickSuccess + locatorName);
-				BaseUtil.scenarioDef.pass("entered text as khaja");
+				BaseUtil.scenarioDef.pass("entered text");
 			}
 		}
 		return status;
@@ -263,7 +266,7 @@ public class Selenide extends BaseUtil{
 	 * @return boolean
 	 * @throws Throwable the throwable
 	 */
-	protected boolean waitForInVisibilityOfElement(By by) throws Throwable {
+	public static boolean waitForInVisibilityOfElement(By by) throws Throwable {
 		boolean flag = false;
 		LOG.info("Class name Selinide Method name : waitForInVisibilityOfElement" );
 		WebDriverWait wait = new WebDriverWait(Driver.browser, 15);
@@ -371,15 +374,91 @@ public class Selenide extends BaseUtil{
 	 * @throws Throwable the throwable
 	 */
 	// TODO
-	private void waitTime() throws Throwable {
-		String time = "10";
+	protected void waitTime() throws Throwable {
+		String time = "10000";
 		long timeValue = Long.parseLong(time);
 		Thread.sleep(timeValue);
 		LOG.info("Time out value is : " + timeValue);
 	}
 
+	public static boolean SelectItemFromNonSelectListDropDown(String desiredValue, String DesiredNameToBePassed, By locator, By listBoxLocator) throws Throwable
+    {
+        boolean flag = false;
+        try
+        {
+        	Driver.browser.findElement(locator).click();
+            Thread.sleep(1000);
+            List<WebElement> optionlist = Driver.browser.findElements(listBoxLocator);
 
-     
+            ArrayList<String> optionlists1 = new  ArrayList();
+
+                if (waitForInVisibilityOfElement(listBoxLocator))
+                {
+                    for(WebElement opts : optionlist)
+                    {
+                    optionlists1.add(opts.getText().trim());
+                    }
+                    }
+                    //List<String> options = optionlist.select(x -> x.Text);
+                    for (String opt : optionlists1)
+                    {
+                        if (opt.contains(desiredValue))
+                        {
+                            flag = true;
+                            break;
+                        }
+                    }
+                    if (flag)
+                    {
+                    	for (WebElement sele : optionlist)
+                        {
+                            if (optionlist.size() > 1)
+                            {
+                                if (sele.getText().contains(desiredValue))
+                                {
+                                    sele.click();
+                                    Thread.sleep(1000);
+                                    break;
+                                }
+                            }
+                            else
+                            {
+                                WebElement ele = optionlist.get(0);
+                                ele.click();
+                                Thread.sleep(1000);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        flag = false;
+                    }
+                              
+        }
+        catch(Exception e)
+        {
+        	e.printStackTrace();
+        }
+        //ImageLoadWait();
+        return flag;
+    }
+	public static boolean SelectItemFromNonSelectListDropDown1(String desiredValue, WebElement locator) throws Throwable
+    {
+        boolean flag = false;
+        try
+        {
+        	locator.click();
+            Thread.sleep(1000);
+           Driver.browser.findElement(By.xpath("//a[text()='"+desiredValue+"']")).click();
+                              
+        }
+        catch(Exception e)
+        {
+        	e.printStackTrace();
+        }
+        //ImageLoadWait();
+        return flag;
+    }
 }
 
 

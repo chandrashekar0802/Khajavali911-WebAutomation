@@ -9,15 +9,28 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Automation Test Report</th></tr>
-<tr><td><a href="#t0">Automation Test Report</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">36,223</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Automation Test Report</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">88,843</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Automation Test Report</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Automation Test Report &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">ui.automation.testrunner.testrunner</td><td><a href="#m0">feature</a></td><td rowspan="1">1595411411748</td><td rowspan="1">22243</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Automation Test Report</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Automation Test Report &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">ui.automation.testrunner.testrunner</td><td><a href="#m0">feature</a></td><td rowspan="1">1596098066618</td><td rowspan="1">73031</td></tr></tbody>
 </table>
-<h2>Automation Test Report</h2><h3 id="m0">ui.automation.testrunner.testrunner#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Title of your scenario&quot;</td><td>&quot;Title of your feature&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.testng.SkipException: There are undefined steps
-	at cucumber.api.testng.TestCaseResultListener.getError(TestCaseResultListener.java:60)
-	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:72)
-	at ui.automation.testrunner.testrunner.feature(testrunner.java:47)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Automation Test Report</h2><h3 id="m0">ui.automation.testrunner.testrunner#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Testing Opportunity record creation&quot;</td><td>&quot;Testing Opportunity tab&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div title=&quot;...&quot; data-aura-rendered-by=&quot;1216:0&quot;&gt;New&lt;/div&gt; is not clickable at point (1304, 170). Other element would receive the click: &lt;div class=&quot;panel slds-modal slds-fade-in-open&quot; aria-labelledby=&quot;title_1243:0&quot; aria-describedby=&quot;content_1243:0&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-modal=&quot;true&quot; data-aura-rendered-by=&quot;1258:0&quot; style=&quot;opacity: 1;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=84.0.4147.89)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;WFH-E004150&apos;, ip: &apos;192.168.1.5&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_261&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.89, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\VIJJU\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50435}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 3d664e07e25ecbb66f731a81e7acdc8e
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at ui.automation.pages.Opportunity_Page_Validator.click_New_Button(Opportunity_Page_Validator.java:9)
+	at ui.automation.stepdef.Opportunity_Steps.user_Click_s_on_Save_button(Opportunity_Steps.java:120)
+	at ✽.user Click&apos;s on Save button(./features/Opportunity.feature:16)
+... Removed 4 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
