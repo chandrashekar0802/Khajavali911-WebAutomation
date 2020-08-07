@@ -1,11 +1,11 @@
 
  
 Feature: Account record creation
- 
+  
   Scenario: Testing Account record creation
     Given Give user login to Salesforce with the correct credentials
     And Click on Accounts tab
-    And Click on New button on the Accounts Home screen
+    And Click on New button
     And Enter the value for Account Name field
     And Enter the value for Parent Account Name field
     And Enter the value for Phone field
@@ -20,7 +20,10 @@ Feature: Account record creation
   	And Enter the value for Billing State/Province field
   	And Enter the value for Billing Zip/Postal Code field
   	And Enter the value for Billing Country field
-  	When user Clicks on Save button
+  	When user clicks on Save button
   	Then Record should  be saved
 
     
+      Scenario: Create the approval process when status indicator field is selected won, approval request should send to manager
+    Given Give user login to Salesforce with the correct credentials
+    And Click on Accounts tab

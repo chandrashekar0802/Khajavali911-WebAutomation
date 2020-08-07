@@ -15,11 +15,14 @@ E:\SalesforceCigniti\WebAutomation\src\test\java\ui\automation\pages\Accounts_Pa
 E:\SalesforceCigniti\WebAutomation\src\test\java\ui\automation\pages\Contacts_Page_Validator.java
 E:\SalesforceCigniti\WebAutomation\src\test\java\ui\automation\pages\SalesForce_Page.java
 E:\SalesforceCigniti\WebAutomation\src\test\java\cigniti\automation\utilities\PropertiesFileReader.java
+E:\SalesforceCigniti\WebAutomation\src\test\java\ui\automation\pages\Leads_Page_Validator.java
 E:\SalesforceCigniti\WebAutomation\src\test\java\ui\automation\pages\Opportunity_Page_Validator.java
 E:\SalesforceCigniti\WebAutomation\src\test\java\ui\automation\pages\Contacts_Page.java
 E:\SalesforceCigniti\WebAutomation\src\test\java\ui\automation\listeners\ITestListernerImpl.java
 E:\SalesforceCigniti\WebAutomation\src\test\java\ui\automation\pages\SalesForce_Page_Validator.java
 E:\SalesforceCigniti\WebAutomation\src\test\java\ui\automation\pages\Opportunity_Page.java
+E:\SalesforceCigniti\WebAutomation\src\test\java\ui\automation\pages\Leads_Page.java
+E:\SalesforceCigniti\WebAutomation\src\test\java\ui\automation\stepdef\Leads_Steps.java
 E:\SalesforceCigniti\WebAutomation\src\test\java\ui\automation\pages\Elsevier_Home_Page_Validator.java
 E:\SalesforceCigniti\WebAutomation\src\test\java\cigniti\base\BaseUtil.java
 E:\SalesforceCigniti\WebAutomation\src\test\java\ui\automation\stepdef\Hooks.java

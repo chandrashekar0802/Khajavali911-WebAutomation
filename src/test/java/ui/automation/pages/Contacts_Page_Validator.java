@@ -6,9 +6,6 @@ public class Contacts_Page_Validator  extends BasePageValidator<Contacts_Page> {
 		// TODO Auto-generated constructor stub
 	}
 
-	public void click_New_Button() throws Throwable{
-		this.getMap().newButton().click();
-	}
 	public void enter_Data_firstName(String firstName) throws Throwable{
 		this.getMap().firstNameField().sendKeys(firstName);
 	}
@@ -42,9 +39,6 @@ public class Contacts_Page_Validator  extends BasePageValidator<Contacts_Page> {
 	}
 	public void enter_Data_mailingCountry(String mailingCountry) throws Throwable{
 		this.getMap().mailingCountryField().sendKeys(mailingCountry);
-	}
-	public void click_Save_Button() throws Throwable{
-		this.getMap().saveButton().click();		
 	}
 	public void select_DesignationLevel_Drop(String str) throws Throwable{
 		this.getMap().selectDesignationLevelDrpDwnBtn(str);		

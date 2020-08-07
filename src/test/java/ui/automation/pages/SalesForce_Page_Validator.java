@@ -22,9 +22,15 @@ public class SalesForce_Page_Validator extends BasePageValidator<SalesForce_Page
 	
 	public void waitForLoad_Login() throws Throwable{
 		this.getMap().LoadingImage_Icon();
+		Thread.sleep(5000);
 		this.getMap().Loading_Icon();
 	}
-	
+	public void click_New_Button() throws Throwable{
+			this.getMap().newButton().click();
+		}
+	public void click_Save_Button() throws Throwable{
+		this.getMap().saveButton().click();		
+	}
 	public void click_accountsTab() throws Throwable{
 		this.getMap().accountsTab().click();
 	}
@@ -34,4 +40,8 @@ public class SalesForce_Page_Validator extends BasePageValidator<SalesForce_Page
 	public void click_opportunitiesTab() throws Throwable{
 		this.getMap().opportunitiesTab().click();
 	}
+	public void click_LeadsTab() throws Throwable{
+		this.getMap().leadsTab().click();
+	}
+	
 }

@@ -12,9 +12,6 @@ public class Contacts_Page extends BasePageElementMap{
 		super(driver);
 	}
 
-	public WebElement newButton() throws Throwable {
-		 return Selenide.getElement(By.xpath("//a[@title='New']/div"),15);  	 
-	    }
 	public WebElement firstNameField() throws Throwable {
 		 return Selenide.getElement(By.xpath("//span[text()='First Name']/../following-sibling::input[1]"),15);  	 
 	    }
@@ -51,10 +48,6 @@ public class Contacts_Page extends BasePageElementMap{
 	public WebElement mailingCountryField() throws Throwable {
 		 return Selenide.getElement(By.xpath("//span[text()='Mailing Country']/../following-sibling::input[1]"),15);  	 
 	    }
-	public WebElement saveButton() throws Throwable {
-		 return Selenide.getElement(By.xpath("//button[@title='Save']"),15);  	 
-	    }
-	
 	
 	public @FindBy(xpath="//span[text()='Designation Level']/../following-sibling::div[1]//a") WebElement designationLevelDrpDwnBtn;	
 	public boolean selectDesignationLevelDrpDwnBtn(String str) throws Throwable {

@@ -18,6 +18,7 @@ import cigniti.automation.utilities.Selenide;
 import cigniti.base.BaseUtil;
 import cigniti.base.ExtentReportUtil;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
 import ui.automation.pages.Elsevier_Home_Page;
 import ui.automation.pages.Elsevier_Home_Page_Validator;
 import ui.automation.pages.SalesForce_Page;
@@ -54,6 +55,18 @@ public class SalesForce extends Selenide{
 		
 	}
 	
+	@Given("Click on New button")
+	public void click_on_New_button() throws Throwable {		
+		salesForceValidator.click_New_Button();		
+		BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").pass("clicked on New button successfully");		
+	}
+	 @When("user clicks on Save button")
+	 public void user_clicks_on_Save_button() throws Throwable{
+		 salesForceValidator.click_Save_Button();
+
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("When"), "Clicking on Save button").pass("Clicked on Save button successfully");
+
+	 }
 	@Given("^Click on Accounts tab$")
 	public void click_on_Accounts_tab() throws Throwable {
 		//Thread.sleep(10000);
@@ -66,24 +79,25 @@ public class SalesForce extends Selenide{
 		
 	}
 	@Given("Click on Contacts tab")
-	public void click_on_Contact_tab() throws Throwable {
-		//Thread.sleep(10000);
-		//WebDriverWait wait = new WebDriverWait(Driver.browser, 50);
-		//if(wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role='navigation']//button")))==null)
-		//{		
-	
+	public void click_on_Contact_tab() throws Throwable {	
 		salesForceValidator.click_contactTab();
-		Thread.sleep(10000);
-		//}
+		waitTime();		
 		BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on Accounts tab").pass("clicked on Accounts tab successfully");
 		
 	}
 	 @Given("Click on Opportunities tab")
 	 public void click_on_Opportunities_tab() throws Throwable{
 		 salesForceValidator.click_opportunitiesTab();
-			Thread.sleep(10000);
-			//}
+		 waitTime();			
 			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on Opportunities tab").pass("clicked on Opportunities tab successfully");
 			
 	 }
+	 @Given("Click on Leads tab")
+	 public void click_on_Leads_tab() throws Throwable{
+		 salesForceValidator.click_LeadsTab();
+		 waitTime();
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on Leads tab").pass("clicked on Leads tab successfully");
+			
+	 }
+	 
 }

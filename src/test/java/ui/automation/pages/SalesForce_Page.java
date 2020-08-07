@@ -24,13 +24,11 @@ public class SalesForce_Page  extends BasePageElementMap{
 	    }
 	
 	public boolean LoadingImage_Icon() throws Throwable {
-		 return Selenide.waitForInVisibilityOfElement(By.xpath("//div[@class='center oneCenterStage lafSinglePaneWindowManager']"));  
-		 
+		 return Selenide.waitForInVisibilityOfElement(By.xpath("//div[@class='center oneCenterStage lafSinglePaneWindowManager']"));  		 
 	    }
 	
 	public boolean Loading_Icon() throws Throwable {
-		 return Selenide.waitForInVisibilityOfElement(By.xpath("//div[@class='slds-spinner slds-spinner--medium slds-spinner--brand' and @role='status']/span"));  
-		 
+		 return Selenide.waitForInVisibilityOfElement(By.xpath("//div[@class='slds-spinner slds-spinner--medium slds-spinner--brand' and @role='status']/span"));  		 
 	    }
 	public WebElement accountsTab() throws Throwable {
 		 return Selenide.getElement(By.xpath("//a[@title='Accounts']/.."),15);  	 
@@ -41,6 +39,14 @@ public class SalesForce_Page  extends BasePageElementMap{
 	public WebElement opportunitiesTab() throws Throwable {
 		 return Selenide.getElement(By.xpath("//a[@title='Opportunities']/.."),15);  	 
 	    }
-	
+	public WebElement leadsTab() throws Throwable {
+		 return Selenide.getElement(By.xpath("//a[@title='Leads']/.."),15);  	 
+	    }
+	public WebElement newButton() throws Throwable {
+			 return Selenide.getElement(By.xpath("//a[@title='New']/div"),15);  	 
+		    }
+	public WebElement saveButton() throws Throwable {
+		 return Selenide.getElement(By.xpath("//button[@title='Save']"),15);  	 
+	    }
 }
 

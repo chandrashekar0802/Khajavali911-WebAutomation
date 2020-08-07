@@ -2,72 +2,49 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Automation Test Report" duration-ms="88843" started-at="2020-07-30T14:04:14 IST" finished-at="2020-07-30T14:05:43 IST">
+  <suite name="Automation Test Report" duration-ms="183517" started-at="2020-08-07T15:32:51 IST" finished-at="2020-08-07T15:35:55 IST">
     <groups>
     </groups>
-    <test name="Automation Test Report" duration-ms="88843" started-at="2020-07-30T14:04:14 IST" finished-at="2020-07-30T14:05:43 IST">
+    <test name="Automation Test Report" duration-ms="183517" started-at="2020-08-07T15:32:51 IST" finished-at="2020-08-07T15:35:55 IST">
       <class name="ui.automation.testrunner.testrunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:ui.automation.testrunner.testrunner@4e9ba398]" name="setUpClass" is-config="true" duration-ms="11646" started-at="2020-07-30T14:04:14 IST" finished-at="2020-07-30T14:04:26 IST">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:ui.automation.testrunner.testrunner@32b0876c]" name="setUpClass" is-config="true" duration-ms="9939" started-at="2020-08-07T15:32:51 IST" finished-at="2020-08-07T15:33:01 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:ui.automation.testrunner.testrunner@4e9ba398]" name="feature" duration-ms="73031" started-at="2020-07-30T14:04:26 IST" data-provider="features" finished-at="2020-07-30T14:05:39 IST">
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:ui.automation.testrunner.testrunner@32b0876c]" name="feature" duration-ms="170775" started-at="2020-08-07T15:33:01 IST" data-provider="features" finished-at="2020-08-07T15:35:52 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Testing Opportunity record creation"]]>
+                <![CDATA["Lead Conversion Standard"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Testing Opportunity tab"]]>
+                <![CDATA["Testing Leads Tab"]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+          <exception class="java.lang.IndexOutOfBoundsException">
             <message>
-              <![CDATA[element click intercepted: Element <div title="..." data-aura-rendered-by="1216:0">New</div> is not clickable at point (1304, 170). Other element would receive the click: <div class="panel slds-modal slds-fade-in-open" aria-labelledby="title_1243:0" aria-describedby="content_1243:0" tabindex="-1" role="dialog" aria-modal="true" data-aura-rendered-by="1258:0" style="opacity: 1;">...</div>
-  (Session info: chrome=84.0.4147.89)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'WFH-E004150', ip: '192.168.1.5', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_261'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.89, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\VIJJU\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50435}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 3d664e07e25ecbb66f731a81e7acdc8e]]>
+              <![CDATA[Index: 1, Size: 1]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <div title="..." data-aura-rendered-by="1216:0">New</div> is not clickable at point (1304, 170). Other element would receive the click: <div class="panel slds-modal slds-fade-in-open" aria-labelledby="title_1243:0" aria-describedby="content_1243:0" tabindex="-1" role="dialog" aria-modal="true" data-aura-rendered-by="1258:0" style="opacity: 1;">...</div>
-  (Session info: chrome=84.0.4147.89)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'WFH-E004150', ip: '192.168.1.5', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_261'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.89, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\VIJJU\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50435}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 3d664e07e25ecbb66f731a81e7acdc8e
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at ui.automation.pages.Opportunity_Page_Validator.click_New_Button(Opportunity_Page_Validator.java:9)
-at ui.automation.stepdef.Opportunity_Steps.user_Click_s_on_Save_button(Opportunity_Steps.java:120)
-at ✽.user Click's on Save button(./features/Opportunity.feature:16)
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+at java.util.ArrayList.rangeCheck(Unknown Source)
+at java.util.ArrayList.get(Unknown Source)
+at ui.automation.stepdef.Leads_Steps.check_account_accordion_with_create_New_and_choose_existing_radio_button(Leads_Steps.java:227)
+at ✽.Check account accordion with create New and choose existing radio button(./features/Leads.feature:37)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass(org.testng.ITestContext)[pri:0, instance:ui.automation.testrunner.testrunner@4e9ba398]" name="tearDownClass" is-config="true" duration-ms="2595" started-at="2020-07-30T14:05:40 IST" finished-at="2020-07-30T14:05:43 IST">
+        <test-method status="PASS" signature="tearDownClass(org.testng.ITestContext)[pri:0, instance:ui.automation.testrunner.testrunner@32b0876c]" name="tearDownClass" is-config="true" duration-ms="1723" started-at="2020-08-07T15:35:53 IST" finished-at="2020-08-07T15:35:55 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@652ab8d9]]>
+                <![CDATA[org.testng.TestRunner@b339a08]]>
               </value>
             </param>
           </params>

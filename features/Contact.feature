@@ -4,7 +4,7 @@ Feature: Contact record creation
   Scenario: Testing Contact record creation
     Given Give user login to Salesforce with the correct credentials
     And Click on Contacts tab
-    And Click on New button on the Contacts Home screen
+    And Click on New button
     And Enter the value for First Name field
     And Enter the value for Last Name field
     And Enter the value for phone field
@@ -19,3 +19,4 @@ Feature: Contact record creation
     And Enter the value for Mailing Country field
     When user clicks on Save button
     Then Record should be saved
+    

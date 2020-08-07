@@ -13,9 +13,6 @@ public class Accounts_Page extends BasePageElementMap{
 	public Accounts_Page(WebDriver driver) {
 		super(driver);
 	}
-	public WebElement newButton() throws Throwable {
-		 return Selenide.getElement(By.xpath("//a[@title='New']/div"),15);  	 
-	    }
 	public WebElement accountNameField() throws Throwable {
 		 return Selenide.getElement(By.xpath("//span[text()='Account Name']/../following-sibling::input[1]"),15);  	 
 	    }
@@ -50,8 +47,8 @@ public class Accounts_Page extends BasePageElementMap{
 	public WebElement billingCountryField() throws Throwable {
 		 return Selenide.getElement(By.xpath("//span[text()='Billing Country']/../following-sibling::input[1]"),15);  	 
 	    }
-	public WebElement saveButton() throws Throwable {
-		 return Selenide.getElement(By.xpath("//button[@title='Save']"),15);  	 
+	public boolean accountCreatedMsg() throws Throwable {
+		 return Selenide.waitForInVisibilityOfElement(By.xpath("//span[contains(text(),'was created')]"));  	 
 	    }
 	
 	public @FindBy(xpath="//span[text()='Status']/../following-sibling::div[1]//a") WebElement statusDrpDwnBtn;	

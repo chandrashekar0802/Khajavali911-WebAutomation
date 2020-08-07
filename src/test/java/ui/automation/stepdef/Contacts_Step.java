@@ -27,14 +27,6 @@ public class Contacts_Step {
 	 Contacts_Page contactsPage = new Contacts_Page(Driver.browser);
 	 Contacts_Page_Validator contactsPageValidator = new Contacts_Page_Validator(contactsPage);
 
-	 @Given("Click on New button on the Contacts Home screen")
-	 public void Click_On_New_button_on_the_Contacts_Home_screen()throws Throwable
-		{
-		 contactsPageValidator.click_New_Button();
-		 Thread.sleep(5000);
-		BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").pass("clicked on New button successfully");
-		
-		}
 	 
 	 @Given("Enter the value for First Name field")
 	 public void enter_the_value_for_First_Name_field() throws Throwable{
@@ -143,13 +135,6 @@ public class Contacts_Step {
 
 	 }
 
-	 @When("user clicks on Save button")
-	 public void user_clicks_on_Save_button() throws Throwable{
-		 contactsPageValidator.click_Save_Button();
-
-			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on Save button").pass("Clicked on Save button successfully");
-
-	 }
 
 	 @Then("Record should be saved")
 	 public void record_should_be_saved()throws Throwable {

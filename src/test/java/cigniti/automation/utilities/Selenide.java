@@ -5,8 +5,9 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
-
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.internal.TouchAction;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import org.openqa.selenium.support.ui.Select;
@@ -207,11 +208,11 @@ public class Selenide extends BaseUtil{
 	 * @return boolean
 	 * @throws Throwable the throwable
 	 */
-	protected boolean waitForVisibilityOfElement(By by, String locatorName) throws Throwable {
+	public static boolean waitForVisibilityOfElement(By by, String locatorName) throws Throwable {
 		boolean flag = false;
 		LOG.info("Class name:Selinide Method name : waitForVisibilityOfElement" );
 		
-		WebDriverWait wait = new WebDriverWait(Driver.browser, 30);
+		WebDriverWait wait = new WebDriverWait(Driver.browser, 15);
 		try {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(by));
 			flag = true;
@@ -321,7 +322,7 @@ public class Selenide extends BaseUtil{
 	 * @return String - Returns text from given locator
 	 * @throws Throwable the throwable
 	 */
-	protected String getText(By locator, String locatorName) throws Throwable {
+	public static String getText(By locator, String locatorName) throws Throwable {
 		String text = "";
 		boolean flag = false;
 		LOG.info("Class name Selinide Method name : getText");
@@ -354,7 +355,7 @@ public class Selenide extends BaseUtil{
 	 * @return boolean
 	 * @throws Throwable the throwable
 	 */
-	protected boolean isElementDisplayed(By locator, String locatorName) throws Throwable {
+	public static boolean isElementDisplayed(By locator, String locatorName) throws Throwable {
 		boolean flag;
 		try {
 			//LOG.info("Class name :: " + getCallerClassName() + " Method name :: " + getCallerMethodName());
@@ -374,7 +375,7 @@ public class Selenide extends BaseUtil{
 	 * @throws Throwable the throwable
 	 */
 	// TODO
-	protected void waitTime() throws Throwable {
+	public static void waitTime() throws Throwable {
 		String time = "10000";
 		long timeValue = Long.parseLong(time);
 		Thread.sleep(timeValue);
@@ -459,6 +460,7 @@ public class Selenide extends BaseUtil{
         //ImageLoadWait();
         return flag;
     }
+
 }
 
 

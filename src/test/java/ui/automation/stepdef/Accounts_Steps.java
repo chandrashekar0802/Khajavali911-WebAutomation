@@ -27,14 +27,7 @@ public class Accounts_Steps {
 	 Accounts_Page accountsPage = new Accounts_Page(Driver.browser);
 	 Accounts_Page_Validator accountsPageValidator = new Accounts_Page_Validator(accountsPage);
 	 
-	 @Given("Click on New button on the Accounts Home screen")
-	 public void Click_On_New_button_on_the_Accounts_Home_screen()throws Throwable
-		{
-		 accountsPageValidator.click_New_Button();
-		 Thread.sleep(5000);
-		BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").pass("clicked on New button successfully");
 
-		}
 	 @Given("^Enter the value for Account Name field$")
 	 public void Enter_the_value_for_Account_Name_field()throws Throwable
 		{
@@ -171,15 +164,10 @@ public class Accounts_Steps {
 
 	 }
 
-	 @When("user Clicks on Save button")
-	 public void user_Clicks_on_Save_button() throws Throwable{
-		 accountsPageValidator.click_Save_Button();
-		BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on Save button").pass("Clicked on Save button successfully");
-
-	 }
 
 	 @Then("Record should  be saved")
 	 public void record_should_be_saved() throws Throwable {
+		 accountsPageValidator.validate_accountCreated_Message();
 			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Record saved").pass("Record saved successfully");
 
 	 }
