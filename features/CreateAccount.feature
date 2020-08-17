@@ -1,7 +1,7 @@
 
  
 Feature: Account record creation
-  
+  #@tag
   Scenario: Testing Account record creation
     Given Give user login to Salesforce with the correct credentials
     And Click on Accounts tab

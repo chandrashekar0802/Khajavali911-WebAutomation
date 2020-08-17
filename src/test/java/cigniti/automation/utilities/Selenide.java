@@ -6,7 +6,9 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.internal.TouchAction;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
@@ -22,12 +24,12 @@ public class Selenide extends BaseUtil{
 	public final static Logger LOG = Logger.getLogger(Selenide.class);
 	protected boolean reportIndicator = true;
 
-	protected boolean click(By locator, String locatorName) throws Throwable {
+	public static boolean click(By locator, String locatorName) throws Throwable {
 		boolean status = false;
 		try {		
 			//LOG.info("Class name" + getCallerClassName() + "Method name : " + getCallerMethodName());
 			LOG.info("Method : click  ::  Locator : " + locatorName);
-			WebDriverWait wait = new WebDriverWait(Driver.browser, 15);
+			WebDriverWait wait = new WebDriverWait(Driver.browser, 30);
 			LOG.info("Locator is Visible :: " + locator);
 			wait.until(ExpectedConditions.elementToBeClickable(locator));
 			LOG.info("Clicked on the Locator");
@@ -450,17 +452,69 @@ public class Selenide extends BaseUtil{
         {
         	locator.click();
             Thread.sleep(1000);
-           Driver.browser.findElement(By.xpath("//a[text()='"+desiredValue+"']")).click();
+            if(Driver.browser.findElement(By.xpath("(//a[text()='"+desiredValue+"'])[1]")).isDisplayed())
+            {
+           Driver.browser.findElement(By.xpath("(//a[text()='"+desiredValue+"'])[1]")).click();
+           flag =true;
+            }
                               
         }
         catch(Exception e)
         {
+        	//BaseUtil.scenarioDef.createNode("Find Element Failure ").fail(e.getMessage());
         	e.printStackTrace();
         }
         //ImageLoadWait();
         return flag;
     }
-
+	public static boolean SelectItemFromNonSelectListDropDown2(String desiredValue, WebElement locator) throws Throwable
+    {
+        boolean flag = false;
+        try
+        {
+        	locator.click();
+            Thread.sleep(1000);
+            if(Driver.browser.findElement(By.xpath("(//a[text()='"+desiredValue+"'])[2]")).isDisplayed())
+            {
+           Driver.browser.findElement(By.xpath("(//a[text()='"+desiredValue+"'])[2]")).click();
+           flag =true;
+            }
+                              
+        }
+        catch(Exception e)
+        {
+        	//BaseUtil.scenarioDef.createNode("Find Element Failure ").fail(e.getMessage());
+        	e.printStackTrace();
+        }
+        //ImageLoadWait();
+        return flag;
+    }
+	public static boolean scrollIntoView(By by) throws Throwable{
+		WebElement element = Driver.browser.findElement(by);
+	((JavascriptExecutor) Driver.browser).executeScript("arguments[0].scrollIntoView();", element);
+	
+		/*WebElement element =  Driver.browser.findElement(by);
+		Actions actions = new Actions(Driver.browser);
+		actions.moveToElement(element);
+		actions.perform();*/
+	return true;
+	}
+	public static boolean jSClick(WebElement element) throws Throwable {
+		boolean flag=false;
+		try {
+			JavascriptExecutor executor = (JavascriptExecutor)Driver.browser;
+			executor.executeScript("arguments[0].click();", element);
+			flag=true;
+		}catch(Exception ex) {
+			flag=false;		
+			ex.printStackTrace();
+		}
+		return flag;
+	}
+	public static boolean fieldIsMandatory(WebElement label) { 
+	    return ((JavascriptExecutor)Driver.browser).executeScript("return window.getComputedStyle(arguments[0], ':after')." + 
+	            "getPropertyValue('content');", label).toString().contains("*"); 
+	}
 }
 
 

@@ -11,7 +11,7 @@ public class Opportunity_Page_Validator extends BasePageValidator<Opportunity_Pa
 		// TODO Auto-generated constructor stub
 	}
 	
-	public void enter_Data_opportunityName(String firstName) throws Throwable{
+	/*public void enter_Data_opportunityName(String firstName) throws Throwable{
 		this.getMap().opportunityNameField().sendKeys(firstName);
 	}
 	public void enter_Data_acctName(String AcctName) throws Throwable{
@@ -45,33 +45,33 @@ public class Opportunity_Page_Validator extends BasePageValidator<Opportunity_Pa
 	}
 	public void select_type_Drop(String type) throws Throwable{
 		this.getMap().selectTypeDrpDwnBtn(type);		
-	}
+	}*/
 	
 	public void click_firstOpportunityInOpportunityHomeScreen_link() throws Throwable{
 		this.getMap().firstOpportunityInOpportunityHomeScreen().click();		
 	}
-	public void click_productsDrpdownInRightPane_link() throws Throwable{
+	/*public void click_productsDrpdownInRightPane_link() throws Throwable{
 		
 		
 		this.getMap().productsDrpdownInRightPane().click();		
-	}
-	public void click_addProductInDrpdwn() throws Throwable{
+	}*/
+	/*public void click_addProductInDrpdwn() throws Throwable{
 		this.getMap().addProductInDrpdwn().click();		
-	}
-	public void click_CheckBoxForProductNameInAddProduct(String chkbox) throws Throwable{
+	}*/
+	/*public void click_CheckBoxForProductNameInAddProduct(String chkbox) throws Throwable{
 		this.getMap().checkBoxToSelectInAddProduct(chkbox).click();		
 	}
 	public void click_Next_Btn() throws Throwable{
 		this.getMap().nextBtnInAddProduct().click();		
-	}
-	public void enter_Data_quantity(String quantity) throws Throwable{
+	}*/
+	/*public void enter_Data_quantity(String quantity) throws Throwable{
 		this.getMap().quantityInEditSelectedProductsthrows().click();
 		this.getMap().quantityAfterClickInEditSelectedProducts().sendKeys(quantity);
 	}
 	public void enter_Data_date(String date) throws Throwable{
 		this.getMap().dateInEditSelectedProducts().click();
 		this.getMap().dateInAfterClickEditSelectedProducts().sendKeys(date);
-	}
+	}*/
 	public void Validate_ProductRecord_Update() throws Throwable{
 		this.getMap().opportunityProductRecordUpdatedMsg().isDisplayed();
 		

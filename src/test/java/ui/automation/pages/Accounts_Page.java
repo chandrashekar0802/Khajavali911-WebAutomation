@@ -14,38 +14,38 @@ public class Accounts_Page extends BasePageElementMap{
 		super(driver);
 	}
 	public WebElement accountNameField() throws Throwable {
-		 return Selenide.getElement(By.xpath("//span[text()='Account Name']/../following-sibling::input[1]"),15);  	 
+		 return Selenide.getElement(By.xpath("//span[text()='Account Name']/../following-sibling::input[1]"),10);  	 
 	    }
 	public WebElement parentaccountNameField() throws Throwable {
-		 return Selenide.getElement(By.xpath("//span[text()='Parent Account']/../following-sibling::div//input"),15);  	 
+		 return Selenide.getElement(By.xpath("//span[text()='Parent Account']/../following-sibling::div//input"),2);  	 
 	    }
 	public WebElement jAndjGlobalInParentacct() throws Throwable {
 		 return Selenide.getElement(By.xpath("//div[@title='J&J Global']"),15);  	 
 	    }
 	
 	public WebElement phoneNumField() throws Throwable {
-		 return Selenide.getElement(By.xpath("//span[text()='Phone']/../following-sibling::input[1]"),15);  	 
+		 return Selenide.getElement(By.xpath("//span[text()='Phone']/../following-sibling::input[1]"),2);  	 
 	    }
 	public WebElement revenueField() throws Throwable {
-		 return Selenide.getElement(By.xpath("//span[text()='Revenue']/../following-sibling::input[1]"),15);  	 
+		 return Selenide.getElement(By.xpath("//span[text()='Revenue']/../following-sibling::input[1]"),2);  	 
 	    }
 	
 	public WebElement billingStreetField() throws Throwable {
-		 return Selenide.getElement(By.xpath("//span[text()='Billing Street']/../following-sibling::textarea"),15);  	 
+		 return Selenide.getElement(By.xpath("//span[text()='Billing Street']/../following-sibling::textarea"),2);  	 
 	    }
 	
 	public WebElement billingCityField() throws Throwable {
-		 return Selenide.getElement(By.xpath("//span[text()='Billing City']/../following-sibling::input[1]"),15);  	 
+		 return Selenide.getElement(By.xpath("//span[text()='Billing City']/../following-sibling::input[1]"),2);  	 
 	    }
 		
 	public WebElement billingStateField() throws Throwable {
-		 return Selenide.getElement(By.xpath("//span[text()='Billing State/Province']/../following-sibling::input[1]"),15);  	 
+		 return Selenide.getElement(By.xpath("//span[text()='Billing State/Province']/../following-sibling::input[1]"),2);  	 
 	    }
 	public WebElement billingPostalField() throws Throwable {
-		 return Selenide.getElement(By.xpath("//span[text()='Billing Zip/Postal Code']/../following-sibling::input[1]"),15);  	 
+		 return Selenide.getElement(By.xpath("//span[text()='Billing Zip/Postal Code']/../following-sibling::input[1]"),2);  	 
 	    }
 	public WebElement billingCountryField() throws Throwable {
-		 return Selenide.getElement(By.xpath("//span[text()='Billing Country']/../following-sibling::input[1]"),15);  	 
+		 return Selenide.getElement(By.xpath("//span[text()='Billing Country']/../following-sibling::input[1]"),2);  	 
 	    }
 	public boolean accountCreatedMsg() throws Throwable {
 		 return Selenide.waitForInVisibilityOfElement(By.xpath("//span[contains(text(),'was created')]"));  	 

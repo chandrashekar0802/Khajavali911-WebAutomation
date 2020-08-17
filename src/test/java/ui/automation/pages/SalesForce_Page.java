@@ -48,5 +48,21 @@ public class SalesForce_Page  extends BasePageElementMap{
 	public WebElement saveButton() throws Throwable {
 		 return Selenide.getElement(By.xpath("//button[@title='Save']"),15);  	 
 	    }
+	public WebElement editButton() throws Throwable {
+		 return Selenide.getElement(By.xpath("//div[text()='Edit']"),15); 		
+	    }
+	public WebElement navigationBtn() throws Throwable {
+		 return Selenide.getElement(By.xpath("(//div[@role='navigation']//div[1])[1]"),10); 		
+	    }
+	public WebElement viewAllLink() throws Throwable {
+		 return Selenide.getElement(By.xpath("//button[text()='View All']"),10); 		
+	    }
+	public WebElement searchBoxInAppLauncher() throws Throwable {
+		 return Selenide.getElement(By.xpath("//h2[text()='App Launcher']/following-sibling::div//input"),10); 		
+	    }
+	public WebElement quotesObject() throws Throwable {
+		 return Selenide.getElement(By.xpath("//mark[text()='Quotes']"),10); 		
+	    }
+	
 }
 

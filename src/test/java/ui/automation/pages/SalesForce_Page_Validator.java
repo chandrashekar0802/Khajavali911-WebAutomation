@@ -43,5 +43,20 @@ public class SalesForce_Page_Validator extends BasePageValidator<SalesForce_Page
 	public void click_LeadsTab() throws Throwable{
 		this.getMap().leadsTab().click();
 	}
+	public void click_Edit_Button() throws Throwable{
+		this.getMap().editButton().click();
+	}
+	public void click_navigation_Button() throws Throwable{
+		this.getMap().navigationBtn().click();
+	}
+	public void click_viewAllLink_Button() throws Throwable{
+		this.getMap().viewAllLink().click();
+	}	
+	public void enter_SearchDetails(String searchValue) throws Throwable {
+		this.getMap().searchBoxInAppLauncher().sendKeys(searchValue);	
+	}
+	public void click_quotesObject() throws Throwable{
+		this.getMap().quotesObject().click();
+	}
 	
 }

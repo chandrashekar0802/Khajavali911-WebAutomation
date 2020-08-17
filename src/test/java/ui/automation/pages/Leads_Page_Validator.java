@@ -6,7 +6,7 @@ public class Leads_Page_Validator extends BasePageValidator<Leads_Page> {
 		// TODO Auto-generated constructor stub
 	}
 
-	public void enter_Data_firstName(String firstName) throws Throwable{
+	/*public void enter_Data_firstName(String firstName) throws Throwable{
 		this.getMap().firstNameField().sendKeys(firstName);
 	}
 	public void enter_Data_lastName(String lastName) throws Throwable{
@@ -72,5 +72,5 @@ public class Leads_Page_Validator extends BasePageValidator<Leads_Page> {
 	}
 	public void click_Convert_Tab() throws Throwable{
 		 this.getMap().convertTab().click();		
-	}
+	}*/
 }

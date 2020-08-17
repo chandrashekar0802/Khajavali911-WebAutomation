@@ -34,7 +34,7 @@ public class Opportunity_Steps extends Selenide{
 	 Opportunity_Page_Validator opportunityPageValidator = new Opportunity_Page_Validator(opportunityPage);
 	 
 
-	 @Given("Enter the value for Opportunity Name field")
+	/* @Given("Enter the value for Opportunity Name field")
 	 public void enter_the_value_for_Opportunity_Name_field() throws Throwable{
 		 JSONObject input = CommonUtil.readJsonObject("Opportunity", "createOpportunity");
 			String opportunityName= input.get("opportunityName").toString();
@@ -106,7 +106,7 @@ public class Opportunity_Steps extends Selenide{
 			String risksCompetitionComments= input.get("risksCompetitionComments").toString();
 			opportunityPageValidator.enter_Data_riskCompetitionComments(risksCompetitionComments);
 	BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering risks,Competition and Comments").pass("Entered risks,Competition and Comments successfully");
-	 }
+	 }*/
 
 	 @Then("Opportunity Record Should be saved")
 	 public void opportunity_Record_Should_be_saved() throws Throwable{
@@ -122,7 +122,7 @@ BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Opportunity Record
 
 	 }
 
-	 @Given("Check on Products tab which is displayed under Related at right pane")
+	/* @Given("Check on Products tab which is displayed under Related at right pane")
 	 public void check_on_Products_tab_which_is_displayed_under_Related_at_right_pane() throws Throwable{
 		 waitTime();
 		 JavascriptExecutor js = (JavascriptExecutor) Driver.browser;
@@ -130,16 +130,16 @@ BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Opportunity Record
 		 opportunityPageValidator.click_productsDrpdownInRightPane_link();
 			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on Products tab").pass("Clicked on Products tab successfully");
 
-	 }
+	 }*/
 
-	 @Given("Click on Add Products from drop down")
+	/* @Given("Click on Add Products from drop down")
 	 public void click_on_Add_Products_from_drop_down()throws Throwable {
 		 opportunityPageValidator.click_addProductInDrpdwn();
 			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on Add Products").pass("Clicked on Add Products successfully");
 
-	 }
+	 }*/
 
-	 @Given("Select valid Product Checkbox and Click on Next")
+	/* @Given("Select valid Product Checkbox and Click on Next")
 	 public void select_valid_Product_Checkbox_and_Click_on_Next() throws Throwable{
 		 JSONObject input = CommonUtil.readJsonObject("Opportunity", "createProduct");
 			String productCheckbox= input.get("productCheckbox").toString();
@@ -147,9 +147,9 @@ BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Opportunity Record
 		 opportunityPageValidator.click_Next_Btn();
 		BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on Checkbox").pass("Clicked on checkbox and then clicked on next button successfully");
 
-	 }
+	 }*/
 
-	 @Given("Enter the value for Quantity field")
+	/* @Given("Enter the value for Quantity field")
 	 public void enter_the_value_for_Quantity_field()throws Throwable {
 		 JSONObject input = CommonUtil.readJsonObject("Opportunity", "createProduct");
 			String Quantity= input.get("Quantity").toString();
@@ -167,7 +167,7 @@ BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Opportunity Record
 		 opportunityPageValidator.enter_Data_date(todayDate);
 			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "entering  Date").pass("entered  Date successfully");
 
-	 }
+	 }*/
 
 	 @Then("record should be Saved")
 	 public void record_should_be_Saved() throws Throwable{
@@ -189,7 +189,7 @@ BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Opportunity Record
 		 BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Close Date field").pass("Close Date field is display the value which we have updated");
 
 	 }
-	 @Given("Enter the {string}")
+	/* @Given("Enter the {string}")
 	 public void enter_the(String amount) throws Throwable{
 			opportunityPageValidator.enter_Data_amount(amount);
 			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Amount").pass("Entered Amount successfully");
@@ -198,7 +198,7 @@ BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Opportunity Record
 	 public void enter_the_value_for_Stage_field(String stage)throws Throwable {
 		 opportunityPageValidator.select_stage_Drop(stage);
 			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering stage").pass("Entered stage successfully");
-	 }
+	 }*/
 	 @Given("Verify the Close date should be updated with Current date")
 	 public void verify_the_Close_date_should_be_updated_with_Current_date() throws Throwable{
 		 String uiDate = opportunityPageValidator.CloseDate_Value_InDetailsPage();

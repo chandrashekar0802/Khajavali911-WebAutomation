@@ -2,6 +2,9 @@
 
 package ui.automation.pages;
 
+import com.aventstack.extentreports.GherkinKeyword;
+
+import cigniti.base.BaseUtil;
 
 public class Accounts_Page_Validator  extends BasePageValidator<Accounts_Page> {
 	public Accounts_Page_Validator(Accounts_Page Map1) {
@@ -42,8 +45,17 @@ public class Accounts_Page_Validator  extends BasePageValidator<Accounts_Page> {
 	public void enter_Data_BillingCountry(String BillingCountry) throws Throwable{
 		this.getMap().billingCountryField().sendKeys(BillingCountry);		
 	}
-	public void select_status_Drop(String status) throws Throwable{
-		this.getMap().selectstatusDrpDwnBtn(status);		
+	public void select_status_Drop(String status) throws Throwable {
+		boolean isSelect;
+		try {
+			isSelect = this.getMap().selectstatusDrpDwnBtn(status);
+			if(!isSelect)
+			{
+				BaseUtil.scenarioDef.createNode("status selecting").fail("Failed to select status");
+			}
+		} catch (Exception e) {
+			BaseUtil.scenarioDef.createNode("status selecting").fail("Failed to select status");
+		}		
 	}
 	public void select_vertical_groupingDrop(String str) throws Throwable{
 		this.getMap().selectVerticalGroupingDrpDwnBtn(str);		

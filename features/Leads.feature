@@ -27,7 +27,7 @@ Feature: Testing Leads Tab
     When user clicks on Save button
   	Then Record should  be saved
   	
-  	  @tag
+  	 
  Scenario: Lead Conversion Standard
     Given Give user login to Salesforce with the correct credentials
     And Click on Leads tab

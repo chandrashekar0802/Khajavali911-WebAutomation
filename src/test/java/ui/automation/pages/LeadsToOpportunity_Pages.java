@@ -7,12 +7,11 @@ import org.openqa.selenium.support.FindBy;
 
 import cigniti.automation.utilities.Selenide;
 
-public class Leads_Page extends BasePageElementMap{
-	public Leads_Page(WebDriver driver) {
+public class LeadsToOpportunity_Pages extends BasePageElementMap{
+	public LeadsToOpportunity_Pages(WebDriver driver) {
 		super(driver);
 	} 
-
-	/*public WebElement firstNameField() throws Throwable {
+	public WebElement firstNameField() throws Throwable {
 		 return Selenide.getElement(By.xpath("//span[text()='First Name']/../following-sibling::input[1]"),15);  	 
 	    }
 	public WebElement lastNameField() throws Throwable {
@@ -44,7 +43,7 @@ public class Leads_Page extends BasePageElementMap{
 	
 	public @FindBy(xpath="//span[text()='Sub Vertical 1']/../following-sibling::div[1]//a") WebElement subverticaloneDrpdwnBtn;
 	public boolean selectSubVerticalOneDrpDwnBtn(String str) throws Throwable {
-		return Selenide.SelectItemFromNonSelectListDropDown1(str, subverticaloneDrpdwnBtn);  	 
+		return Selenide.SelectItemFromNonSelectListDropDown2(str, subverticaloneDrpdwnBtn);  	 
 	    }
 	public @FindBy(xpath="//span[text()='Vertical']/../following-sibling::div[1]//a") WebElement verticalDrpdwnBtn;
 	public boolean selectVerticalDrpDwnBtn(String str) throws Throwable {
@@ -83,6 +82,72 @@ public class Leads_Page extends BasePageElementMap{
 	    }
 	public WebElement convertTab() throws Throwable {
 		 return Selenide.getElement(By.xpath("//div[text()='Edit']/ancestor::li/preceding-sibling::li[1]//div"),10); 		
-	    }*/
+	    }
+	//new
+	public WebElement convertBtn() throws Throwable {
+		 return Selenide.getElement(By.xpath("//span[text()='Convert']"),10); 		
+	    }
+	
+	public @FindBy(xpath="//span[text()='Lead Status']/../following-sibling::div[1]//a") WebElement leadStatus;
+	public boolean selectLeadStatusDrpDwnBtn(String str) throws Throwable {
+		return Selenide.SelectItemFromNonSelectListDropDown1(str, leadStatus);  	 
+	    }
+	public @FindBy(xpath="//span[text()='Salutation']/../following-sibling::div[1]//a") WebElement salutation;
+	public boolean selectSalutationDrpDwnBtn(String str) throws Throwable {
+		return Selenide.SelectItemFromNonSelectListDropDown1(str, salutation);  	 
+	    }
+	
+	public WebElement faxField() throws Throwable {
+		 return Selenide.getElement(By.xpath("//span[text()='Fax']/../following-sibling::input[1]"),15);  	 
+	    }
+	public WebElement titleField() throws Throwable {
+		 return Selenide.getElement(By.xpath("//span[text()='Title']/../following-sibling::input[1]"),15);  	 
+	    }
+	public WebElement webSiteField() throws Throwable {
+		 return Selenide.getElement(By.xpath("//span[text()='Website']/../following-sibling::input[1]"),15);  	 
+	    }
+	public WebElement emailField() throws Throwable {
+		 return Selenide.getElement(By.xpath("//span[text()='Email']/../following-sibling::input[1]"),15);  	 
+	    }
+	public @FindBy(xpath="//span[text()='Ownership']/../following-sibling::div[1]//a") WebElement ownership;
+	public boolean selectownershipDrpDwnBtn(String str) throws Throwable {
+		return Selenide.SelectItemFromNonSelectListDropDown1(str, ownership);  	 
+	    }
+	public @FindBy(xpath="//span[text()='Revenue Range']/../following-sibling::div[1]//a") WebElement revenueRange;
+	public boolean selectrevenueRangeDrpDwnBtn(String str) throws Throwable {
+		return Selenide.SelectItemFromNonSelectListDropDown1(str, revenueRange);  	 
+	    }
+	public WebElement contactLocationField() throws Throwable {
+		 return Selenide.getElement(By.xpath("//span[text()='Contact Location']/../following-sibling::textarea"),15);  	 
+	    }
+	public @FindBy(xpath="//span[text()='BDM']/../following-sibling::div[1]//a") WebElement bdm;
+	public boolean selectBDMDrpDwnBtn(String str) throws Throwable {
+		return Selenide.SelectItemFromNonSelectListDropDown1(str, bdm);  	 
+	    }
+	public @FindBy(xpath="//span[text()='Business Unit']/../following-sibling::div[1]//a") WebElement businessUnit;
+	public boolean selectBusinesUnitDrpDwnBtn(String bu) throws Throwable {
+		return Selenide.SelectItemFromNonSelectListDropDown1(bu, businessUnit);  	 
+	    }
+	public WebElement CreateNewRadioBtnInAccount() throws Throwable {
+		 return Selenide.getElement(By.xpath("(//legend[text()='Account']/following-sibling::div//span[@class='slds-radio_faux'])[1]"),15);  	 
+	    }
+	public WebElement chooseExistingRadioBtnInContact() throws Throwable {
+		 return Selenide.getElement(By.xpath("(//legend[text()='Contact']/following-sibling::div//span[@class='slds-radio_faux'])[2]"),15);  	 
+	    }
+	public WebElement contactSearchInChooseExistingRadioBtnInContact() throws Throwable {
+		 return Selenide.getElement(By.xpath("//span[text()='Contact Search']/../following-sibling::div//input"),15);  	 
+	    }
+	public WebElement selectFirstRecordIncontactSearchInChooseExistingRadioBtnInContact() throws Throwable {
+		 return Selenide.getElement(By.xpath("(//span[text()='Contact Search']/../following-sibling::div//ul/li)[1]/a"),15);  	 
+	    }
+	public WebElement acctNameHyperLinkAccountTableOnYourLeadHasBeenConvertedLayoutSceen() throws Throwable {
+		 return Selenide.getElement(By.xpath("(//div[text()='Account']/following-sibling::div//a)[1]"),10);  	 
+	    }
+	public WebElement accontHistoryHyperLink() throws Throwable {
+		 return Selenide.getElement(By.xpath("(//span[text()='Account History'])[1]"),10);  	 
+	    }
+	public boolean LeadConvertRecordOnTheAccountHistoryScreen() throws Throwable {
+		 return Selenide.isElementDisplayed(By.xpath("(//span[text()='Created by lead convert'])[2]"),"Lead Convert Record");  	 
+	    }
 	
 }

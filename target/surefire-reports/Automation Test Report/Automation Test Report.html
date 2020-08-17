@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Aug 07 15:32:51 IST 2020</td>
+<td>Started on:</td><td>Mon Aug 17 14:09:18 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>183 seconds (183517 ms)</td>
+<tr><td>Total time:</td><td>189 seconds (189235 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,21 +75,19 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='ui.automation.testrunner.testrunner.feature()'><b>feature</b><br>Test class: ui.automation.testrunner.testrunner<br>Parameters: "Lead Conversion Standard", "Testing Leads Tab"</td>
-<td><div><pre>java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
-	at java.util.ArrayList.rangeCheck(Unknown Source)
-	at java.util.ArrayList.get(Unknown Source)
-	at ui.automation.stepdef.Leads_Steps.check_account_accordion_with_create_New_and_choose_existing_radio_button(Leads_Steps.java:227)
-	at ?.Check account accordion with create New and choose existing radio button(./features/Leads.feature:37)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1097632693", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1097632693'><pre>java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
-	at java.util.ArrayList.rangeCheck(Unknown Source)
-	at java.util.ArrayList.get(Unknown Source)
-	at ui.automation.stepdef.Leads_Steps.check_account_accordion_with_create_New_and_choose_existing_radio_button(Leads_Steps.java:227)
-	at ?.Check account accordion with create New and choose existing radio button(./features/Leads.feature:37)
+<td title='ui.automation.testrunner.testrunner.feature()'><b>feature</b><br>Test class: ui.automation.testrunner.testrunner<br>Parameters: "Testing Lead record creation and Converting to Account, Contact and Opportunity", "Create Lead and Convert"</td>
+<td><div><pre>java.lang.NullPointerException
+	at ui.automation.pages.LeadsToOpportunity_Page_Validator.enter_Data_firstName(LeadsToOpportunity_Page_Validator.java:11)
+	at ui.automation.stepdef.LeadsToOpportunity_Steps.enter_the_value_for_First_Name_field(LeadsToOpportunity_Steps.java:34)
+	at ?.Enter the value for first name field(./features/LeadsToOpportunity.feature:10)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1343145833", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1343145833'><pre>java.lang.NullPointerException
+	at ui.automation.pages.LeadsToOpportunity_Page_Validator.enter_Data_firstName(LeadsToOpportunity_Page_Validator.java:11)
+	at ui.automation.stepdef.LeadsToOpportunity_Steps.enter_the_value_for_First_Name_field(LeadsToOpportunity_Steps.java:34)
+	at ?.Enter the value for first name field(./features/LeadsToOpportunity.feature:10)
 </pre></div></td>
-<td>170</td>
-<td>ui.automation.testrunner.testrunner@32b0876c</td></tr>
+<td>147</td>
+<td>ui.automation.testrunner.testrunner@5a50d9fc</td></tr>
 </table><p>
 </body>
 </html>

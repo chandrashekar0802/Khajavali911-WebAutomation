@@ -9,15 +9,14 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Automation Test Report</th></tr>
-<tr><td><a href="#t0">Automation Test Report</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">183,517</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Automation Test Report</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">189,235</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Automation Test Report</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Automation Test Report &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">ui.automation.testrunner.testrunner</td><td><a href="#m0">feature</a></td><td rowspan="1">1596794581863</td><td rowspan="1">170775</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Automation Test Report</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Automation Test Report &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">ui.automation.testrunner.testrunner</td><td><a href="#m0">feature</a></td><td rowspan="1">1597653596696</td><td rowspan="1">147237</td></tr></tbody>
 </table>
-<h2>Automation Test Report</h2><h3 id="m0">ui.automation.testrunner.testrunner#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Lead Conversion Standard&quot;</td><td>&quot;Testing Leads Tab&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
-	at java.util.ArrayList.rangeCheck(Unknown Source)
-	at java.util.ArrayList.get(Unknown Source)
-	at ui.automation.stepdef.Leads_Steps.check_account_accordion_with_create_New_and_choose_existing_radio_button(Leads_Steps.java:227)
-	at ✽.Check account accordion with create New and choose existing radio button(./features/Leads.feature:37)
+<h2>Automation Test Report</h2><h3 id="m0">ui.automation.testrunner.testrunner#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Testing Lead record creation and Converting to Account, Contact and Opportunity&quot;</td><td>&quot;Create Lead and Convert&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.NullPointerException
+	at ui.automation.pages.LeadsToOpportunity_Page_Validator.enter_Data_firstName(LeadsToOpportunity_Page_Validator.java:11)
+	at ui.automation.stepdef.LeadsToOpportunity_Steps.enter_the_value_for_First_Name_field(LeadsToOpportunity_Steps.java:34)
+	at ✽.Enter the value for first name field(./features/LeadsToOpportunity.feature:10)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

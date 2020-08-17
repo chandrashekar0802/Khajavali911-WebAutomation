@@ -33,7 +33,7 @@ public class Leads_Steps {
 	 Leads_Page leadsPage = new Leads_Page(Driver.browser);
 	 Leads_Page_Validator leadsPageValidator = new Leads_Page_Validator(leadsPage);
 	 
-	 @Given("Enter the value for first name field")
+	/* @Given("Enter the value for first name field")
 	 public void enter_the_value_for_First_Name_field() throws Throwable{
 		 JSONObject input = CommonUtil.readJsonObject("Leads", "leads");
 			String firstName= input.get("firstName").toString();
@@ -191,36 +191,9 @@ public class Leads_Steps {
 			leadsPageValidator.select_Region_Drop(Region);
 			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for Region field").pass("Entered the value for Region field successfully");
 
-	 }
+	 }*/
 	 
-	 @Given("Click on one name from existing lead  list on the Leads Home screen")
-	 public void click_on_one_existing_lead_on_the_Home_screen() throws Throwable{
-		 leadsPageValidator.click_firstLeadInLeadsHomeScreen_link();
-			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on one Lead name").pass("Clicked on one Lead name successfully");
 
-	 }
-	 
-	 @Given("Check Convert tab Left side of edit tab in lead detail screen")
-	 public void check_Convert_tab_Left_side_of_edit_tab_in_lead_detail_screen() throws Throwable{
-		 String str = leadsPageValidator.convertTab_Leftside_Edit_Btn();
-		 softAssert.assertEquals(str.equals("Conver"), true);
-			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Check Convert tab").pass("Checking of Convert tab Left side of edit tab in lead detail screen successfully");
-
-		 if(str.equals("Convert")){
-		 }
-		 else
-		 {
-			//	BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Check Convert tab").fail("Checking of Convert tab Left side of edit tab in lead detail screen successfully").a;
-
-		 }
-	 }
-
-	 @Given("Click on Convert tab")
-	 public void click_on_Convert_tab() throws Throwable{
-		 leadsPageValidator.click_Convert_Tab();
-			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on Convert tab").pass("Clicked on Convert tab successfully");
-
-	 }
 
 	 @Given("Check account accordion with create New and choose existing radio button")
 	 public void check_account_accordion_with_create_New_and_choose_existing_radio_button() throws Throwable{
@@ -269,10 +242,7 @@ public class Leads_Steps {
 	    
 	 }
 
-	 @Given("Click on convert button")
-	 public void click_on_convert_button()throws Throwable {
-	    
-	 }
+	
 
 	 @Given("Click on  hyperlink of account name  in account table on pop op")
 	 public void click_on_hyperlink_of_account_name_in_account_table_on_pop_op() throws Throwable{

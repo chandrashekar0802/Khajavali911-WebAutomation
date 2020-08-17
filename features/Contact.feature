@@ -1,6 +1,6 @@
  
 Feature: Contact record creation
- 
+# @tag
   Scenario: Testing Contact record creation
     Given Give user login to Salesforce with the correct credentials
     And Click on Contacts tab

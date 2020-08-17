@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Automation_Test_Report">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Automation_Test_Report" title="ui.automation.testrunner.testrunner" hash-for-method="feature(&quot;Lead Conversion Standard&quot;, &quot;Testing Leads Tab&quot;)">feature("Lead Conversion Standard", "Testing Leads Tab")</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Automation_Test_Report" title="ui.automation.testrunner.testrunner" hash-for-method="feature(&quot;Testing Lead record creation and Converting to Account, Contact and Opportunity&quot;, &quot;Create Lead and ...)">feature("Testing Lead record creation and Converting to Account, Contact and Opportunity", "Create Lead and ...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Automation_Test_Report -->
@@ -125,15 +125,14 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="feature(&quot;Lead Conversion Standard&quot;, &quot;Testing Leads Tab&quot;)">
-                  </a> <!-- feature("Lead Conversion Standard", "Testing Leads Tab") -->
+                  <a name="feature(&quot;Testing Lead record creation and Converting to Account, Contact and Opportunity&quot;, &quot;Create Lead and ...)">
+                  </a> <!-- feature("Testing Lead record creation and Converting to Account, Contact and Opportunity", "Create Lead and ...) -->
                   <span class="method-name">feature</span>
-                  <span class="parameters">("Lead Conversion Standard", "Testing Leads Tab")</span>
-                  <div class="stack-trace">java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
-	at java.util.ArrayList.rangeCheck(Unknown Source)
-	at java.util.ArrayList.get(Unknown Source)
-	at ui.automation.stepdef.Leads_Steps.check_account_accordion_with_create_New_and_choose_existing_radio_button(Leads_Steps.java:227)
-	at ✽.Check account accordion with create New and choose existing radio button(./features/Leads.feature:37)
+                  <span class="parameters">("Testing Lead record creation and Converting to Account, Contact and Opportunity", "Create Lead and Convert")</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at ui.automation.pages.LeadsToOpportunity_Page_Validator.enter_Data_firstName(LeadsToOpportunity_Page_Validator.java:11)
+	at ui.automation.stepdef.LeadsToOpportunity_Steps.enter_the_value_for_First_Name_field(LeadsToOpportunity_Steps.java:34)
+	at ✽.Enter the value for first name field(./features/LeadsToOpportunity.feature:10)
 
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -196,7 +195,7 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'feature')
 data.setCell(0, 2, 'ui.automation.testrunner.testrunner')
-data.setCell(0, 3, 170775);
+data.setCell(0, 3, 147237);
 window.suiteTableData['Automation_Test_Report']= { tableData: data, tableDiv: 'times-div-Automation_Test_Report'}
 return data;
 }
@@ -235,12 +234,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">feature("Lead Conversion Standard", "Testing Leads Tab")</span>
-                <span class="method-start">10038 ms</span>
+                <span class="method-name">feature("Testing Lead record creation and Converting to Account, Contact and Opportunity", "Create Lead and ...)</span>
+                <span class="method-start">37642 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
-                <span class="method-name">tearDownClass(org.testng.TestRunner@b339a08)</span>
-                <span class="method-start">181530 ms</span>
+                <span class="method-name">tearDownClass(org.testng.TestRunner@12a6e8ed)</span>
+                <span class="method-start">185555 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
