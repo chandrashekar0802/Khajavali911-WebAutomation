@@ -54,7 +54,7 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 		<span class='report-name'>
         Cigniti Test Automation Report
             
-                <img src='C:/Walmart/POC/Java/catalyst/catalyst/resources/cigniti_logo.png' />
+                <img src='E:/SalesforceCigniti/WebAutomation/resources/cigniti_logo.png' />
             
         </span>
 		<!-- report headline -->
@@ -62,7 +62,7 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Aug 28, 2020 01:15:11 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Aug 28, 2020 02:00:12 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -149,10 +149,10 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='66.667%'><span class='strong'>2</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -172,8 +172,8 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>"Title of your feature"</span>
-						<span class='test-time'>Aug 28, 2020 01:15:15 PM</span>
+						<span class='test-name'>"Create Case"</span>
+						<span class='test-time'>Aug 28, 2020 02:00:28 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
@@ -184,14 +184,22 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     <a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 <div class='scenario node' test-id='2' status='fail'>
-    <span class='duration right label'>0h 0m 0s+1ms</span>
+    <span class='duration right label'>0h 1m 1s+287ms</span>
     <div class="bdd-test">
-        <div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario: Title of your scenario</div>
+        <div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario: Testing cases record creation</div>
     </div>
     <ul class='steps'>
         <li test-id='3' class='node given pass' status='pass'>
-            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Launched elsevier page</div>
-                <div class="node-step">Launched elsevier page</div>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Url enter</div>
+                <div class="node-step">Url entered successfully</div>
+        </li>
+        <li test-id='4' class='node given pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Username and Password entering</div>
+                <div class="node-step">Username and Password entering entered successfully</div>
+        </li>
+        <li test-id='5' class='node given fail' status='fail'>
+            <div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>clicking on Cases</div>
+                <div class="node-step">Failed to click on Cases</div>
         </li>
     </ul>
 </div>
@@ -237,25 +245,25 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 28, 2020 01:15:11 PM</div>
+					<div class='panel-lead'>Aug 28, 2020 02:00:12 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 28, 2020 01:15:16 PM</div>
+			 		<div class='panel-lead'>Aug 28, 2020 02:01:32 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 5s+377ms</div>
+					<div class='panel-lead'>0h 1m 20s+35ms</div>
 				</div>
 			</div>
 		</div>
@@ -284,21 +292,21 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 				infoChild: 0,
 				debugChild: 0,
 				exceptionsChild: 1,
-				grandChildCount: 1,
-				passGrandChild: 1,
-				failGrandChild: 0,
+				grandChildCount: 3,
+				passGrandChild: 2,
+				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
 				skipGrandChild: 0,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 0,
+				exceptionsGrandChild: 1,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        ""Title of your feature"":0.001
+			        ""Create Case"":61.287
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>

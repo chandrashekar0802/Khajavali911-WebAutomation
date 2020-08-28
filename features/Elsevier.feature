@@ -5,4 +5,6 @@ Feature: Title of your feature
   Scenario: Title of your scenario
     Given Open chrome browser and enter url
     And Enter the User credentials
+
     #Then Validate user 
+
