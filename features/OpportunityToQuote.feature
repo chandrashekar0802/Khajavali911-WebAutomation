@@ -30,11 +30,6 @@ Scenario: Testing Opportunity record creation
     And Enter the value for Quote Name field
     And Enter the value for Expiration Date field 30
     And  the value for Status field
-    #And Enter the value for Bill To Street field
-    #And Enter the value for Bill To City field
-    #And Enter the value for Bill To State Province field
-    #And Enter the value for Bill To Zip Postal Code field
-    #And Enter the value for Bill To Country field
     And user clicks on Save button
     And Click on Quote Object
     And Open one Quote from existing Quotes

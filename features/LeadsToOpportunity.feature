@@ -48,7 +48,30 @@ Feature: Create Lead and Convert
      And Click on hyperlink of Account name in account table on Your lead has been converted layout sceen
      And Click on Account History hyperlink
      And Check the lead convert record on the Account History screen
-    
+     And Click on Leads tab
+     And Click on one name from existing lead  list on the Leads Home screen
+     And Click on Convert tab
+     And Select radio button for Account Choose existing
+     And Search for matching Account and select one Account name form list
+     And Select radio button for Contact create New
+     And Select radio button for Opportunity choose existing
+     And Select one record from Opportunity grid
+     And Click on convert button
+     And Click on hyperlink of Account name in account table on Your lead has been converted layout sceen
+     And Click on Account History hyperlink
+     And Check the lead convert record on the Account History screen
+     And Click on Leads tab
+     And Click on one name from existing lead  list on the Leads Home screen
+     And Click on Convert tab
+     And Select radio button for Account Choose existing
+     And Search for matching Account and select one Account name form list
+     And Select radio button for Contact choose existing
+     And Search for matching contact  and select one contact name form list
+     And Select radio button for Opportunity create New
+    And Click on convert button
+      And Click on hyperlink of Account name in account table on Your lead has been converted layout sceen
+     When Click on Account History hyperlink
+     Then Check the lead convert record on the Account History screen
     
     
     

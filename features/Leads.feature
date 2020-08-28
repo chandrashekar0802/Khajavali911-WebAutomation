@@ -1,7 +1,7 @@
 
 
 Feature: Testing Leads Tab
- 
+ #@tag
  Scenario: Testing Lead record creation
     Given Give user login to Salesforce with the correct credentials
     And Click on Leads tab

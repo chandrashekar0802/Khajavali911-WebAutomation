@@ -1,5 +1,7 @@
 package ui.automation.pages;
 
+import cigniti.automation.utilities.Selenide;
+
 public class SalesForce_Page_Validator extends BasePageValidator<SalesForce_Page> {
 	public SalesForce_Page_Validator(SalesForce_Page Map1) {
 		super(Map1);
@@ -10,24 +12,24 @@ public class SalesForce_Page_Validator extends BasePageValidator<SalesForce_Page
 		this.getMap().username.sendKeys(username);
 		this.getMap().Password.sendKeys(password);
 	}
-	
+
 	public void click_login() throws Throwable{
 		this.getMap().signin_btn.click();
 	}
-	
+
 	public void click_remindLater() throws Throwable{
 		this.getMap().reminderLater().click();
 	}
-	
-	
+
+
 	public void waitForLoad_Login() throws Throwable{
 		this.getMap().LoadingImage_Icon();
-		Thread.sleep(5000);
+		Selenide.smallwaitTime();
 		this.getMap().Loading_Icon();
 	}
 	public void click_New_Button() throws Throwable{
-			this.getMap().newButton().click();
-		}
+		this.getMap().newButton().click();
+	}
 	public void click_Save_Button() throws Throwable{
 		this.getMap().saveButton().click();		
 	}
@@ -58,5 +60,5 @@ public class SalesForce_Page_Validator extends BasePageValidator<SalesForce_Page
 	public void click_quotesObject() throws Throwable{
 		this.getMap().quotesObject().click();
 	}
-	
+
 }

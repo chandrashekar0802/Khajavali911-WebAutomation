@@ -1,12 +1,15 @@
 package ui.automation.pages;
 
+import org.openqa.selenium.By;
+
+import cigniti.automation.utilities.Driver;
 import cigniti.automation.utilities.Selenide;
 
 public class LeadsToOpportunity_Page_Validator extends BasePageValidator<LeadsToOpportunity_Pages> {
 	public LeadsToOpportunity_Page_Validator(LeadsToOpportunity_Pages Map1) {
 		super(Map1);
 	}
-	
+
 	public void enter_Data_firstName(String firstName) throws Throwable{
 		this.getMap().firstNameField().sendKeys(firstName);
 	}
@@ -43,18 +46,18 @@ public class LeadsToOpportunity_Page_Validator extends BasePageValidator<LeadsTo
 	public void select_Region_Drop(String str) throws Throwable{
 		this.getMap().selectRegionDrpDwnBtn(str);		
 	}
-	
+
 	public void enter_Data_Revenue(String revenue) throws Throwable{
 		this.getMap().revenueField().sendKeys(revenue);
 	}
-	
+
 	public void enter_Data_Street(String Street) throws Throwable{
 		this.getMap().streetField().sendKeys(Street);
 	}
 	public void enter_Data_City(String City) throws Throwable{
 		this.getMap().cityField().sendKeys(City);
 	}
-	
+
 	public void enter_Data_State(String State) throws Throwable{
 		this.getMap().stateField().sendKeys(State);
 	}
@@ -64,29 +67,42 @@ public class LeadsToOpportunity_Page_Validator extends BasePageValidator<LeadsTo
 	public void enter_Data_Country(String Country) throws Throwable{
 		this.getMap().countryField().sendKeys(Country);		
 	}
-	
+
 	public void click_firstLeadInLeadsHomeScreen_link() throws Throwable{
 		this.getMap().firstLeadInLeadsHomeScreen().click();		
 	}
-/*	public String convertTab_Leftside_Edit_Btn() throws Throwable{
+	/*	public String convertTab_Leftside_Edit_Btn() throws Throwable{
 		return this.getMap().convertTab().getText();		
 	}*/
-	public void click_Convert_Tab() throws Throwable{
-		 this.getMap().convertTab().click();		
+	public boolean click_Convert_Tab() throws Throwable{
+		try{
+		this.getMap().convertTab().click();	
+		//Driver.browser.findElement(By.xpath("//ul[@class='slds-global-actions']/li[4]/div")).click();
+		//Thread.sleep(2000);
+		//return Selenide.jSClick(this.getMap().convertTab());
+		//return true;
+		}
+		catch(Exception e){
+			e.getMessage();
+			Thread.sleep(5000);
+			//this.getMap().convertTab().click();	
+			Selenide.jSClick(Driver.browser.findElement(By.xpath("//div[@title='Convert']")));
+		}
+		return false;
 	}
-	
+
 	//new
 	public void click_Convert_Btn() throws Throwable{
-		 this.getMap().convertBtn().click();		
+		this.getMap().convertBtn().click();		
 	}
-	
+
 	public void select_LeadStatus_Dropdown(String str) throws Throwable{
 		this.getMap().selectLeadStatusDrpDwnBtn(str);		
 	}
 	public void select_Salutation_Dropdown(String str) throws Throwable{
 		this.getMap().selectSalutationDrpDwnBtn(str);		
 	}
-	
+
 	public void enter_Data_fax(String fax) throws Throwable{
 		this.getMap().faxField().sendKeys(fax);
 	}
@@ -117,20 +133,48 @@ public class LeadsToOpportunity_Page_Validator extends BasePageValidator<LeadsTo
 	public void click_CreateNewRadioBtnInAccount_Btn() throws Throwable{
 		this.getMap().CreateNewRadioBtnInAccount().click();		
 	}
+	public void click_CreateNewRadioBtnInOpportunity_Btn() throws Throwable{
+		this.getMap().CreateNewRadioBtnInOpportunity().click();		
+	}
+
+	public void click_CreateNewRadioBtnInContact_Btn() throws Throwable{
+		this.getMap().CreateNewRadioBtnInContact().click();		
+	}
+
 	public void click_chooseExistingRadioBtnInAccount_Btn() throws Throwable{
-		 this.getMap().chooseExistingRadioBtnInContact().click();		
+		this.getMap().chooseExistingRadioBtnInAccount().click();		
+	}
+	public void click_chooseExistingRadioBtnInOpportunity_Btn() throws Throwable{
+		this.getMap().chooseExistingRadioBtnInOpportunity().click();		
+	}
+
+	public void click_chooseExistingRadioBtnInContact_Btn() throws Throwable{
+		this.getMap().chooseExistingRadioBtnInContact().click();		
 	}
 	public void click_contactSearchInChooseExistingRadioBtnInContact() throws Throwable{
 		this.getMap().contactSearchInChooseExistingRadioBtnInContact().click();
 	}
+	public void click_accountSearchInChooseExistingRadioBtnInAccount() throws Throwable{
+		this.getMap().accountSearchInChooseExistingRadioBtnInAccount().click();
+	}
+
 	public void click_FirstRecordIncontactSearchInChooseExistingRadioBtnInContact() throws Throwable{
 		this.getMap().selectFirstRecordIncontactSearchInChooseExistingRadioBtnInContact().click();
 	}
+	public void click_FirstRecordInAccountSearchInChooseExistingRadioBtnInAccount() throws Throwable{
+		this.getMap().selectFirstRecordInAccountSearchInChooseExistingRadioBtnInAccount().click();
+	}
+	public void click_selectFirstRecordInOpportunitySearchInChooseExistingRadioBtnInOpportunity() throws Throwable{
+		this.getMap().selectFirstRecordInOpportunitySearchInChooseExistingRadioBtnInOpportunity().click();
+	}
+
 	public void click_acctNameHyperLinkAccountTableOnYourLeadHasBeenConvertedLayoutSceen() throws Throwable{
 		this.getMap().acctNameHyperLinkAccountTableOnYourLeadHasBeenConvertedLayoutSceen().click();
 	}
 	public void click_accontHistoryHyperLink() throws Throwable{
-		this.getMap().accontHistoryHyperLink().click();
+		//this.getMap().accontHistoryHyperLink().click();
+		Selenide.jSClick(this.getMap().accontHistoryHyperLink());
+
 	}
 	public boolean isDisplayed_LeadConvertRecordOnTheAccountHistoryScreen() throws Throwable{
 		return this.getMap().LeadConvertRecordOnTheAccountHistoryScreen();

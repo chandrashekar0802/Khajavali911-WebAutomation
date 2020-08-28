@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Aug 17 14:09:18 IST 2020</td>
+<td>Started on:</td><td>Thu Aug 27 18:19:50 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>189 seconds (189235 ms)</td>
+<tr><td>Total time:</td><td>156 seconds (156013 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,18 +76,17 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='ui.automation.testrunner.testrunner.feature()'><b>feature</b><br>Test class: ui.automation.testrunner.testrunner<br>Parameters: "Testing Lead record creation and Converting to Account, Contact and Opportunity", "Create Lead and Convert"</td>
-<td><div><pre>java.lang.NullPointerException
-	at ui.automation.pages.LeadsToOpportunity_Page_Validator.enter_Data_firstName(LeadsToOpportunity_Page_Validator.java:11)
-	at ui.automation.stepdef.LeadsToOpportunity_Steps.enter_the_value_for_First_Name_field(LeadsToOpportunity_Steps.java:34)
-	at ?.Enter the value for first name field(./features/LeadsToOpportunity.feature:10)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1343145833", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1343145833'><pre>java.lang.NullPointerException
-	at ui.automation.pages.LeadsToOpportunity_Page_Validator.enter_Data_firstName(LeadsToOpportunity_Page_Validator.java:11)
-	at ui.automation.stepdef.LeadsToOpportunity_Steps.enter_the_value_for_First_Name_field(LeadsToOpportunity_Steps.java:34)
-	at ?.Enter the value for first name field(./features/LeadsToOpportunity.feature:10)
+<td><div><pre>java.lang.AssertionError: Failed to select one contact name
+	at ui.automation.stepdef.LeadsToOpportunity_Steps.searchForMatchingContactAndSelectOneContactNameFormList(LeadsToOpportunity_Steps.java:577)
+	at ?.Search for matching contact  and select one contact name form list(./features/LeadsToOpportunity.feature:45)
+... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace814987775", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace814987775'><pre>java.lang.AssertionError: Failed to select one contact name
+	at org.testng.Assert.fail(Assert.java:97)
+	at ui.automation.stepdef.LeadsToOpportunity_Steps.searchForMatchingContactAndSelectOneContactNameFormList(LeadsToOpportunity_Steps.java:577)
+	at ?.Search for matching contact  and select one contact name form list(./features/LeadsToOpportunity.feature:45)
 </pre></div></td>
-<td>147</td>
-<td>ui.automation.testrunner.testrunner@5a50d9fc</td></tr>
+<td>137</td>
+<td>ui.automation.testrunner.testrunner@54067fdc</td></tr>
 </table><p>
 </body>
 </html>
