@@ -1,9 +1,15 @@
 package cigniti.automation.utilities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
-
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.internal.TouchAction;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import org.openqa.selenium.support.ui.Select;
@@ -18,12 +24,12 @@ public class Selenide extends BaseUtil{
 	public final static Logger LOG = Logger.getLogger(Selenide.class);
 	protected boolean reportIndicator = true;
 
-	protected boolean click(By locator, String locatorName) throws Throwable {
+	public static boolean click(By locator, String locatorName) throws Throwable {
 		boolean status = false;
 		try {		
 			//LOG.info("Class name" + getCallerClassName() + "Method name : " + getCallerMethodName());
 			LOG.info("Method : click  ::  Locator : " + locatorName);
-			WebDriverWait wait = new WebDriverWait(Driver.browser, 15);
+			WebDriverWait wait = new WebDriverWait(Driver.browser, 30);
 			LOG.info("Locator is Visible :: " + locator);
 			wait.until(ExpectedConditions.elementToBeClickable(locator));
 			LOG.info("Clicked on the Locator");
@@ -42,7 +48,7 @@ public class Selenide extends BaseUtil{
 				//BaseUtil.scenarioDef.pass("entered text as khaja");
 			} else {
 				//reporter.SuccessReport("Click : " + locatorName, msgClickSuccess + locatorName);
-				BaseUtil.scenarioDef.pass("entered text as khaja");
+				BaseUtil.scenarioDef.pass("entered text");
 			}
 		}
 		return status;
@@ -204,11 +210,11 @@ public class Selenide extends BaseUtil{
 	 * @return boolean
 	 * @throws Throwable the throwable
 	 */
-	protected boolean waitForVisibilityOfElement(By by, String locatorName) throws Throwable {
+	public static boolean waitForVisibilityOfElement(By by, String locatorName) throws Throwable {
 		boolean flag = false;
 		LOG.info("Class name:Selinide Method name : waitForVisibilityOfElement" );
 		
-		WebDriverWait wait = new WebDriverWait(Driver.browser, 30);
+		WebDriverWait wait = new WebDriverWait(Driver.browser, 15);
 		try {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(by));
 			flag = true;
@@ -263,7 +269,7 @@ public class Selenide extends BaseUtil{
 	 * @return boolean
 	 * @throws Throwable the throwable
 	 */
-	protected boolean waitForInVisibilityOfElement(By by) throws Throwable {
+	public static boolean waitForInVisibilityOfElement(By by) throws Throwable {
 		boolean flag = false;
 		LOG.info("Class name Selinide Method name : waitForInVisibilityOfElement" );
 		WebDriverWait wait = new WebDriverWait(Driver.browser, 15);
@@ -318,7 +324,7 @@ public class Selenide extends BaseUtil{
 	 * @return String - Returns text from given locator
 	 * @throws Throwable the throwable
 	 */
-	protected String getText(By locator, String locatorName) throws Throwable {
+	public static String getText(By locator, String locatorName) throws Throwable {
 		String text = "";
 		boolean flag = false;
 		LOG.info("Class name Selinide Method name : getText");
@@ -351,7 +357,7 @@ public class Selenide extends BaseUtil{
 	 * @return boolean
 	 * @throws Throwable the throwable
 	 */
-	protected boolean isElementDisplayed(By locator, String locatorName) throws Throwable {
+	public static boolean isElementDisplayed(By locator, String locatorName) throws Throwable {
 		boolean flag;
 		try {
 			//LOG.info("Class name :: " + getCallerClassName() + " Method name :: " + getCallerMethodName());
@@ -371,15 +377,144 @@ public class Selenide extends BaseUtil{
 	 * @throws Throwable the throwable
 	 */
 	// TODO
-	private void waitTime() throws Throwable {
-		String time = "10";
+	public static void waitTime() throws Throwable {
+		String time = "10000";
 		long timeValue = Long.parseLong(time);
 		Thread.sleep(timeValue);
 		LOG.info("Time out value is : " + timeValue);
 	}
 
+	public static boolean SelectItemFromNonSelectListDropDown(String desiredValue, String DesiredNameToBePassed, By locator, By listBoxLocator) throws Throwable
+    {
+        boolean flag = false;
+        try
+        {
+        	Driver.browser.findElement(locator).click();
+            Thread.sleep(1000);
+            List<WebElement> optionlist = Driver.browser.findElements(listBoxLocator);
 
-     
+            ArrayList<String> optionlists1 = new  ArrayList();
+
+                if (waitForInVisibilityOfElement(listBoxLocator))
+                {
+                    for(WebElement opts : optionlist)
+                    {
+                    optionlists1.add(opts.getText().trim());
+                    }
+                    }
+                    //List<String> options = optionlist.select(x -> x.Text);
+                    for (String opt : optionlists1)
+                    {
+                        if (opt.contains(desiredValue))
+                        {
+                            flag = true;
+                            break;
+                        }
+                    }
+                    if (flag)
+                    {
+                    	for (WebElement sele : optionlist)
+                        {
+                            if (optionlist.size() > 1)
+                            {
+                                if (sele.getText().contains(desiredValue))
+                                {
+                                    sele.click();
+                                    Thread.sleep(1000);
+                                    break;
+                                }
+                            }
+                            else
+                            {
+                                WebElement ele = optionlist.get(0);
+                                ele.click();
+                                Thread.sleep(1000);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        flag = false;
+                    }
+                              
+        }
+        catch(Exception e)
+        {
+        	e.printStackTrace();
+        }
+        //ImageLoadWait();
+        return flag;
+    }
+	public static boolean SelectItemFromNonSelectListDropDown1(String desiredValue, WebElement locator) throws Throwable
+    {
+        boolean flag = false;
+        try
+        {
+        	locator.click();
+            Thread.sleep(1000);
+            if(Driver.browser.findElement(By.xpath("(//a[text()='"+desiredValue+"'])[1]")).isDisplayed())
+            {
+           Driver.browser.findElement(By.xpath("(//a[text()='"+desiredValue+"'])[1]")).click();
+           flag =true;
+            }
+                              
+        }
+        catch(Exception e)
+        {
+        	//BaseUtil.scenarioDef.createNode("Find Element Failure ").fail(e.getMessage());
+        	e.printStackTrace();
+        }
+        //ImageLoadWait();
+        return flag;
+    }
+	public static boolean SelectItemFromNonSelectListDropDown2(String desiredValue, WebElement locator) throws Throwable
+    {
+        boolean flag = false;
+        try
+        {
+        	locator.click();
+            Thread.sleep(1000);
+            if(Driver.browser.findElement(By.xpath("(//a[text()='"+desiredValue+"'])[2]")).isDisplayed())
+            {
+           Driver.browser.findElement(By.xpath("(//a[text()='"+desiredValue+"'])[2]")).click();
+           flag =true;
+            }
+                              
+        }
+        catch(Exception e)
+        {
+        	//BaseUtil.scenarioDef.createNode("Find Element Failure ").fail(e.getMessage());
+        	e.printStackTrace();
+        }
+        //ImageLoadWait();
+        return flag;
+    }
+	public static boolean scrollIntoView(By by) throws Throwable{
+		WebElement element = Driver.browser.findElement(by);
+	((JavascriptExecutor) Driver.browser).executeScript("arguments[0].scrollIntoView();", element);
+	
+		/*WebElement element =  Driver.browser.findElement(by);
+		Actions actions = new Actions(Driver.browser);
+		actions.moveToElement(element);
+		actions.perform();*/
+	return true;
+	}
+	public static boolean jSClick(WebElement element) throws Throwable {
+		boolean flag=false;
+		try {
+			JavascriptExecutor executor = (JavascriptExecutor)Driver.browser;
+			executor.executeScript("arguments[0].click();", element);
+			flag=true;
+		}catch(Exception ex) {
+			flag=false;		
+			ex.printStackTrace();
+		}
+		return flag;
+	}
+	public static boolean fieldIsMandatory(WebElement label) { 
+	    return ((JavascriptExecutor)Driver.browser).executeScript("return window.getComputedStyle(arguments[0], ':after')." + 
+	            "getPropertyValue('content');", label).toString().contains("*"); 
+	}
 }
 
 
