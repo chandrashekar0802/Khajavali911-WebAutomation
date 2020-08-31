@@ -61,4 +61,9 @@ public class SalesForce_Page_Validator extends BasePageValidator<SalesForce_Page
 		this.getMap().quotesObject().click();
 	}
 
+	public void click_casesObject() throws Throwable{
+		this.getMap().casesObject().click();
+	}
+	
 }
+
