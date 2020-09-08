@@ -2,7 +2,7 @@ package ui.automation.stepdef;
 
 import java.util.List;
 
-import javax.jws.soap.SOAPBinding;
+//import javax.jws.soap.SOAPBinding;
 
 import org.json.simple.JSONObject;
 import org.openqa.selenium.By;

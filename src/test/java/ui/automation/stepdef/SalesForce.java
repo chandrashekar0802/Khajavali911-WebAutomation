@@ -177,6 +177,33 @@ public class SalesForce extends Selenide{
 			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on Quotes").fail("Failed to click on Quotes").addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
 
 
+
 		}
 	}
+
+
+	 
+	 @Given("Click on Case Object")
+	 public void click_on_Case_Object() throws Throwable {
+		 try{
+			 smallwaitTime();
+			 salesForceValidator.click_navigation_Button();
+			 salesForceValidator.click_viewAllLink_Button();
+			 salesForceValidator.enter_SearchDetails("Cases");
+			 salesForceValidator.click_casesObject();
+			 BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on Cases Object").pass("clicked on Cases Object successfully");
+
+		 	}
+		 catch(Exception e)
+		 {
+			 BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on Cases").fail("Failed to click on Cases").addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+
+		 }
+	 }
+
+	 @Given("^Click on cancel Button$")
+	public void clickOnCancelButton() throws Throwable {
+		 salesForceValidator.click_cancle_Button();
+	}
+
 }
