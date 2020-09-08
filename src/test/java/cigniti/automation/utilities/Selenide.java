@@ -2,8 +2,9 @@ package cigniti.automation.utilities;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
-
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import org.openqa.selenium.support.ui.Select;
@@ -17,17 +18,20 @@ import cigniti.base.*;
 public class Selenide extends BaseUtil{
 	public final static Logger LOG = Logger.getLogger(Selenide.class);
 	protected boolean reportIndicator = true;
-
+    private WebDriver driver; 
+	public Selenide(RemoteWebDriver driver) {
+		this.driver = driver;
+	}
 	protected boolean click(By locator, String locatorName) throws Throwable {
 		boolean status = false;
 		try {		
 			//LOG.info("Class name" + getCallerClassName() + "Method name : " + getCallerMethodName());
 			LOG.info("Method : click  ::  Locator : " + locatorName);
-			WebDriverWait wait = new WebDriverWait(Driver.browser, 15);
+			WebDriverWait wait = new WebDriverWait(driver, 15);
 			LOG.info("Locator is Visible :: " + locator);
 			wait.until(ExpectedConditions.elementToBeClickable(locator));
 			LOG.info("Clicked on the Locator");
-			Driver.browser.findElement(locator).click();
+			driver.findElement(locator).click();
 			//Driver.findElement(locator).click();
 			LOG.info("identified the element :: " + locator);
 			status = true;
@@ -42,7 +46,7 @@ public class Selenide extends BaseUtil{
 				//BaseUtil.scenarioDef.pass("entered text as khaja");
 			} else {
 				//reporter.SuccessReport("Click : " + locatorName, msgClickSuccess + locatorName);
-				BaseUtil.scenarioDef.pass("entered text as khaja");
+				//BaseUtil.scenarioDef.pass("entered text as khaja");
 			}
 		}
 		return status;
@@ -51,14 +55,14 @@ public class Selenide extends BaseUtil{
 	 * 
 	 * 
 	 */
-	public static WebElement getElement(By locator,int defaultwait) throws Throwable {
+	public WebElement getElement(By locator,int defaultwait) throws Throwable {
 		WebElement webelement = null;
 		try {
-			WebDriverWait wait = new WebDriverWait(Driver.browser, defaultwait);
+			WebDriverWait wait = new WebDriverWait(driver, defaultwait);
 			LOG.info("Locator is Visible :: " + locator);
 			wait.until(ExpectedConditions.elementToBeClickable(locator));
 			LOG.info("Clicked on the Locator");
-			webelement= Driver.browser.findElement(locator);
+			webelement= driver.findElement(locator);
 			//Driver.findElement(locator).click();
 			LOG.info("identified the element :: " + locator);
 			return webelement;
@@ -85,7 +89,7 @@ public class Selenide extends BaseUtil{
 			
 			LOG.info(e.getMessage());
 			//reporter.failureReport("Click : ", msgClickFailure + locatorName, driver);
-			BaseUtil.scenarioDef.fail("getFluentElement: Unable to find element");
+		//	BaseUtil.scenarioDef.fail("getFluentElement: Unable to find element");
 		} 
 		finally {
 			
@@ -112,7 +116,7 @@ public class Selenide extends BaseUtil{
 		try {
 			LOG.info("Class name" + Selenide.class + "Method name : selectDropdownByIndex" );
 			LOG.info("Method : selectDropdownByIndex ::  Locator : " + locatorName);
-			Select s = new Select(Driver.browser.findElement(locator));
+			Select s = new Select(driver.findElement(locator));
 			s.selectByIndex(index);
 			flag = true;
 			return true;
@@ -122,7 +126,7 @@ public class Selenide extends BaseUtil{
 		} finally {
 			if (!flag) {
 				if (reportIndicator) {
-					BaseUtil.scenarioDef.pass("Selected Dropdown By index ");
+				//	BaseUtil.scenarioDef.pass("Selected Dropdown By index ");
 				} 
 				
 			}
@@ -147,7 +151,7 @@ public class Selenide extends BaseUtil{
 		try {
 			LOG.info("Class name: Selinide "+ "Method name : selectDropdownByValue" );
 			LOG.info("Method : selectDropdownByValue  ::  Locator : " + locatorName);
-			Select s = new Select(Driver.browser.findElement(locator));
+			Select s = new Select(driver.findElement(locator));
 			s.selectByValue(value);
 			flag = true;
 			LOG.info("Successfully selected the value" + locatorName);
@@ -156,9 +160,9 @@ public class Selenide extends BaseUtil{
 			throw new RuntimeException(e);
 		} finally {
 			if (!flag) {
-				BaseUtil.scenarioDef.fail("Option with value attribute : " + value + " is Not Select from the DropDown : " + locatorName);
+				//BaseUtil.scenarioDef.fail("Option with value attribute : " + value + " is Not Select from the DropDown : " + locatorName);
 			} else {
-				BaseUtil.scenarioDef.pass("Option with value attribute : " + value + " is  Selected from the DropDown : " + locatorName);
+				//BaseUtil.scenarioDef.pass("Option with value attribute : " + value + " is  Selected from the DropDown : " + locatorName);
 			}
 		}
 	}
@@ -177,7 +181,7 @@ public class Selenide extends BaseUtil{
 	protected boolean selectDropdownByVisibleText(By locator, String visibleText, String locatorName) throws Throwable {
 		boolean flag = false;
 		try {
-			Select s = new Select(Driver.browser.findElement(locator));
+			Select s = new Select(driver.findElement(locator));
 			s.selectByVisibleText(visibleText.trim());
 			flag = true;
 			return true;
@@ -187,9 +191,9 @@ public class Selenide extends BaseUtil{
 			throw new RuntimeException(e);
 		} finally {
 			if (!flag) {
-				BaseUtil.scenarioDef.fail("Select "+ visibleText + " is Not Select from the DropDown" + locatorName);
+				//BaseUtil.scenarioDef.fail("Select "+ visibleText + " is Not Select from the DropDown" + locatorName);
 			} else {
-				BaseUtil.scenarioDef.pass("Select "+ visibleText + "  is Selected from the DropDown" + locatorName);
+				//BaseUtil.scenarioDef.pass("Select "+ visibleText + "  is Selected from the DropDown" + locatorName);
 			}
 		}
 	}
@@ -208,7 +212,7 @@ public class Selenide extends BaseUtil{
 		boolean flag = false;
 		LOG.info("Class name:Selinide Method name : waitForVisibilityOfElement" );
 		
-		WebDriverWait wait = new WebDriverWait(Driver.browser, 30);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		try {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(by));
 			flag = true;
@@ -218,9 +222,9 @@ public class Selenide extends BaseUtil{
 			return false;
 		} finally {
 			if (!flag) {
-				BaseUtil.scenarioDef.fail("Visible of element is false :: Element :: " + locatorName + " is not visible");
+				//BaseUtil.scenarioDef.fail("Visible of element is false :: Element :: " + locatorName + " is not visible");
 			} else {
-				BaseUtil.scenarioDef.pass("Visible of element is true :: , Element :: " + locatorName + "  is visible");
+				//BaseUtil.scenarioDef.pass("Visible of element is true :: , Element :: " + locatorName + "  is visible");
 			}
 		}
 	}
@@ -238,7 +242,7 @@ public class Selenide extends BaseUtil{
 		boolean flag = false;
 		LOG.info("Class name:Selinide Method name : waitForInVisibilityOfElement" );
 		//LOG.info("Method : " + getCallerMethodName() + "  ::  Locator : " + locatorName);
-		WebDriverWait wait = new WebDriverWait(Driver.browser, 15);
+		WebDriverWait wait = new WebDriverWait(driver, 15);
 		try {
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(by));
 			flag = true;
@@ -248,9 +252,9 @@ public class Selenide extends BaseUtil{
 			return false;
 		} finally {
 			if (!flag) {
-				BaseUtil.scenarioDef.fail("InVisible of element is false ::, Element :: " + locatorName + " is visible");
+				//BaseUtil.scenarioDef.fail("InVisible of element is false ::, Element :: " + locatorName + " is visible");
 			} else {
-				BaseUtil.scenarioDef.pass("InVisible of element is true :: ,Element :: " + locatorName + "  is not visible");
+				//BaseUtil.scenarioDef.pass("InVisible of element is true :: ,Element :: " + locatorName + "  is not visible");
 			}
 		}
 	}
@@ -266,7 +270,7 @@ public class Selenide extends BaseUtil{
 	protected boolean waitForInVisibilityOfElement(By by) throws Throwable {
 		boolean flag = false;
 		LOG.info("Class name Selinide Method name : waitForInVisibilityOfElement" );
-		WebDriverWait wait = new WebDriverWait(Driver.browser, 15);
+		WebDriverWait wait = new WebDriverWait(driver, 15);
 		try {
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(by));
 			flag = true;
@@ -301,10 +305,10 @@ public class Selenide extends BaseUtil{
 			
 		}finally {
 			if(flag) {
-				BaseUtil.scenarioDef.pass("CheckPoint ::  expected  is  present  : " + locatorName);
+				//BaseUtil.scenarioDef.pass("CheckPoint ::  expected  is  present  : " + locatorName);
 			}
 			else {
-				BaseUtil.scenarioDef.fail("CheckPoint :: expected  is not present  : " + locatorName);
+				//BaseUtil.scenarioDef.fail("CheckPoint :: expected  is not present  : " + locatorName);
 			}
 		}
 	}
@@ -326,7 +330,7 @@ public class Selenide extends BaseUtil{
 			waitTime();
 			boolean value = isElementDisplayed(locator, locatorName);
 			if (value) {
-				text = Driver.browser.findElement(locator).getText();
+				text = driver.findElement(locator).getText();
 				LOG.info("Locator is Visible and text is retrieved :: " + text);
 				flag = true;
 			}
@@ -334,9 +338,9 @@ public class Selenide extends BaseUtil{
 			throw new RuntimeException(e);
 		} finally {
 			if (!flag) {				
-				BaseUtil.scenarioDef.fail("GetText ::  Unable to get Text from ::" + locatorName);
+				//BaseUtil.scenarioDef.fail("GetText ::  Unable to get Text from ::" + locatorName);
 			} else {
-				BaseUtil.scenarioDef.pass("GetText ::" + locatorName + " is: "+text);
+				//BaseUtil.scenarioDef.pass("GetText ::" + locatorName + " is: "+text);
 				LOG.info("Locator is Visible and text is retrieved :: " + text);
 			}
 		}
@@ -356,9 +360,9 @@ public class Selenide extends BaseUtil{
 		try {
 			//LOG.info("Class name :: " + getCallerClassName() + " Method name :: " + getCallerMethodName());
 			//LOG.info("Method : " + getCallerMethodName() + "  ::  Locator : " + locatorName);
-			WebDriverWait wait = new WebDriverWait(Driver.browser, 3);
+			WebDriverWait wait = new WebDriverWait(driver, 3);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-			flag = Driver.browser.findElement(locator).isDisplayed();
+			flag = driver.findElement(locator).isDisplayed();
 		} catch (Exception e) {
 			flag = false;
 		}

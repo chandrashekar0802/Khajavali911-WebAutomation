@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Automation Test Report" duration-ms="36223" started-at="2020-07-22T15:20:00 IST" finished-at="2020-07-22T15:20:36 IST">
+  <suite name="Automation Test Report" duration-ms="47280" started-at="2020-08-28T12:46:30 IST" finished-at="2020-08-28T12:47:17 IST">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:ui.automation.testrunner.testrunner@3108bc]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test name="Automation Test Report" duration-ms="36223" started-at="2020-07-22T15:20:00 IST" finished-at="2020-07-22T15:20:36 IST">
+    <test name="Automation Test Report" duration-ms="47280" started-at="2020-08-28T12:46:30 IST" finished-at="2020-08-28T12:47:17 IST">
       <class name="ui.automation.testrunner.testrunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:ui.automation.testrunner.testrunner@5abca1e0]" name="setUpClass" is-config="true" duration-ms="10749" started-at="2020-07-22T15:20:00 IST" finished-at="2020-07-22T15:20:11 IST">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:ui.automation.testrunner.testrunner@3108bc]" name="setUpClass" is-config="true" duration-ms="270" started-at="2020-08-28T12:46:30 IST" finished-at="2020-08-28T12:46:31 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="SKIP" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:ui.automation.testrunner.testrunner@5abca1e0]" name="feature" duration-ms="22243" started-at="2020-07-22T15:20:11 IST" data-provider="features" finished-at="2020-07-22T15:20:33 IST">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:ui.automation.testrunner.testrunner@3108bc]" name="feature" duration-ms="30957" started-at="2020-08-28T12:46:31 IST" data-provider="features" finished-at="2020-08-28T12:47:02 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Title of your scenario"]]>
+                <![CDATA["Title of your scenario2"]]>
               </value>
             </param>
             <param index="1">
@@ -24,61 +27,69 @@
               </value>
             </param>
           </params>
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[There are undefined steps]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: There are undefined steps
-at cucumber.api.testng.TestCaseResultListener.getError(TestCaseResultListener.java:60)
-at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:72)
-at ui.automation.testrunner.testrunner.feature(testrunner.java:47)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(ArrayList.java:1257)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
-at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass(org.testng.ITestContext)[pri:0, instance:ui.automation.testrunner.testrunner@5abca1e0]" name="tearDownClass" is-config="true" duration-ms="2782" started-at="2020-07-22T15:20:33 IST" finished-at="2020-07-22T15:20:36 IST">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:ui.automation.testrunner.testrunner@3108bc]" name="feature" duration-ms="29168" started-at="2020-08-28T12:46:31 IST" data-provider="features" finished-at="2020-08-28T12:47:00 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@ec2bf82]]>
+                <![CDATA["Title of your scenario1"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Title of your feature"]]>
               </value>
             </param>
           </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:ui.automation.testrunner.testrunner@3108bc]" name="feature" duration-ms="11876" started-at="2020-08-28T12:47:00 IST" data-provider="features" finished-at="2020-08-28T12:47:12 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Title of your scenario6"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Title of your feature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:ui.automation.testrunner.testrunner@3108bc]" name="feature" duration-ms="15651" started-at="2020-08-28T12:47:02 IST" data-provider="features" finished-at="2020-08-28T12:47:17 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Title of your scenario8"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Title of your feature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass(org.testng.ITestContext)[pri:0, instance:ui.automation.testrunner.testrunner@3108bc]" name="tearDownClass" is-config="true" duration-ms="9" started-at="2020-08-28T12:47:17 IST" finished-at="2020-08-28T12:47:17 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@82de64a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:ui.automation.testrunner.testrunner@3108bc]" name="tearDownClass" is-config="true" duration-ms="0" started-at="2020-08-28T12:47:17 IST" finished-at="2020-08-28T12:47:17 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

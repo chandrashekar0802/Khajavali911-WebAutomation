@@ -3,6 +3,7 @@ package ui.automation.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
 
 import ui.automation.pages.BasePageElementMap;
@@ -11,7 +12,11 @@ import cigniti.automation.utilities.Selenide;
 public class Elsevier_Home_Page  extends BasePageElementMap{	
 	public Elsevier_Home_Page(WebDriver driver) {
 		super(driver);
+		// TODO Auto-generated constructor stub
 	}
+	RemoteWebDriver driver;
+	
+	Selenide selenide =new Selenide(driver);
 	public @FindBy(xpath="//*[contains(@title,'Link to the homepage')]") WebElement logo;
 	public @FindBy(xpath="//*[@title='View account']") WebElement login_btn;
 	public @FindBy(xpath="//*[@id='signin-email']") WebElement username;
@@ -34,13 +39,13 @@ public class Elsevier_Home_Page  extends BasePageElementMap{
 	public @FindBy(xpath="//*[contains(@class,'item-remove')]") WebElement removeItem;
 	
 	public WebElement preorder() throws Throwable {
-	 return Selenide.getElement(By.xpath("//*[contains(@class,'addToCart-btn')]"),15);    	
+	 return selenide.getElement(By.xpath("//*[contains(@class,'addToCart-btn')]"),15);    	
     }
 	
 	public WebElement product() throws Throwable {
-		 return Selenide.getElement(By.xpath("//*[contains(@class,'listing-section-products')]/div[1]//*[@class='listing-products-info-text-title']/a"),15);    	
+		 return selenide.getElement(By.xpath("//*[contains(@class,'listing-section-products')]/div[1]//*[@class='listing-products-info-text-title']/a"),15);    	
 	    }
 	public WebElement serach_text() throws Throwable {
-		 return Selenide.getElement(By.xpath("//*[@name='q']"),15);    	
+		 return selenide.getElement(By.xpath("//*[@name='q']"),15);    	
 	    }	
 }

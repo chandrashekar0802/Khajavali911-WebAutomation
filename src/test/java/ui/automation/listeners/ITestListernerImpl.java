@@ -7,6 +7,8 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.gherkin.model.Feature;
 
 import cigniti.base.BaseUtil;
@@ -16,42 +18,44 @@ import cigniti.base.ExtentReportUtil;
 
 
 public class ITestListernerImpl implements ITestListener {
-	ExtentReportUtil extentreportUtil =new ExtentReportUtil();
+	//private static  ExtentReports extent = ExtentReportUtil.CreateInstance();
+	    
+	// private static ThreadLocal<ExtentTest> extentTestThread =new ThreadLocal<ExtentTest>(); work
 	private static boolean isReportRunning;
-	
+	//private static ExtentTest test;
 	public void onFinish(ITestContext iTestContext) {
-		// TODO Auto-generated method stub
-		extentreportUtil.FlushReport();
+	ExtentReportUtil.CreateInstance().FlushReport();
+		//ExtentReportUtil.FlushReport();
+		//extent.flush();
 		System.out.print("On finish from listener");
 	}
 
 	public void onStart(ITestContext iTestContext) {
-		// TODO Auto-generated method stub
-		if(!isReportRunning) {			
-			extentreportUtil.ExtentReport();
-		    isReportRunning = true;				
-		}
-		//BaseUtil.features = BaseUtil.extent.createTest(Feature.class, "ericbank andriod sample");
+		ExtentReportUtil.CreateInstance().ExtentReport();
+		//if(!isReportRunning) {			
+		//	extentreportUtil.ExtentReport();
+		 //   isReportRunning = true;				
+		//}
+		
 		System.out.print("from on start");
 	}
 
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
-		// TODO Auto-generated method stub
+	
 		System.out.print("from on nTestFailedButWithinSuccessPercentage");
 	}
 	
 	public void onTestFailure(ITestResult iTestResult) {
-		//TODO Auto-generated method stub
-		System.out.print("from onTestFailure");
-			
-			try {
-				//extentreportUtil.ExtentReportScreenShot();				
-				BaseUtil.scenarioDef.fail("details").addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());				
-			} catch (IOException e) {
+		
+			 try {
+				 System.out.print("from onTestFailure");
+		//	ExtentReportUtil.scenarioDef.createNode(iTestResult.getTestName()).fail(iTestResult.getThrowable());
+			} catch (Exception e1) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				e1.printStackTrace();
 			}
+			
 					
 	} 
 
@@ -62,15 +66,21 @@ public class ITestListernerImpl implements ITestListener {
 	}
 
 
-	public void onTestStart(ITestResult iTestResult) {
+	public void onTestStart(ITestResult result) {
+	//	ExtentTest test = extent.createTest(result.getMethod().getMethodName(),result.getMethod().getDescription());
+	//	extentTestThread.set(test);
+		 System.out.print("from teststart feature name "+ result.getMethod() +" is name");
 		// TODO Auto-generated method stub
-		System.out.print("from onTestStart");
+	 // ExtentReportUtil.test =	extent.createTest(iTestResult.getTestName());
+	 //	extentTestThread.get().createNode("this is test name");
 	}
 
 
 	public void onTestSuccess(ITestResult iTestResult) {
 		// TODO Auto-generated method stub
-		System.out.print("from onTestSuccess");
+		// System.out.print("from testsuccess "+ extentTestThread.get());
+	//	extentTestThread.get().createNode("Node is created");
+	//s	extentTestThread.get().createNode(iTestResult.getTestName()).pass("This step is passed");
 	}
 
 

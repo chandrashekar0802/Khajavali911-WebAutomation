@@ -10,22 +10,24 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 public class Driver {
-	private static WebDriverWait browserWait;
-	public static RemoteWebDriver browser=null;
-	static DesiredCapabilities dc = new DesiredCapabilities();
+	RemoteWebDriver driver;
+	
+	private  WebDriverWait browserWait;
+	public  RemoteWebDriver browser=null;
+	private DesiredCapabilities dc = new DesiredCapabilities();
     public RemoteWebDriver getWebDriver() { return this.browser; }
-    public void setWebDriver(RemoteWebDriver browser) { Driver.browser = browser; }
+    public void setWebDriver(RemoteWebDriver browser) { this.browser = browser; }
     public WebDriverWait getWebDriverWait() { return this.browserWait; }
     public void setWebDriverWait(WebDriverWait browserWait) { this.browserWait = browserWait; }
-    public static void StartBrowser(BrowserTypes browserType,int defaultTimeOut) throws MalformedURLException
+    public  RemoteWebDriver StartBrowser(BrowserTypes browserType,int defaultTimeOut) throws MalformedURLException
     {    
     	try {
 		if(browser == null) {		
         switch (browserType)
         {
             case Firefox:
-                Driver.browser = new FirefoxDriver();  
-                browserWait = new WebDriverWait(Driver.browser, defaultTimeOut);
+            	browser = new FirefoxDriver();  
+                browserWait = new WebDriverWait(browser, defaultTimeOut);
                 browser.manage().deleteAllCookies();
         		browser.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         		browser.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
@@ -35,8 +37,8 @@ public class Driver {
                 break;
             case Chrome:
             	System.setProperty("webdriver.chrome.driver", "C:\\Walmart\\chromedriver_win32\\chromedriver.exe");
-            	Driver.browser = new ChromeDriver();
-            	browserWait = new WebDriverWait(Driver.browser, defaultTimeOut);
+            	browser = new ChromeDriver();
+            	browserWait = new WebDriverWait(browser, defaultTimeOut);
                 browser.manage().deleteAllCookies();
         		browser.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         		browser.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
@@ -51,10 +53,10 @@ public class Driver {
             	//dc.setCapability("appArguments", "MyTestFile.txt");
             	//dc.setCapability("appWorkingDir", "C:\\MyTestFolder\\");
             	//Driver.browser =  new WindowsDriver<WindowsElement>(new URL("http://127.0.0.1:4727"), dc);
-            	Driver.browser.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
-            	Driver.browser.findElementByName("Nine").click();
-            	Driver.browser.findElementByName("Seven").click();
-            	Driver.browser.findElementByName("Multiply by").click();
+            	browser.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
+            	browser.findElementByName("Nine").click();
+            	browser.findElementByName("Seven").click();
+            	browser.findElementByName("Multiply by").click();
             	//Driver.browser.
             //	Driver.browser = new ChromeDriver();
                 break;
@@ -79,9 +81,9 @@ public class Driver {
     	}
     	
 		
-    	
+    	return browser;
     }
-    public static void StopBrowser()
+    public  void StopBrowser()
     {    
     	browser.quit();
     	browser = null;
