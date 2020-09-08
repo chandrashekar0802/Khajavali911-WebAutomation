@@ -186,7 +186,7 @@ public class SalesForce extends Selenide{
 	 @Given("Click on Case Object")
 	 public void click_on_Case_Object() throws Throwable {
 		 try{
-			 waitTime();
+			 smallwaitTime();
 			 salesForceValidator.click_navigation_Button();
 			 salesForceValidator.click_viewAllLink_Button();
 			 salesForceValidator.enter_SearchDetails("Cases");
@@ -200,5 +200,10 @@ public class SalesForce extends Selenide{
 
 		 }
 	 }
+
+	 @Given("^Click on cancel Button$")
+	public void clickOnCancelButton() throws Throwable {
+		 salesForceValidator.click_cancle_Button();
+	}
 
 }

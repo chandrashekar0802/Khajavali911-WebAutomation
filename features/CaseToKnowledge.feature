@@ -1,11 +1,9 @@
-@tag
+#@tag
 Feature: Create Case
 Scenario: Testing cases record creation
     Given Give user login to Salesforce with the correct credentials
     And Click on Case Object
-    #And I Click on Cases Tab
     And Click on Cases New button
-    #And Enter the value for Cases owner field
     And Enter the value for contact name field
     And Enter the value for account name field
     And Enter the value for status field
@@ -26,7 +24,6 @@ Scenario: Testing cases record creation
     And user clicks on Save button
     And Click on Related Tab
     And Click on New Task
-    And Enter Value for Name Field
     And Enter the value for Subject  field
     And Enter the date for due date field
     And Enter the data for Comments field
@@ -44,6 +41,7 @@ Scenario: Testing cases record creation
     And select  value from the status field
     When select  value from the Case Reason field
     Then Click on save button
+    And Change to lightening view
     
     
     

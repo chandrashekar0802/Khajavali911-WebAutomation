@@ -1,7 +1,9 @@
 package cigniti.automation.utilities;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -180,7 +182,7 @@ public class Selenide extends BaseUtil{
 	 * @return boolean
 	 * @throws Throwable the throwable
 	 */
-	protected boolean selectDropdownByVisibleText(By locator, String visibleText, String locatorName) throws Throwable {
+	public static boolean selectDropdownByVisibleText(By locator, String visibleText, String locatorName) throws Throwable {
 		boolean flag = false;
 		try {
 			Select s = new Select(Driver.browser.findElement(locator));
@@ -520,6 +522,36 @@ public class Selenide extends BaseUtil{
 		return ((JavascriptExecutor)Driver.browser).executeScript("return window.getComputedStyle(arguments[0], ':after')." + 
 				"getPropertyValue('content');", label).toString().contains("*"); 
 	}
+	
+	public static String generateRandomString(int length) {
+		String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        Random random = new SecureRandom();
+        if (length <= 0) {
+            throw new IllegalArgumentException("String length must be a positive integer");
+        }
+
+        StringBuilder sb = new StringBuilder(length);
+        for (int i = 0; i < length; i++) {
+            sb.append(characters.charAt(random.nextInt(characters.length())));
+        }
+
+        return sb.toString();
+    }
+	
+	public static String generateRandomNumber(int length) {
+		String characters = "1234567890";
+        Random random = new SecureRandom();
+        if (length <= 0) {
+            throw new IllegalArgumentException("String length must be a positive integer");
+        }
+
+        StringBuilder sb = new StringBuilder(length);
+        for (int i = 0; i < length; i++) {
+            sb.append(characters.charAt(random.nextInt(characters.length())));
+        }
+
+        return sb.toString();
+    }
 }
 
 

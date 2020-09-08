@@ -64,11 +64,12 @@ public class SalesForce_Page  extends BasePageElementMap{
 
 		return Selenide.getElement(By.xpath("//mark[text()='Quotes']"),10); 		
 	}
-
-
 	public WebElement casesObject() throws Throwable {
 		 return Selenide.getElement(By.xpath("//mark[text()='Cases']"),10); 		
 	    }
-
+	public WebElement cancleButton() throws Throwable {
+		 return Selenide.getElement(By.xpath("(//span[text()='Cancel']/..)[last()]"),10); 		
+	    }
+	
 }
 

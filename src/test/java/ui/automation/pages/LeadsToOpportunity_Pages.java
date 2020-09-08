@@ -151,6 +151,13 @@ public class LeadsToOpportunity_Pages extends BasePageElementMap{
 	public WebElement selectFirstRecordInAccountSearchInChooseExistingRadioBtnInAccount() throws Throwable {
 		return Selenide.getElement(By.xpath("(//span[text()='Account Search']/../following-sibling::div//ul/li)[1]/a"),15);  	 
 	}
+	public String selectedAccountNameAccountSearch() throws Throwable {
+		return Selenide.getText(By.xpath("(//span[@class='pillText'])[1]"), "Account Name");  	 
+	}
+	public WebElement searchSymbolInContactSearch() throws Throwable {
+		return Selenide.getElement(By.xpath("//span[contains(@title,'in Contact')]"),15);  	 
+	}
+	
 	public WebElement selectFirstRecordInOpportunitySearchInChooseExistingRadioBtnInOpportunity() throws Throwable {
 		return Selenide.getElement(By.xpath("(//legend[text()='Opportunity']/following-sibling::div//ul//span[@class='slds-radio'])[1]"),15);  	 
 	}
@@ -163,5 +170,8 @@ public class LeadsToOpportunity_Pages extends BasePageElementMap{
 	public boolean LeadConvertRecordOnTheAccountHistoryScreen() throws Throwable {
 		return Selenide.isElementDisplayed(By.xpath("(//span[contains(text(),'ead convert')])[last()]"),"Lead Convert Record");  	 
 	}
-
+	public boolean LeadConvertRecordOnTheAccountHistoryScreen1() throws Throwable {
+		return Selenide.isElementDisplayed(By.xpath("(//span[contains(text(),'ead convert')])[1]"),"Lead Convert Record");  	 
+	}
+    public String SelectContactInContactSearch = "//a[@title='"+"Test"+"']/../preceding-sibling::td[1]/a";
 }

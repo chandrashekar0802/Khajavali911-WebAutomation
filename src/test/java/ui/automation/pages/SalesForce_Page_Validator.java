@@ -1,8 +1,12 @@
 package ui.automation.pages;
 
+import org.openqa.selenium.By;
+
+import cigniti.automation.utilities.Driver;
 import cigniti.automation.utilities.Selenide;
 
 public class SalesForce_Page_Validator extends BasePageValidator<SalesForce_Page> {
+	
 	public SalesForce_Page_Validator(SalesForce_Page Map1) {
 		super(Map1);
 		// TODO Auto-generated constructor stub
@@ -46,7 +50,15 @@ public class SalesForce_Page_Validator extends BasePageValidator<SalesForce_Page
 		this.getMap().leadsTab().click();
 	}
 	public void click_Edit_Button() throws Throwable{
+		try{
 		this.getMap().editButton().click();
+		}
+		catch(Exception e){	
+			e.getMessage();
+			Thread.sleep(3000);
+			//this.getMap().convertTab().click();	
+			Selenide.jSClick(Driver.browser.findElement(By.xpath("//div[text()='Edit']")));
+		}
 	}
 	public void click_navigation_Button() throws Throwable{
 		this.getMap().navigationBtn().click();
@@ -63,6 +75,9 @@ public class SalesForce_Page_Validator extends BasePageValidator<SalesForce_Page
 
 	public void click_casesObject() throws Throwable{
 		this.getMap().casesObject().click();
+	}
+	public void click_cancle_Button() throws Throwable{
+		this.getMap().cancleButton().click();
 	}
 	
 }
