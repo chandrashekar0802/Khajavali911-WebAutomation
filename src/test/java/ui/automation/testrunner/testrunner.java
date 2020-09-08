@@ -21,7 +21,7 @@ import cucumber.api.testng.TestNGCucumberRunner;
         features = "./features/"
         ,glue = {"ui.automation.stepdef"}
          //tags= {"@ericbank"})
-      ,tags = {"@Elsevier"})
+      ,tags = {"@tag"})
 		/*,plugin= { "pretty",
                 "html:target/site/cucumber-pretty",
         "json:target/cucumber.json" },
