@@ -37,7 +37,9 @@ public class Driver {
             case Chrome:
             	ChromeOptions options = new ChromeOptions();
             	options.addArguments("--disable-notifications");
-            	System.setProperty("webdriver.chrome.driver", "C:\\\\Walmart\\\\chromedriver_win32\\\\chromedriver.exe");
+            	
+            	String driverpath =System.getProperty("user.dir")+"\\drivers\\chromedriver.exe";
+            	System.setProperty("webdriver.chrome.driver",driverpath);
             	browser = new ChromeDriver(options);
             	browserWait = new WebDriverWait(Driver.browser, defaultTimeOut);
                 //browser.manage().deleteAllCookies();

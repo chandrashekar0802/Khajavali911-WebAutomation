@@ -15,8 +15,8 @@ import ui.automation.pages.Elsevier_Home_Page_Validator;
 import cigniti.automation.utilities.CommonUtil;
 import cigniti.automation.utilities.Driver;
 import cigniti.automation.utilities.PropertiesFileReader;
-import cigniti.base.BaseUtil;
-import cigniti.base.ExtentReportUtil;
+import cigniti.reports.BaseUtil;
+import cigniti.reports.ExtentReportUtil;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 

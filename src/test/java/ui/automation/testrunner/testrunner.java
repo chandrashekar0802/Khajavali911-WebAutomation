@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import cigniti.automation.utilities.BrowserTypes;
 import cigniti.automation.utilities.Driver;
-import cigniti.base.BaseUtil;
+import cigniti.reports.BaseUtil;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.PickleEventWrapper;
@@ -47,7 +47,7 @@ public class testrunner {
 	    	testNGCucumberRunner.runScenario(eventwrapper.getPickleEvent());
 	    }
 	    
-	    @DataProvider//(parallel=true)
+	    @DataProvider(parallel=false)
 	    public Object[][] features() {
 	       // return testNGCucumberRunner.provideFeatures();    	
 	    	 return testNGCucumberRunner.provideScenarios();

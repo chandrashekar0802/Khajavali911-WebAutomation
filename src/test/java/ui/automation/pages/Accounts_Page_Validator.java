@@ -4,7 +4,7 @@ package ui.automation.pages;
 
 import com.aventstack.extentreports.GherkinKeyword;
 
-import cigniti.base.BaseUtil;
+import cigniti.reports.BaseUtil;
 
 public class Accounts_Page_Validator  extends BasePageValidator<Accounts_Page> {
 	public Accounts_Page_Validator(Accounts_Page Map1) {

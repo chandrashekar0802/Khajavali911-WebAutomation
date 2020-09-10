@@ -372,3 +372,21 @@
 >>>>>>> 601f7bb074a2e78fffce5a32052f1111e54e1a33
 [0908/160146.265:ERROR:exit_code_watcher_win.cc(87)] Failed to wait for process exit or stop event
 [0908/160146.361:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[0908/161028.766:ERROR:exit_code_watcher_win.cc(87)] Failed to wait for process exit or stop event
+[0908/161028.979:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[0908/193842.730:ERROR:exit_code_watcher_win.cc(87)] Failed to wait for process exit or stop event
+[0908/193842.822:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[0909/130110.191:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[0909/130203.377:ERROR:exit_code_watcher_win.cc(87)] Failed to wait for process exit or stop event
+[0909/130203.454:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[0909/131649.082:ERROR:exit_code_watcher_win.cc(87)] Failed to wait for process exit or stop event
+[0909/131649.208:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[0909/134629.230:ERROR:exit_code_watcher_win.cc(87)] Failed to wait for process exit or stop event
+[0909/134629.322:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[0909/153215.358:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[0909/154231.404:ERROR:exit_code_watcher_win.cc(87)] Failed to wait for process exit or stop event
+[0909/154231.487:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[0909/155506.201:ERROR:exit_code_watcher_win.cc(87)] Failed to wait for process exit or stop event
+[0909/155506.271:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[0909/224424.325:ERROR:exit_code_watcher_win.cc(87)] Failed to wait for process exit or stop event
+[0909/224424.392:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: The pipe has been ended. (0x6D)

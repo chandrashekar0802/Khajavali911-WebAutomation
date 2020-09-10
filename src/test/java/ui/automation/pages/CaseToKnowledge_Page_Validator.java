@@ -5,7 +5,7 @@ import org.openqa.selenium.Keys;
 
 import cigniti.automation.utilities.Driver;
 import cigniti.automation.utilities.Selenide;
-import cigniti.base.BaseUtil;
+import cigniti.reports.BaseUtil;
 
 public class CaseToKnowledge_Page_Validator extends BasePageValidator<CaseToKnowledge_Page> {
 	public CaseToKnowledge_Page_Validator(CaseToKnowledge_Page Map1) {

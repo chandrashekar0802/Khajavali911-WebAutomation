@@ -1,4 +1,4 @@
-package cigniti.base;
+package cigniti.reports;
 
 import java.io.File;
 import java.io.IOException;

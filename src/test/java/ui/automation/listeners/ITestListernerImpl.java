@@ -9,9 +9,8 @@ import org.testng.ITestResult;
 
 import com.aventstack.extentreports.gherkin.model.Feature;
 
-import cigniti.base.BaseUtil;
-
-import cigniti.base.ExtentReportUtil;
+import cigniti.reports.BaseUtil;
+import cigniti.reports.ExtentReportUtil;
 
 
 

@@ -2,8 +2,8 @@ package ui.automation.stepdef;
 
 import com.aventstack.extentreports.GherkinKeyword;
 
-import cigniti.base.BaseUtil;
-import cigniti.base.ExtentReportUtil;
+import cigniti.reports.BaseUtil;
+import cigniti.reports.ExtentReportUtil;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;

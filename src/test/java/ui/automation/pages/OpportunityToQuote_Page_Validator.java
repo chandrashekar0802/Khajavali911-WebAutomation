@@ -3,7 +3,7 @@ package ui.automation.pages;
 import org.openqa.selenium.Keys;
 
 import cigniti.automation.utilities.Selenide;
-import cigniti.base.BaseUtil;
+import cigniti.reports.BaseUtil;
 
 public class OpportunityToQuote_Page_Validator extends BasePageValidator<OpportunityToQuote_Page> {
 	public OpportunityToQuote_Page_Validator(OpportunityToQuote_Page Map1) {
