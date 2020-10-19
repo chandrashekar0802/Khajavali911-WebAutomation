@@ -31,10 +31,13 @@ C:\Walmart\POC\WebAutomaionV1\WebAutomation\src\test\java\ui\automation\stepdef\
 C:\Walmart\POC\WebAutomaionV1\WebAutomation\src\test\java\ui\automation\pages\Elsevier_Home_Page_Validator.java
 C:\Walmart\POC\WebAutomaionV1\WebAutomation\src\test\java\ui\automation\stepdef\LeadsToOpportunity_Steps.java
 C:\Walmart\POC\WebAutomaionV1\WebAutomation\src\test\java\cigniti\automation\utilities\PropertiesFileReader.java
+C:\Walmart\POC\WebAutomaionV1\WebAutomation\src\test\java\cigniti\automation\utilities\Reporters.java
 C:\Walmart\POC\WebAutomaionV1\WebAutomation\src\test\java\ui\automation\pages\CaseToKnowledge_Page.java
 C:\Walmart\POC\WebAutomaionV1\WebAutomation\src\test\java\ui\automation\pages\CaseToKnowledge_Page_Validator.java
+C:\Walmart\POC\WebAutomaionV1\WebAutomation\src\test\java\cigniti\automation\utilities\Property.java
 C:\Walmart\POC\WebAutomaionV1\WebAutomation\src\test\java\ui\automation\pages\LeadsToOpportunity_Pages.java
 C:\Walmart\POC\WebAutomaionV1\WebAutomation\src\test\java\ui\automation\pages\Opportunity_Page.java
+C:\Walmart\POC\WebAutomaionV1\WebAutomation\src\test\java\cigniti\automation\utilities\HtmlReporters.java
 C:\Walmart\POC\WebAutomaionV1\WebAutomation\src\test\java\ui\automation\pages\Accounts_Page_Validator.java
 C:\Walmart\POC\WebAutomaionV1\WebAutomation\src\test\java\ui\automation\pages\Opportunity_Page_Validator.java
 C:\Walmart\POC\WebAutomaionV1\WebAutomation\src\test\java\cigniti\automation\utilities\CommonUtil.java

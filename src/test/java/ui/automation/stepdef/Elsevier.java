@@ -10,6 +10,7 @@ import org.testng.asserts.SoftAssert;
 import com.aventstack.extentreports.GherkinKeyword;
 import com.aventstack.extentreports.Status;
 
+
 import ui.automation.pages.Elsevier_Home_Page;
 import ui.automation.pages.Elsevier_Home_Page_Validator;
 import cigniti.automation.utilities.CommonUtil;
@@ -43,8 +44,10 @@ public class Elsevier {
 			String email= input.get("email").toString();
 			String password=  input.get("password").toString();
 			elsevierValidator.enter_credentials(email,password);
+			cigniti.automation.utilities.Reporters.successReport("Enter the username into username text box", "Successfully entered the usernmae and pass word");
 			//elsevierValidator.enter_credentials("prabhakar.ontela99@gmail.com", "8125959364");
 			elsevierValidator.click_login();
+			cigniti.automation.utilities.Reporters.successReport("Enter the username into username text box", "Successfully clicked on login button");
 			BaseUtil.scenarioDef.createNode(new GherkinKeyword("And"), "Enter the User credentials").pass("Successfully Entered the User credentials");
 		}
 	 

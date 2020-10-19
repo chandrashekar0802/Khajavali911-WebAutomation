@@ -2,6 +2,9 @@ package cigniti.reports;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import com.aventstack.extentreports.ExtentReports;
@@ -26,6 +29,10 @@ public class ExtentReportUtil extends BaseUtil{
 	}
 	
 	public String ExtentReportScreenShot() throws IOException {		
+		//LocalDateTime myDateObj = LocalDateTime.now();
+		// DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("ddMMyyyyHHmmss");
+		// String formattedDate = myDateObj.format(myFormatObj);
+		// reportLocation + "screenshot_"+formattedDate+".png";
 		File scr= ((TakesScreenshot)Driver.browser).getScreenshotAs(OutputType.FILE);
 		Files.copy(scr,new File(reportLocation + "screenshot.png"));
 		return reportLocation + "screenshot.png";
