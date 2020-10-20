@@ -1,4 +1,4 @@
-@tag
+#@tag
 Feature: Create Case
 Scenario: Testing cases record creation
     Given Give user login to Salesforce with the correct credentials

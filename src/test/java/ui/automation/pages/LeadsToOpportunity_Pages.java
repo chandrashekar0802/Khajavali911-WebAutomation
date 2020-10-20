@@ -77,7 +77,7 @@ public class LeadsToOpportunity_Pages extends BasePageElementMap{
 		return Selenide.getElement(By.xpath("//table[@data-aura-class='uiVirtualDataTable']/tbody/tr[1]/th//a"),10); 		
 	}
 	public WebElement convertTab() throws Throwable {
-		return Selenide.getElement(By.xpath("//div[@title='Convert']"),10); 		
+		return Selenide.getElement(By.xpath("//button[@name='Convert']"),10); 		
 	}
 	public WebElement convertBtn() throws Throwable {
 		return Selenide.getElement(By.xpath("//span[text()='Convert']"),10); 		

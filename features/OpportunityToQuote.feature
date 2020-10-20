@@ -1,5 +1,5 @@
 
-@tag
+#@tag
 Feature: Create Opportunity
 Scenario: Testing Opportunity record creation
     Given Give user login to Salesforce with the correct credentials

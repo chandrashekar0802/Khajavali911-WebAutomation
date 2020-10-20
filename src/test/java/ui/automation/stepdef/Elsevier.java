@@ -49,7 +49,8 @@ public class Elsevier {
 			elsevierValidator.click_login();
 			cigniti.automation.utilities.Reporters.successReport("Enter the username into username text box", "Successfully clicked on login button");
 			BaseUtil.scenarioDef.createNode(new GherkinKeyword("And"), "Enter the User credentials").pass("Successfully Entered the User credentials");
-		}
+			
+	 }
 	 
 	
 
