@@ -1,5 +1,5 @@
 
-
+ #@tag
 Feature: Testing Leads Tab
  #@tag
  Scenario: Testing Lead record creation

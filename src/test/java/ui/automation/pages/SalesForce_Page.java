@@ -49,7 +49,7 @@ public class SalesForce_Page  extends BasePageElementMap{
 		return Selenide.getElement(By.xpath("//button[@title='Save']"),15);  	 
 	}
 	public WebElement editButton() throws Throwable {
-		return Selenide.getElement(By.xpath("//div[text()='Edit']"),15); 		
+		return Selenide.getElement(By.xpath("//button[text()='Edit']"),15); 		
 	}
 	public WebElement navigationBtn() throws Throwable {
 		return Selenide.getElement(By.xpath("(//div[@role='navigation']//div[1])[1]"),10); 		

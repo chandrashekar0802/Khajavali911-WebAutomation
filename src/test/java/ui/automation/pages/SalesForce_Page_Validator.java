@@ -57,7 +57,7 @@ public class SalesForce_Page_Validator extends BasePageValidator<SalesForce_Page
 			e.getMessage();
 			Thread.sleep(3000);
 			//this.getMap().convertTab().click();	
-			Selenide.jSClick(Driver.browser.findElement(By.xpath("//div[text()='Edit']")));
+			Selenide.jSClick(Driver.browser.findElement(By.xpath("//button[text()='Edit']")));
 		}
 	}
 	public void click_navigation_Button() throws Throwable{

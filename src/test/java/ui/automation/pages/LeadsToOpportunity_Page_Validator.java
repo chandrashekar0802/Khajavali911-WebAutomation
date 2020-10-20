@@ -95,7 +95,7 @@ public class LeadsToOpportunity_Page_Validator extends BasePageValidator<LeadsTo
 		} catch (Exception e) {
 			e.getMessage();
 			Selenide.smallwaitTime();
-			Selenide.click(By.xpath("//div[@title='Convert']"), "Convert Button");
+			Selenide.click(By.xpath("//button[@name='Convert']"), "Convert Button");
 			// Selenide.jSClick(Driver.browser.findElement(By.xpath("//div[@title='Convert']")));
 		}
 
