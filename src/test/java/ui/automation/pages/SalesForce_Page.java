@@ -45,6 +45,30 @@ public class SalesForce_Page  extends BasePageElementMap{
 	public WebElement newButton() throws Throwable {
 		return Selenide.getElement(By.xpath("//a[@title='New']/div"),15);  	 
 	}
+	public boolean newLeadWindow() throws Throwable {
+		return Selenide.isElementDisplayed(By.xpath("//h2[text()='New Lead']"),"New Lead Creation screen");  	 
+	}
+	public boolean newCaseWindow() throws Throwable {
+		return Selenide.isElementDisplayed(By.xpath("//h2[text()='New Case']"),"New Case Creation screen");  	 
+	}
+	
+	public boolean newOpportunityWindow() throws Throwable {
+		return Selenide.isElementDisplayed(By.xpath("//h2[text()='New Opportunity']"),"New Opportunity Creation screen");  	 
+	}
+	
+	public boolean RecordUpdatedMsg() throws Throwable {
+		return Selenide.isElementDisplayed(By.xpath("//div[@class='forceVisualMessageQueue']"),"New record updated Msg");  	 
+	}
+	public boolean newLeadCreatedsucessMsg() throws Throwable {
+		return Selenide.isElementDisplayed(By.xpath("//div[@class='forceVisualMessageQueue']"),"New Lead Creation Sucess Msg");  	 
+	}
+	public boolean newOpportunityCreatedsucessMsg() throws Throwable {
+		return Selenide.isElementDisplayed(By.xpath("//div[@class='forceVisualMessageQueue']"),"New Opportunity Creation Sucess Msg");  	 
+	}
+	
+	public boolean newcaseCreatedMsg() throws Throwable {
+		return Selenide.isElementDisplayed(By.xpath("//div[@class='forceVisualMessageQueue']"),"New Case Creation Sucess Msg");  	 
+	}
 	public WebElement saveButton() throws Throwable {
 		return Selenide.getElement(By.xpath("//button[@title='Save']"),15);  	 
 	}

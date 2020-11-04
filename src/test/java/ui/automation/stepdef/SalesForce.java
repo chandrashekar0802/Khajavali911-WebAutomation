@@ -18,6 +18,7 @@ import cigniti.automation.utilities.Selenide;
 import cigniti.reports.BaseUtil;
 import cigniti.reports.ExtentReportUtil;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import ui.automation.pages.Elsevier_Home_Page;
 import ui.automation.pages.Elsevier_Home_Page_Validator;
@@ -64,7 +65,7 @@ public class SalesForce extends Selenide{
 
 	}
 
-	@Given("Click on New button")
+	@When("Click on New button")
 	public void click_on_New_button() throws Throwable {
 		try{
 			salesForceValidator.click_New_Button();		
@@ -79,6 +80,75 @@ public class SalesForce extends Selenide{
 		}
 
 	}
+	
+	@Then("New opportunity creation window should be Open")
+	public void New_opportunity_Creation_window_should_open() throws Throwable {
+		try{
+			boolean flag = salesForceValidator.isDisplayed_newopportunityWindow();		
+			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").pass("clicked on New button successfully");		
+			if(flag)
+				{
+				Reporters.successReport("New opportunity Creation window open","New opportunity Creation window opened successfully");
+				
+				}
+			else
+			{
+				Reporters.failureReport("New opportunity Creation window open", "Failed to open New opportunity Creation window");
+			}
+		}
+		catch(Exception e)
+		{
+			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").fail("Failed to click on New button").addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			Reporters.failureReport("New opportunity Creation window open", "Failed to open New opportunity Creation window");
+		}
+
+	}
+	
+	@Then("New case creation window should open")
+	public void New_case_Creation_window_should_open() throws Throwable {
+		try{
+			boolean flag = salesForceValidator.isDisplayed_newCaseWindow();		
+			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").pass("clicked on New button successfully");		
+			if(flag)
+				{
+				Reporters.successReport("New case Creation window open","New case Creation window opened successfully");
+				
+				}
+			else
+			{
+				Reporters.failureReport("New case Creation window open", "Failed to open New case Creation window");
+			}
+		}
+		catch(Exception e)
+		{
+			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").fail("Failed to click on New button").addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			Reporters.failureReport("New case Creation window open", "Failed to open New case Creation window");
+		}
+
+	}
+	@Then("New Lead Creation window should open")
+	public void New_Lead_Creation_window_should_open() throws Throwable {
+		try{
+			boolean flag = salesForceValidator.isDisplayed_newLeadWindow();		
+			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").pass("clicked on New button successfully");		
+			if(flag)
+				{
+				Reporters.successReport("New Lead Creation window open","New Lead Creation window opened successfully");
+				
+				}
+			else
+			{
+				Reporters.failureReport("New Lead Creation window open", "Failed to open New Lead Creation window");
+			}
+		}
+		catch(Exception e)
+		{
+			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").fail("Failed to click on New button").addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			Reporters.failureReport("New Lead Creation window open", "Failed to open New Lead Creation window");
+		}
+
+	}
+	
 	@When("user clicks on Save button")
 
 	public void user_clicks_on_Save_button() throws Throwable{
@@ -96,7 +166,98 @@ public class SalesForce extends Selenide{
 		}
 
 	}
-	@Given("Click on Edit button")
+	
+	@Then("Record Should be Updated")
+	public void Record_Should_be_Updated() throws Throwable {
+		try{
+			boolean flag = salesForceValidator.isDisplayed_RecordUpdated();		
+			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").pass("clicked on New button successfully");		
+			if(flag)
+				{
+				Reporters.successReport("New Lead Creation","New Lead Created successfully");
+				
+				}
+			else
+			{
+				Reporters.failureReport("New Lead Creation", "Failed to create new lead");
+			}
+		}
+		catch(Exception e)
+		{
+			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").fail("Failed to click on New button").addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			Reporters.failureReport("New Lead Creation", "Failed to create new lead");
+		}
+
+	}
+	@Then("New Lead created successfully")
+	public void New_Lead_created_successfully() throws Throwable {
+		try{
+			boolean flag = salesForceValidator.isDisplayed_newLeadCreated();		
+			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").pass("clicked on New button successfully");		
+			if(flag)
+				{
+				Reporters.successReport("New Lead Creation","New Lead Created successfully");
+				
+				}
+			else
+			{
+				Reporters.failureReport("New Lead Creation", "Failed to create new lead");
+			}
+		}
+		catch(Exception e)
+		{
+			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").fail("Failed to click on New button").addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			Reporters.failureReport("New Lead Creation", "Failed to create new lead");
+		}
+
+	}
+	
+	@Then("New Opportunity created successfully")
+	public void New_Opportunity_created_successfully() throws Throwable {
+		try{
+			boolean flag = salesForceValidator.isDisplayed_newOpportunityCreated();		
+			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").pass("clicked on New button successfully");		
+			if(flag)
+				{
+				Reporters.successReport("New Opportunity Creation","New Opportunity Created successfully");
+				
+				}
+			else
+			{
+				Reporters.failureReport("New Opportunity Creation", "Failed to create new Opportunity");
+			}
+		}
+		catch(Exception e)
+		{
+			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").fail("Failed to click on New button").addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			Reporters.failureReport("New Opportunity Creation", "Failed to create new Opportunity");
+		}
+
+	}
+	
+	@Then("New case created successfully")
+	public void New_case_created_successfully() throws Throwable {
+		try{
+			boolean flag = salesForceValidator.isDisplayed_newcaseCreated();		
+			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").pass("clicked on New button successfully");		
+			if(flag)
+				{
+				Reporters.successReport("New case Creation","New case Created successfully");
+				
+				}
+			else
+			{
+				Reporters.failureReport("New case Creation", "Failed to create new case");
+			}
+		}
+		catch(Exception e)
+		{
+			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").fail("Failed to click on New button").addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			Reporters.failureReport("New case Creation", "Failed to create new case");
+		}
+
+	}
+	@When("Click on Edit button")
 	public void click_on_Edit_button() throws Throwable {		
 		try{
 			salesForceValidator.click_Edit_Button();		
@@ -113,7 +274,7 @@ public class SalesForce extends Selenide{
 
 	}
 
-	@Given("^Click on Accounts tab$")
+	@When("^Click on Accounts tab$")
 	public void click_on_Accounts_tab() throws Throwable {
 		try{
 
@@ -131,7 +292,7 @@ public class SalesForce extends Selenide{
 
 
 	}
-	@Given("Click on Contacts tab")
+	@When("Click on Contacts tab")
 	public void click_on_Contact_tab() throws Throwable {	
 		try{
 			salesForceValidator.click_contactTab();
@@ -148,7 +309,7 @@ public class SalesForce extends Selenide{
 		}
 
 	}
-	@Given("Click on Opportunities tab")
+	@When("Click on Opportunities tab")
 	public void click_on_Opportunities_tab() throws Throwable{
 		try{
 			salesForceValidator.click_opportunitiesTab();
@@ -166,7 +327,7 @@ public class SalesForce extends Selenide{
 		}
 
 	}
-	@Given("Click on Leads tab")
+	@When("Click on Leads tab")
 	public void click_on_Leads_tab() throws Throwable{
 		try{
 			salesForceValidator.click_LeadsTab();
@@ -183,7 +344,7 @@ public class SalesForce extends Selenide{
 		}
 
 	}
-	@Given("^Click on Quote Object$")
+	@When("^Click on Quote Object$")
 	public void clickOnQuoteObject() throws Throwable {
 		try{
 			waitTime();
@@ -199,15 +360,12 @@ public class SalesForce extends Selenide{
 		{
 			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on Quotes").fail("Failed to click on Quotes").addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
 			Reporters.failureReport("clicking on Quote Object", "Failed to click on Quotes");
-
-
-
 		}
 	}
 
-
+	
 	 
-	 @Given("Click on Case Object")
+	 @When("Click on Case Object")
 	 public void click_on_Case_Object() throws Throwable {
 		 try{
 			 smallwaitTime();
@@ -227,7 +385,7 @@ public class SalesForce extends Selenide{
 		 }
 	 }
 
-	 @Given("^Click on cancel Button$")
+	 @When("^Click on cancel Button$")
 	public void clickOnCancelButton() throws Throwable {
 		 salesForceValidator.click_cancle_Button();
 		 

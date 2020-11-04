@@ -19,6 +19,7 @@ import cigniti.reports.BaseUtil;
 import cigniti.reports.ExtentReportUtil;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import ui.automation.pages.Accounts_Page;
 import ui.automation.pages.Accounts_Page_Validator;
 import ui.automation.pages.LeadsToOpportunity_Page_Validator;
@@ -408,8 +409,54 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			Assert.fail("Failed to Click on Convert tab");
 		}
 	}
-
-	@Given("^Enter the value for Lead Status field$")
+	
+	@Then("Convert Lead Window should open")
+	public void Convert_Lead_Window_should_open() throws Throwable {
+		try {
+			
+			boolean flag = leadsToOpportunityPageValidator.isDisplayed_ConvertLead();
+			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on Convert tab")
+					.pass("Clicked on Convert tab successfully");*/
+			if(flag)
+			{
+			Reporters.successReport("Convert Lead Window should open","Convert Lead Window opened successfully");
+			}
+			else
+			{
+				Reporters.failureReport("Convert Lead Window should open", "Failed to open convert Lead Window");
+			}
+		} catch (Exception e) {
+			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on Convert tab")
+					.fail("Failed to Click on Convert tab")
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
+			Reporters.failureReport("Convert Lead Window should open", "Failed to open convert Lead Window");
+			Assert.fail("Failed to open convert Lead Window");
+		}
+	}
+	@Then("Lead should be converted")
+	public void Lead_should_be_converted() throws Throwable {
+		try {
+			
+			boolean flag = leadsToOpportunityPageValidator.isDisplayed_LeadConvertedMsg();
+			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on Convert tab")
+					.pass("Clicked on Convert tab successfully");*/
+			if(flag)
+			{
+			Reporters.successReport("Lead converted Message Should appear","Lead converted Message appeared successfully");
+			}
+			else
+			{
+				Reporters.failureReport("Lead converted Message Should appear", "Failed to get Lead converted Message");
+			}
+		} catch (Exception e) {
+			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on Convert tab")
+					.fail("Failed to Click on Convert tab")
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
+			Reporters.failureReport("Lead converted Message Should appear", "Failed to get Lead converted Message");
+			Assert.fail("Failed to get Lead converted Message");
+		}
+	}
+	@When("^Enter the value for Lead Status field$")
 	public void enterTheValueForLeadStatusField() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
@@ -427,7 +474,7 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Enter the value for Salutation field$")
+	@When("^Enter the value for Salutation field$")
 	public void enterTheValueForSalutationField() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
@@ -446,7 +493,7 @@ public class LeadsToOpportunity_Steps extends Selenide {
 
 	}
 
-	@Given("^Enter the value for Fax field$")
+	@When("^Enter the value for Fax field$")
 	public void enterTheValueForFaxField() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
@@ -463,7 +510,7 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Enter the value for Title field$")
+	@When("^Enter the value for Title field$")
 	public void enterTheValueForTitleField() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
@@ -481,7 +528,7 @@ public class LeadsToOpportunity_Steps extends Selenide {
 
 	}
 
-	@Given("^Enter the value for Website field$")
+	@When("^Enter the value for Website field$")
 	public void enterTheValueForWebsiteField() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
@@ -499,7 +546,7 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		}
 	}
 
-	@Given("Enter the value for email field")
+	@When("Enter the value for email field")
 	public void enter_the_value_for_Email_field() throws Throwable {
 		try {
 
@@ -519,7 +566,7 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Enter the value for Ownership field$")
+	@When("^Enter the value for Ownership field$")
 	public void enterTheValueForOwnershipField() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
@@ -537,7 +584,7 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Enter the value for Revenue Range field$")
+	@When("^Enter the value for Revenue Range field$")
 	public void enterTheValueForRevenueRangeField() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
@@ -555,7 +602,7 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Enter the value for Contact Locaton field$")
+	@When("^Enter the value for Contact Locaton field$")
 	public void enterTheValueForContactLocatonField() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
@@ -573,7 +620,7 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Enter the value for BDM field$")
+	@When("^Enter the value for BDM field$")
 	public void enterTheValueForBDMField() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
@@ -590,7 +637,7 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Enter the value for Business Unit field$")
+	@When("^Enter the value for Business Unit field$")
 	public void enterTheValueForBusinessUnitField() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
@@ -608,7 +655,7 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Change Lead Status field value to \"([^\"]*)\"$")
+	@When("^Change Lead Status field value to \"([^\"]*)\"$")
 	public void changeLeadStatusFieldValueTo(String leadStatus) throws Throwable {
 		try {
 			leadsToOpportunityPageValidator.select_LeadStatus_Dropdown(leadStatus);
@@ -624,7 +671,7 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Select radio button for Account create New$")
+	@When("^Select radio button for Account create New$")
 	public void selectRadioButtonForAccountCreateNew() throws Throwable {
 		try {
 			smallwaitTime();
@@ -641,7 +688,7 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Select radio button for Contact choose existing$")
+	@When("^Select radio button for Contact choose existing$")
 	public void selectRadioButtonForContactChooseExisting() throws Throwable {
 		try {
 			smallwaitTime();
@@ -658,7 +705,7 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Search for matching contact  and select one contact name form list$")
+	@When("^Search for matching contact  and select one contact name form list$")
 	public void searchForMatchingContactAndSelectOneContactNameFormList() throws Throwable {
 		try {
 			leadsToOpportunityPageValidator.click_contactSearchInChooseExistingRadioBtnInContact();
@@ -677,7 +724,7 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		}
 	}
 
-	@Given("Click on convert button")
+	@When("Click on convert button")
 	public void click_on_convert_button() throws Throwable {
 		try {
 			leadsToOpportunityPageValidator.click_Convert_Btn();
@@ -693,7 +740,7 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Click on hyperlink of Account name in account table on Your lead has been converted layout sceen$")
+	@When("^Click on hyperlink of Account name in account table on Your lead has been converted layout sceen$")
 	public void clickOnHyperlinkOfAccountNameInAccountTableOnYourLeadHasBeenConvertedLayoutSceen() throws Throwable {
 		try {
 			leadsToOpportunityPageValidator.click_acctNameHyperLinkAccountTableOnYourLeadHasBeenConvertedLayoutSceen();
@@ -709,7 +756,7 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Click on Account History hyperlink$")
+	@When("^Click on Account History hyperlink$")
 	public void clickOnAccountHistoryHyperlink() throws Throwable {
 		try {
 			smallwaitTime();
@@ -733,7 +780,7 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Check the lead convert record on the Account History screen$")
+	@When("^Check the lead convert record on the Account History screen$")
 	public void checkTheLeadConvertRecordOnTheAccountHistoryScreen() throws Throwable {
 		try {
 			boolean isPresent = leadsToOpportunityPageValidator
@@ -760,7 +807,7 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Select radio button for Account Choose existing$")
+	@When("^Select radio button for Account Choose existing$")
 	public void selectRadioButtonForAccountChooseExisting() throws Throwable {
 		try {
 			leadsToOpportunityPageValidator.click_chooseExistingRadioBtnInAccount_Btn();
@@ -776,7 +823,7 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Search for matching Account and select one Account name form list$")
+	@When("^Search for matching Account and select one Account name form list$")
 	public void searchForMatchingAccountAndSelectOneAccountNameFormList() throws Throwable {
 		try {
 			leadsToOpportunityPageValidator.click_accountSearchInChooseExistingRadioBtnInAccount();
@@ -795,7 +842,7 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Select radio button for Contact create New$")
+	@When("^Select radio button for Contact create New$")
 	public void selectRadioButtonForContactCreateNew() throws Throwable {
 		try {
 			leadsToOpportunityPageValidator.click_CreateNewRadioBtnInContact_Btn();
@@ -811,7 +858,7 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Select radio button for Opportunity choose existing$")
+	@When("^Select radio button for Opportunity choose existing$")
 	public void selectRadioButtonForOpportunityChooseExisting() throws Throwable {
 		try {
 			leadsToOpportunityPageValidator.click_chooseExistingRadioBtnInOpportunity_Btn();
@@ -827,7 +874,7 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Select one record from Opportunity grid$")
+	@When("^Select one record from Opportunity grid$")
 	public void selectOneRecordFromOpportunityGrid() throws Throwable {
 		try {
 			leadsToOpportunityPageValidator
@@ -844,7 +891,7 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Select radio button for Opportunity create New$")
+	@When("^Select radio button for Opportunity create New$")
 	public void selectRadioButtonForOpportunityCreateNew() throws Throwable {
 		try {
 			leadsToOpportunityPageValidator.click_CreateNewRadioBtnInOpportunity_Btn();
@@ -860,7 +907,7 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Search for matching contact for Selected Account and select one contact name from list$")
+	@When("^Search for matching contact for Selected Account and select one contact name from list$")
 	public void searchForMatchingContactForSelectedAccountAndSelectOneContactNameFromList() throws Throwable {
 
 		leadsToOpportunityPageValidator

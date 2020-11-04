@@ -37,7 +37,7 @@ public class OpportunityToQuote_Steps extends Selenide {
 			opportunityToQuotePage);
 
 	// old
-	@Given("Enter the value for Opportunity Name field")
+	@When("Enter the value for Opportunity Name field")
 	public void enter_the_value_for_Opportunity_Name_field() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("OpportunityToQuote", "createOpportunity");
@@ -55,7 +55,7 @@ Reporters.successReport("Entering opportunity name","Entered opportunity Name su
 		}
 	}
 
-	@Given("Enter the value for account Name field")
+	@When("Enter the value for account Name field")
 	public void enter_the_value_for_account_Name_field() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("OpportunityToQuote", "createOpportunity");
@@ -75,7 +75,7 @@ Reporters.successReport("Entering account name","Entered account Name successful
 		}
 	}
 
-	@Given("Enter the value for Close Date field {int}")
+	@When("Enter the value for Close Date field {int}")
 	public void enter_the_value_for_Close_Date_field(Integer days) throws Throwable {
 		try {
 			Date date = new Date();
@@ -100,7 +100,7 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 		}
 	}
 
-	@Given("Enter the value for Stage field")
+	@When("Enter the value for Stage field")
 	public void enter_the_value_for_Stage_field() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("OpportunityToQuote", "createOpportunity");
@@ -118,7 +118,7 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 		}
 	}
 
-	@Given("Enter the value for Type field")
+	@When("Enter the value for Type field")
 	public void enter_the_value_for_Type_field() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("OpportunityToQuote", "createOpportunity");
@@ -136,7 +136,7 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 		}
 	}
 
-	@Given("Enter the value for Probability field")
+	@When("Enter the value for Probability field")
 	public void enter_the_value_for_Probability_field() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("OpportunityToQuote", "createOpportunity");
@@ -155,7 +155,7 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 		}
 	}
 
-	@Given("Enter the value for Amount field")
+	@When("Enter the value for Amount field")
 	public void enter_the_value_for_Amount_field() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("OpportunityToQuote", "createOpportunity");
@@ -173,7 +173,7 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 		}
 	}
 
-	@Given("Enter the value for Risks, Competition and Comments field")
+	@When("Enter the value for Risks, Competition and Comments field")
 	public void enter_the_value_for_Risks_Competition_and_Comments_field() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("OpportunityToQuote", "createOpportunity");
@@ -192,7 +192,7 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 		}
 	}
 
-	@Given("Enter the {string}")
+	@When("Enter the {string}")
 	public void enter_the(String amount) throws Throwable {
 		try {
 			opportunityToQuotePageValidator.enter_Data_amount(amount);
@@ -208,7 +208,7 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 		}
 	}
 
-	@Given("Enter the value for Stage field {string}")
+	@When("Enter the value for Stage field {string}")
 	public void enter_the_value_for_Stage_field(String stage) throws Throwable {
 		try {
 			opportunityToQuotePageValidator.select_stage_Drop(stage);
@@ -224,7 +224,7 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 		}
 	}
 
-	@Given("Check on Products tab which is displayed under Related at right pane")
+	@When("Check on Products tab which is displayed under Related at right pane")
 	public void check_on_Products_tab_which_is_displayed_under_Related_at_right_pane() throws Throwable {
 		try {
 			waitTime();
@@ -244,7 +244,7 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 		}
 	}
 
-	@Given("^Click on Choose Price Book from drop down$")
+	@When("^Click on Choose Price Book from drop down$")
 	public void clickOnChoosePriceBookFromDropDown() throws Throwable {
 		try {
 			opportunityToQuotePageValidator.click_choosePriceBookInProductDrpdwn();
@@ -261,7 +261,7 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 		}
 	}
 
-	@Given("Click on Add Products from drop down")
+	@When("Click on Add Products from drop down")
 	public void click_on_Add_Products_from_drop_down() throws Throwable {
 		try {
 			Selenide.smallwaitTime();
@@ -281,7 +281,7 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 		}
 	}
 
-	@Given("Select valid Product Checkbox and Click on Next")
+	@When("Select valid Product Checkbox and Click on Next")
 	public void select_valid_Product_Checkbox_and_Click_on_Next() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("OpportunityToQuote", "createOpportunity");
@@ -301,7 +301,7 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 		}
 	}
 
-	@Given("Enter the value for Quantity field")
+	@When("Enter the value for Quantity field")
 	public void enter_the_value_for_Quantity_field() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("OpportunityToQuote", "createOpportunity");
@@ -320,7 +320,7 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 		}
 	}
 
-	@Given("Enter the value for Date field")
+	@When("Enter the value for Date field")
 	public void enter_the_value_for_Date_field() throws Throwable {
 		try {
 			Date date = new Date();
@@ -339,7 +339,7 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 		}
 	}
 
-	@Given("^Scroll on Related List Views to Quotes$")
+	@When("^Scroll on Related List Views to Quotes$")
 	public void scrollOnRelatedListViewsToQuotes() throws Throwable {
 		try {
 			waitTime();
@@ -360,7 +360,7 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 		}
 	}
 
-	@Given("^Select one valid Price Book Checkbox and Click on Save$")
+	@When("^Select one valid Price Book Checkbox and Click on Save$")
 	public void selectOneValidPriceBookCheckboxAndClickOnSave() throws Throwable {
 		try {
 			opportunityToQuotePageValidator.click_saveBtnInChoosePriceBook_Btn();
@@ -379,7 +379,7 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 		}
 	}
 
-	@Given("^Click on the twistie icon and select New Quote$")
+	@When("^Click on the twistie icon and select New Quote$")
 	public void clickOnTheTwistieIconAndSelectNewQuote() throws Throwable {
 		try {
 			waitTime();
@@ -398,7 +398,7 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 		}
 	}
 
-	@Given("^Enter the value for Quote Name field$")
+	@When("^Enter the value for Quote Name field$")
 	public void enterTheValueForQuoteNameField() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("OpportunityToQuote", "createOpportunity");
@@ -417,7 +417,7 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 		}
 	}
 
-	@Given("^Enter the value for Expiration Date field (\\d+)$")
+	@When("^Enter the value for Expiration Date field (\\d+)$")
 	public void enterTheValueForExpirationDateField(int days) throws Throwable {
 		try {
 			Date date = new Date();
@@ -443,7 +443,7 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 		}
 	}
 
-	@Given("^the value for Status field$")
+	@When("^the value for Status field$")
 	public void theValueForStatusField() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("OpportunityToQuote", "createOpportunity");
@@ -462,7 +462,7 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 		}
 	}
 
-	@Given("^Enter the value for Bill To Street field$")
+	@When("^Enter the value for Bill To Street field$")
 	public void enterTheValueForBillToStreetField() throws Throwable {
 		try {
 		} catch (Exception e) {
@@ -475,7 +475,7 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 		}
 	}
 
-	@Given("^Add Products if Products are not available under Quote Line Items$")
+	@When("^Add Products if Products are not available under Quote Line Items$")
 	public void addProductsIfProductsAreNotAvailableUnderQuoteLineItems() throws Throwable {
 		try {
 			int x = opportunityToQuotePageValidator.count_QuoteLineItems();
@@ -510,7 +510,7 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 		}
 	}
 
-	@Given("^Open one Quote from existing Quotes$")
+	@When("^Open one Quote from existing Quotes$")
 	public void openOneQuoteFromExistingQuotes() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("OpportunityToQuote", "createOpportunity");
@@ -531,8 +531,30 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 
 		}
 	}
+	
+	@Then("Quote Should be Created")
+	public void Quote_Should_be_Created() throws Throwable {
+		try{
+			boolean flag = opportunityToQuotePageValidator.isDisplayed_QuoteCreated();		
+			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").pass("clicked on New button successfully");		
+			if(flag)
+				{
+				Reporters.successReport("Quote Should be Created","Quote Created successfully");
+				
+				}
+			else
+			{
+				Reporters.failureReport("Quote Should be Created", "Quote Created successfully");
+			}
+		}
+		catch(Exception e)
+		{
+			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").fail("Failed to click on New button").addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			Reporters.failureReport("Quote Should be Created", "Failed to Create Quote");
+		}
 
-	@Given("^Click on Create PDF button at top right corner$")
+	}
+	@When("^Click on Create PDF button at top right corner$")
 	public void clickOnCreatePDFButtonAtTopRightCorner() throws Throwable {
 		try {
 			waitTime();

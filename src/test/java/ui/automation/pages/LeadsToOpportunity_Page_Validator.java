@@ -32,7 +32,13 @@ public class LeadsToOpportunity_Page_Validator extends BasePageValidator<LeadsTo
 	public void select_LeasSource_Drop(String status) throws Throwable {
 		this.getMap().selectleadSourceDrpDwnBtn(status);
 	}
-
+	public boolean isDisplayed_ConvertLead() throws Throwable {
+		return this.getMap().ConvertLeadWindow();
+	}
+	public boolean isDisplayed_LeadConvertedMsg() throws Throwable {
+		return this.getMap().LeadConvertedMsg();
+	}
+	
 	public void select_ISTRepresentative_Drop(String str) throws Throwable {
 		this.getMap().selectISTrepresentativeDrpDwnBtn(str);
 	}

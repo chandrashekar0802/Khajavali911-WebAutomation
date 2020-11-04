@@ -1,11 +1,12 @@
 
-#@tag
+@tag
 Feature: Create Opportunity
 Scenario: Testing Opportunity record creation
     Given Give user login to Salesforce with the correct credentials
-		And Click on Opportunities tab
+		When Click on Opportunities tab
     And Click on New button
-    And Enter the value for Opportunity Name field
+    Then New opportunity creation window should be Open
+    When Enter the value for Opportunity Name field
     And Enter the value for account Name field
     And Enter the value for Close Date field 30
     And Enter the value for Stage field "Sales Qualification"
@@ -13,8 +14,9 @@ Scenario: Testing Opportunity record creation
     And Enter the value for Probability field
     And Enter the value for Amount field
     And Enter the value for Risks, Competition and Comments field
-    And user clicks on Save button
-    And Click on Edit button
+    When user clicks on Save button
+    Then New Opportunity created successfully
+    When Click on Edit button
     And Enter the value for Stage field "Contract Finalization"
     And user clicks on Save button
     And Check on Products tab which is displayed under Related at right pane
@@ -24,14 +26,16 @@ Scenario: Testing Opportunity record creation
     And Select valid Product Checkbox and Click on Next
     And Enter the value for Quantity field
     And Enter the value for Date field
-    And user clicks on Save button
-    And Scroll on Related List Views to Quotes
+    When user clicks on Save button
+    Then Record Should be Updated
+    When Scroll on Related List Views to Quotes
     And Click on the twistie icon and select New Quote
     And Enter the value for Quote Name field
     And Enter the value for Expiration Date field 30
     And  the value for Status field
-    And user clicks on Save button
-    And Click on Quote Object
+    When user clicks on Save button
+    Then Quote Should be Created
+    When Click on Quote Object
     And Open one Quote from existing Quotes
     And Add Products if Products are not available under Quote Line Items
     And Click on Create PDF button at top right corner

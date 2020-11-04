@@ -23,6 +23,14 @@ public class LeadsToOpportunity_Pages extends BasePageElementMap{
 	public WebElement companyField() throws Throwable {
 		return Selenide.getElement(By.xpath("//span[text()='Company']/../following-sibling::input[1]"),15);  	 
 	}
+	
+	public boolean ConvertLeadWindow() throws Throwable {
+		return Selenide.isElementDisplayed(By.xpath("//h2[contains(text(),'Convert Lead')]"),"Convert Lead window");  	 
+	}
+	public boolean LeadConvertedMsg() throws Throwable {
+		return Selenide.isElementDisplayed(By.xpath("//span[text()='Your lead has been converted']"),"Lead Converted message");  	 
+	}
+	
 	public @FindBy(xpath="//span[text()='Lead Source']/../following-sibling::div[1]//a") WebElement leadSourceDrpDwnBtn;	
 	public boolean selectleadSourceDrpDwnBtn(String str) throws Throwable {
 		return Selenide.SelectItemFromNonSelectListDropDown1(str, leadSourceDrpDwnBtn);  	 

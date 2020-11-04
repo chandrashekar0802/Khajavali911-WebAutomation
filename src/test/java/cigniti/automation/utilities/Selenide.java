@@ -458,7 +458,7 @@ public class Selenide extends BaseUtil{
 		try
 		{
 			locator.click();
-			Thread.sleep(1000);
+			Thread.sleep(1500);
 			if(Driver.browser.findElement(By.xpath("(//a[text()='"+desiredValue+"'])[1]")).isDisplayed())
 			{
 				Driver.browser.findElement(By.xpath("(//a[text()='"+desiredValue+"'])[1]")).click();
