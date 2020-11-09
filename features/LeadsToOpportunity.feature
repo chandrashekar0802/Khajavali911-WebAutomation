@@ -1,7 +1,7 @@
 
 @tag
 Feature: Create Lead and Convert
- Scenario: Testing Lead record creation and Converting to Account, Contact and Opportunity
+ Scenario: Create and convert Lead to an Opportunity
     Given Give user login to Salesforce with the correct credentials
     And Click on Leads tab
     And Click on New button
@@ -129,6 +129,5 @@ Feature: Create Lead and Convert
     And Click on hyperlink of Account name in account table on Your lead has been converted layout sceen
     When Click on Account History hyperlink
     Then Check the Lead convert record on the Account History screen
-    
     
     

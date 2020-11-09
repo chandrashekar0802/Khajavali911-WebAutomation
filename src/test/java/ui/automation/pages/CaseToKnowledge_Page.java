@@ -15,6 +15,9 @@ public class CaseToKnowledge_Page extends BasePageElementMap {
 	public WebElement newBtn() throws Throwable {
 		return Selenide.getElement(By.xpath("//div[@class='forceObjectHomeDesktop']//div[contains(text(),'New')]"), 15);
 	}
+	public WebElement newBtnwithwrongPath() throws Throwable {
+		return Selenide.getElement(By.xpath("//div[@class='forceObjectHomeDesktop']//div[contains(text(),'HOLD')]"), 15);
+	}
 
 	public WebElement assignChk() throws Throwable {
 		return Selenide.getElement(

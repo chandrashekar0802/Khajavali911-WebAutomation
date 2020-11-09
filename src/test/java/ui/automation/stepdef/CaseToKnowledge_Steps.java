@@ -53,6 +53,22 @@ public class CaseToKnowledge_Steps extends Selenide {
 			Assert.fail("Failed to click on New button");
 		}
 	}
+	
+	@Given("^Click on Cases New button to create case$")
+	public void clickOnCasesNew1Button() throws Throwable {
+		try {
+			caseToKnowledgePageValidator.click_New_Button_Wrong();
+			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button")
+					.pass("clicked on New button successfully");*/
+			Reporters.successReport("clicking on New button","clicked on New button successfully");
+		} catch (Exception e) {
+			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button")
+					.fail("Failed to click on New button " + e.getMessage())
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
+			Reporters.failureReport("clicking on New button", "Failed to click on New button");
+			Assert.fail("Failed to click on New button");
+		}
+	}
 
 	@Given("Enter the value for Cases owner field")
 	public void enter_the_value_for_Cases_owner_field() {

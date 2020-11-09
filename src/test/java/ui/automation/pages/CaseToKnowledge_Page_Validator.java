@@ -16,7 +16,9 @@ public class CaseToKnowledge_Page_Validator extends BasePageValidator<CaseToKnow
 	public void click_New_Button() throws Throwable {
 		this.getMap().newBtn().click();
 	}
-
+	public void click_New_Button_Wrong() throws Throwable {
+		this.getMap().newBtnwithwrongPath().click();
+	}
 	public void click_Assign_Chk() throws Throwable {
 		this.getMap().assignChk().click();
 	}

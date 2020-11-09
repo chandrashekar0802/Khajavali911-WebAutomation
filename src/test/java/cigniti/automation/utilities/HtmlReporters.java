@@ -51,6 +51,7 @@ public class HtmlReporters {
 	public static long iSuiteEndTime = 0;
 	public static double iSuiteExecutionTime = 0;
 	public static ArrayList<Double> list = new ArrayList<Double>();
+	public static ArrayList<Long> tcextimelist = new ArrayList<Long>();
 	public static long startStepTime = 0;
 	public static long endStepTime = 0;
 	public static double stepExecutionTime = 0;
@@ -1150,23 +1151,26 @@ public class HtmlReporters {
 			writer.write("</thead> ");
 			Iterator<Entry<String, String>> iterator1 = map.entrySet()
 					.iterator();
+			
 			int serialNo = 1;
+			int count=HtmlReporters.list.size();
 			while (iterator1.hasNext()) {
 				@SuppressWarnings("rawtypes")
 				Map.Entry mapEntry1 = (Map.Entry) iterator1.next();
 				key = mapEntry1.getKey().toString().split(":");
 				String b1 = (String)key[1];
 				System.out.println(b1);
-				String sBrowser = b1.toString().split(",")[1];
-				String timeStamp = b1.toString().split(",")[2];
+				String sBrowser = b1.toString().split(",")[1];// modified from 1 to 2
+				String timeStamp = b1.toString().split(",")[2];// modified from 2 to 3
 				String value = (String) mapEntry1.getValue();
-
+				String methodname=b1.toString().split(",")[0].replace(" ", "_");
+				
 				writer.write("<tbody style='font-size:18px'> ");
 				writer.write("<tr class='content2' > ");
 				writer.write("<td class='justified' align='center'>" + serialNo + "</td>");
 				if (value.equalsIgnoreCase("pass")) {
 					writer.write("<td class='justified'><a href='Results_"
-							+ timeStamp
+							+ HtmlReporters.tcextimelist.get(serialNo-1)
 							+ ".html#"
 							+ b1.toString().split(",")[0]
 									+ "'>"
@@ -1175,7 +1179,7 @@ public class HtmlReporters {
 											+ "</td>");
 				} else if (value.equalsIgnoreCase("fail")) {
 					writer.write("<td class='justified'><a href='Results_"
-							+ timeStamp
+							+ HtmlReporters.tcextimelist.get(serialNo-1)
 							+ ".html#"
 							+ b1.toString().split(",")[0]
 									+ "'>"
@@ -1186,9 +1190,12 @@ public class HtmlReporters {
 				else{
 					writer.write("<td class='justified'>"+b1.toString().split(",")[0]+"</td>");
 				}
+			//System.out.print(HtmlReporters.list.get(serialNo-1));
+				double execution=(HtmlReporters.list.get(serialNo-1));
 				String tcName = b1.toString().split(",")[0];
 				writer.write("<td class='justified'>" + sBrowser+ "</td>");
-				writer.write("<td>" + executionTime.get(b1)+ " Seconds</td>");
+				writer.write("<td>" + execution + " Seconds</td>");
+				//writer.write("<td>" + executionTime.get(b1)+ " Seconds</td>");
 				if(value.equals("PASS"))
 				{
 					writer.write("<td class='pass'>"+value+"</td> ");
@@ -1263,16 +1270,17 @@ public class HtmlReporters {
 		try {
 			workingDir = System.getProperty("user.dir")
 					.replace(File.separator, "/");
-			strTestName = testName;
-			File file = new File(BaseUtil.filePath() + "Results_" + BaseUtil.timeStampBeforeSutie
-					+ ".html");// "Results.html"
+			strTestName = testName.split(":")[1].trim().replace(" ", "_");
+			//File file = new File(BaseUtil.filePath() + "Results_" + BaseUtil.timeStampBeforeSutie+ ".html");// "Results.html"
+			//File file = new File(BaseUtil.filePath() + strTestName + BaseUtil.timeStampBeforeSutie+ ".html");
+			File file = new File(BaseUtil.filePath() + "Results_" + HtmlReporters.iStartTime+ ".html");
 			writer = new FileWriter(file, true);
 
 			writer.write("<!DOCTYPE html> ");
 			writer.write("<html>");
 			writer.write("<head> ");
 			writer.write("<meta charset='UTF-8'> ");
-			writer.write("<title>" + strTestName
+			writer.write("<title>" + testName
 					+ " Execution Results</title> ");
 
 			writer.write("<style type='text/css'> ");
@@ -1467,7 +1475,7 @@ public class HtmlReporters {
 
 			writer.write("<tr class='heading'> ");
 			writer.write("<th colspan='4' style='font-family:Copperplate Gothic Bold; font-size:1.4em;'> ");
-			writer.write("**" + strTestName + "     Execution Results **");
+			writer.write("**" + strTestName + "**");
 			writer.write("</th> ");
 			writer.write("</tr> ");
 			writer.write("<tr class='subheading'> ");
@@ -1520,8 +1528,9 @@ public class HtmlReporters {
 	 * @throws IOException 
 	 */
 	public static void onSuccess1(String strStepName, String strStepDes) throws IOException {
-
-		File file = new File(BaseUtil.filePath() + "/" + "Results_"	+ BaseUtil.timeStampBeforeSutie + ".html");// "SummaryReport.html"
+		File file = new File(BaseUtil.filePath() + "/" + "Results_"	+ HtmlReporters.iStartTime + ".html");
+		//File file = new File(BaseUtil.filePath() + "/" + "Results_"	+ HtmlReporters.startTime(); + ".html");// "SummaryReport.html"
+		//File file = new File(BaseUtil.filePath() + "/" + "Results_"	+ BaseUtil.timeStampBeforeSutie + ".html");// "SummaryReport.html"
 		Writer writer = null;
 		BaseUtil.iStepNo = BaseUtil.iStepNo + 1;
 
@@ -1562,7 +1571,7 @@ public class HtmlReporters {
 	public static void onFailure1(String strStepName, String strStepDes) {
 		Writer writer = null;
 		try {
-			File file = new File(BaseUtil.filePath() + "/" + "Results_"	+ BaseUtil.timeStampBeforeSutie + ".html");// "SummaryReport.html"
+			File file = new File(BaseUtil.filePath() + "/" + "Results_"	+ HtmlReporters.iStartTime + ".html");// "SummaryReport.html"
 			writer = new FileWriter(file, true);
 			BaseUtil.iStepNo = BaseUtil.iStepNo + 1;
 
@@ -1591,7 +1600,7 @@ public class HtmlReporters {
 	}
 
 	/**
-	 * used to close the instance of the detailed report
+	 * used to close the instance of the z report
 	 * @throws IOException 
 	 */
 	public static void closeDetailedReport1() throws IOException {

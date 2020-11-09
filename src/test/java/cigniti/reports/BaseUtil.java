@@ -7,9 +7,14 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
+import cigniti.automation.utilities.Driver;
 import cigniti.automation.utilities.HtmlReporters;
 
 import cigniti.automation.utilities.PropertiesFileReader;
@@ -46,16 +51,24 @@ public class BaseUtil {
 	{
 		
 		String strDirectoy="ResultFile";
-		new File(System.getProperty("user.dir")+"\\test_output\\"+strDirectoy+"_"+timeStamp).mkdirs();
-		return System.getProperty("user.dir")+"\\test_output\\"+strDirectoy+"_"+timeStamp+"\\";
+		new File(System.getProperty("user.dir")+"\\test-reports\\"+strDirectoy+"_"+timeStamp).mkdirs();
+		return System.getProperty("user.dir")+"\\test-reports\\"+strDirectoy+"_"+timeStamp+"\\";
 	}
 	//return time and date
 	public static String timeStamp(){
 			java.util.Date today = new java.util.Date();
 			return new java.sql.Timestamp(today.getTime()).toString();
 	}
-	public static void screenShot(String string) {
+	public static void screenShot(String fileName) {
 		// TODO Auto-generated method stub
+		File scrFile = ((TakesScreenshot) Driver.browser).getScreenshotAs(OutputType.FILE);
+		try {
+			// Now you can do whatever you need to do with it, for example copy
+			// somewhere
+			FileUtils.copyFile(scrFile, new File(fileName));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
 	}
 	public static void calculateStepExecutionTime() {
@@ -85,6 +98,8 @@ public class BaseUtil {
 	public static void calculateTestCaseStartTime() {
 		// TODO Auto-generated method stub
 		HtmlReporters.iStartTime = System.currentTimeMillis();
+		HtmlReporters.tcextimelist.add(HtmlReporters.iStartTime);
+		
 	}
 	public static void calculateTestCaseExecutionTime() {
 		// TODO Auto-generated method stub
