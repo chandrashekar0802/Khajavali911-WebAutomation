@@ -34,6 +34,31 @@ public class SalesForce_Page_Validator extends BasePageValidator<SalesForce_Page
 	public void click_New_Button() throws Throwable{
 		this.getMap().newButton().click();
 	}
+	public boolean isDisplayed_newLeadWindow() throws Throwable {
+		return this.getMap().newLeadWindow();
+	}
+	
+	public boolean isDisplayed_newCaseWindow() throws Throwable {
+		return this.getMap().newCaseWindow();
+	}
+	public boolean isDisplayed_newopportunityWindow() throws Throwable {
+		return this.getMap().newOpportunityWindow();
+	}
+	
+	public boolean isDisplayed_newLeadCreated() throws Throwable {
+		return this.getMap().newLeadCreatedsucessMsg();
+	}
+	public boolean isDisplayed_RecordUpdated() throws Throwable {
+		return this.getMap().RecordUpdatedMsg();
+	}
+	
+	public boolean isDisplayed_newOpportunityCreated() throws Throwable {
+		return this.getMap().newOpportunityCreatedsucessMsg();
+	}
+	public boolean isDisplayed_newcaseCreated() throws Throwable {
+		return this.getMap().newcaseCreatedMsg();
+	}
+	
 	public void click_Save_Button() throws Throwable{
 		this.getMap().saveButton().click();		
 	}

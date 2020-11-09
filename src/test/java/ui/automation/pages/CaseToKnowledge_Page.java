@@ -23,7 +23,9 @@ public class CaseToKnowledge_Page extends BasePageElementMap {
 		return Selenide.getElement(
 				By.xpath("//label[@class='slds-checkbox__label uiLabel']//span[@class='slds-checkbox--faux']"), 15);
 	}
-
+	public boolean newTaskWindow() throws Throwable {
+		return Selenide.isElementDisplayed(By.xpath("//h2[contains(text(),'New Task')]"),"New Task screen");  	 
+	}
 	public WebElement relatedTab() throws Throwable {
 		return Selenide.getElement(By.xpath("//a[text()='Related']/.."), 15);
 	}
@@ -207,5 +209,12 @@ public class CaseToKnowledge_Page extends BasePageElementMap {
 
 	public WebElement saveCase() throws Throwable {
 		return Selenide.getElement(By.xpath("//td[@id='topButtonRow']//input[@name='save']"), 10);
+	}
+	public boolean newTaskCreatedMsg() throws Throwable {
+		return Selenide.isElementDisplayed(By.xpath("//div[@class='forceVisualMessageQueue']"),"New task Creation Sucess Msg");  	 
+	}
+	
+	public boolean CasesPage() throws Throwable {
+		return Selenide.isElementDisplayed(By.xpath("//h1[text()='Cases']"),"Cases Page");  	 
 	}
 }

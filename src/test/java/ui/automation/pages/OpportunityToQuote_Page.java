@@ -134,7 +134,9 @@ public class OpportunityToQuote_Page extends BasePageElementMap {
 	public WebElement FirstQuoteName(String str) throws Throwable {
 		return Selenide.getElement(By.xpath("(//a[@title='" + str + "'])[2]"), 15);
 	}
-
+	public boolean QuoteCreatedMsg() throws Throwable {
+		return Selenide.isElementDisplayed(By.xpath("//div[contains(text(),'Quote for Johnson Investments')]"),"Quote Creation Sucess Msg");  	 
+	}
 	public WebElement createPDFbutton() throws Throwable {
 		return Selenide.getElement(By.xpath("//div[text()='Create PDF']"), 15);
 	}

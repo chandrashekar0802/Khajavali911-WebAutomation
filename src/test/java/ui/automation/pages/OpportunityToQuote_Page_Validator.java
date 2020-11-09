@@ -131,6 +131,10 @@ public class OpportunityToQuote_Page_Validator extends BasePageValidator<Opportu
 		this.getMap().FirstQuoteName(quoteName).click();
 	}
 
+	
+	public boolean isDisplayed_QuoteCreated() throws Throwable {
+		return this.getMap().QuoteCreatedMsg();
+	}
 	public void click_createPDFbutton() throws Throwable {
 		this.getMap().createPDFbutton().click();
 	}

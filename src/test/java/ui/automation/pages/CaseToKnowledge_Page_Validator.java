@@ -83,7 +83,14 @@ public class CaseToKnowledge_Page_Validator extends BasePageValidator<CaseToKnow
 	public void select_priority1_Drop(String priority1) throws Throwable {
 		this.getMap().selectPriority1DrpDwnBtn(priority1);
 	}
-
+	
+	public boolean isDisplayed_newTaskCreated() throws Throwable {
+		return this.getMap().newTaskCreatedMsg();
+	}
+	public boolean isDisplayed_CasesPage() throws Throwable {
+		return this.getMap().CasesPage();
+	}
+	
 	public void select_type_Drop(String type) throws Throwable {
 		this.getMap().selecttypeDrpDwnBtn(type);
 	}
@@ -172,7 +179,10 @@ public class CaseToKnowledge_Page_Validator extends BasePageValidator<CaseToKnow
 	public void click_FindSolutionBtn() throws Throwable {
 		this.getMap().findSolutionBtn().click();
 	}
-
+	
+	public boolean isDisplayed_newTaskWindow() throws Throwable {
+		return this.getMap().newTaskWindow();
+	}
 	public void click_HyperLinkInSolutionGrid() throws Throwable {
 		this.getMap().hyperLinkInSolutionGrid().click();
 	}

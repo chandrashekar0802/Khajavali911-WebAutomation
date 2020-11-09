@@ -38,7 +38,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 	CaseToKnowledge_Page_Validator caseToKnowledgePageValidator = new CaseToKnowledge_Page_Validator(
 			caseToKnowledgePage);
 
-	@Given("^Click on Cases New button$")
+	@When("^Click on Cases New button$")
 	public void clickOnCasesNewButton() throws Throwable {
 		try {
 			caseToKnowledgePageValidator.click_New_Button();
@@ -70,13 +70,13 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("Enter the value for Cases owner field")
+	@When("Enter the value for Cases owner field")
 	public void enter_the_value_for_Cases_owner_field() {
 		// Write code here that turns the phrase above into concrete actions
 		throw new cucumber.api.PendingException();
 	}
 
-	@Given("Enter the value for contact name field")
+	@When("Enter the value for contact name field")
 	public void enter_the_value_for_contact_name_field() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("CasesToKnowledge", "caseToKnowledge");
@@ -94,7 +94,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Enter the value for account name field$")
+	@When("^Enter the value for account name field$")
 	public void enterTheValueForAccountNameField() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("CasesToKnowledge", "caseToKnowledge");
@@ -112,7 +112,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("Enter the value for status field")
+	@When("Enter the value for status field")
 	public void enter_the_value_for_status_field() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("CasesToKnowledge", "caseToKnowledge");
@@ -130,7 +130,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("Enter the value for Case Origin field")
+	@When("Enter the value for Case Origin field")
 	public void enter_the_value_for_Case_Origin_field() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("CasesToKnowledge", "caseToKnowledge");
@@ -148,7 +148,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("Enter the value for Priority  field")
+	@When("Enter the value for Priority  field")
 	public void enter_the_value_for_Priority_field() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("CasesToKnowledge", "caseToKnowledge");
@@ -166,7 +166,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Enter the value for type field$")
+	@When("^Enter the value for type field$")
 	public void enterTheValueForTypeField() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("CasesToKnowledge", "caseToKnowledge");
@@ -183,7 +183,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("Enter the value for Case Reason field")
+	@When("Enter the value for Case Reason field")
 	public void enter_the_value_for_Case_Reason_field() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("CasesToKnowledge", "caseToKnowledge");
@@ -201,7 +201,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("Enter the value for Subject field")
+	@When("Enter the value for Subject field")
 	public void enter_the_value_for_Subject_field() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("CasesToKnowledge", "caseToKnowledge");
@@ -219,7 +219,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("Enter the value for Description field")
+	@When("Enter the value for Description field")
 	public void enter_the_value_for_Description_field() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("CasesToKnowledge", "caseToKnowledge");
@@ -237,7 +237,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("Enter the value for Internal Comments field")
+	@When("Enter the value for Internal Comments field")
 	public void enter_the_value_for_Internal_Comments_field() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("CasesToKnowledge", "caseToKnowledge");
@@ -255,7 +255,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("Enter the value for Web Email field")
+	@When("Enter the value for Web Email field")
 	public void enter_the_value_for_Web_Email_field() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("CasesToKnowledge", "caseToKnowledge");
@@ -273,7 +273,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("Enter the value for Web Name field")
+	@When("Enter the value for Web Name field")
 	public void enter_the_value_for_Web_Name_field() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("CasesToKnowledge", "caseToKnowledge");
@@ -291,7 +291,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("Enter the value for Web Company field")
+	@When("Enter the value for Web Company field")
 	public void enter_the_value_for_Web_Company_field() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("CasesToKnowledge", "caseToKnowledge");
@@ -309,7 +309,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("Enter the value for Web Phone field")
+	@When("Enter the value for Web Phone field")
 	public void enter_the_value_for_Web_Phone_field() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("CasesToKnowledge", "caseToKnowledge");
@@ -327,7 +327,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Check Assign Using Active Assignment rule Check box$")
+	@When("^Check Assign Using Active Assignment rule Check box$")
 	public void checkAssignUsingActiveAssignmentRuleCheckBox() throws Throwable {
 		try {
 			caseToKnowledgePageValidator.click_Assign_Chk();
@@ -343,7 +343,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Click on Related Tab$")
+	@When("^Click on Related Tab$")
 	public void clickOnRelatedTab() throws Throwable {
 		try {
 			caseToKnowledgePageValidator.click_RelatedTab();
@@ -359,7 +359,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Click on New Task$")
+	@When("^Click on New Task$")
 	public void clickOnNewTask() throws Throwable {
 		try {
 			// Driver.browser.navigate().refresh();
@@ -375,8 +375,30 @@ public class CaseToKnowledge_Steps extends Selenide {
 			Assert.fail("Failed to click on New Task button ");
 		}
 	}
+	
+	@Then("New task window should open")
+	public void New_task_window_should_open() throws Throwable {
+		try{
+			boolean flag = caseToKnowledgePageValidator.isDisplayed_newTaskWindow();		
+			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").pass("clicked on New button successfully");		
+			if(flag)
+				{
+				Reporters.successReport("New task window open","New Task window opened successfully");
+				
+				}
+			else
+			{
+				Reporters.failureReport("New task window open", "Failed to open New task window");
+			}
+		}
+		catch(Exception e)
+		{
+			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").fail("Failed to click on New button").addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			Reporters.failureReport("New task window open", "Failed to open New task window");
+		}
 
-	@Given("^Enter Value for Name Field$")
+	}
+	@When("^Enter Value for Name Field$")
 	public void enterValueForNameField() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("CasesToKnowledge", "caseToKnowledge");
@@ -393,7 +415,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Enter the value for Subject  field$")
+	@When("^Enter the value for Subject  field$")
 	public void enterTheValueForSubjectField() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("CasesToKnowledge", "caseToKnowledge");
@@ -412,7 +434,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Enter the data for Comments field$")
+	@When("^Enter the data for Comments field$")
 	public void enterTheDataForCommentsField() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("CasesToKnowledge", "caseToKnowledge");
@@ -430,7 +452,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Enter the data for status field$")
+	@When("^Enter the data for status field$")
 	public void enterTheDataForStatusField() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("CasesToKnowledge", "caseToKnowledge");
@@ -448,7 +470,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Enter the value for Priority field$")
+	@When("^Enter the value for Priority field$")
 	public void enterTheValueForPriorityField() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("CasesToKnowledge", "caseToKnowledge");
@@ -466,7 +488,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Enter the date for due date field$")
+	@When("^Enter the date for due date field$")
 	public void enterTheDateForDueDateField() throws Throwable {
 		try {
 			Date date = new Date();
@@ -485,7 +507,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Mouse over on user name and click on switch to sales force classic$")
+	@When("^Mouse over on user name and click on switch to sales force classic$")
 	public void mouseOverOnUserNameAndClickOnSwitchToSalesForceClassic() throws Throwable {
 		try {
 			smallwaitTime();
@@ -505,7 +527,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Click on Case Link$")
+	@When("^Click on Case Link$")
 	public void clickOnCaseLink() throws Throwable {
 		try {
 			caseToKnowledgePageValidator.click_AllTabsArrow();
@@ -523,7 +545,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Click on hyperlink of one case number on the cases Home screen$")
+	@When("^Click on hyperlink of one case number on the cases Home screen$")
 	public void clickOnHyperlinkOfOneCaseNumberOnTheCasesHomeScreen() throws Throwable {
 		try {
 			caseToKnowledgePageValidator.click_CaseNumber();
@@ -557,14 +579,14 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("^check the solution grid$")
+	@When("^check the solution grid$")
 	public void checkTheSolutionGrid() throws Throwable {
 		try {
 			boolean grid = caseToKnowledgePageValidator.solution_Grid();
 			if (grid) {
 				/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Verify Solution Grid")
 						.pass("Solution Grid displayed successfully");*/
-				Reporters.successReport("","");
+				Reporters.successReport("Verify Solution Grid","Solution Grid displayed successfully");
 			} else {
 				/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Verify Solution Grid")
 						.fail("Failed to display Solution Grid")
@@ -580,7 +602,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Click on Find solution button$")
+	@When("^Click on Find solution button$")
 	public void clickOnFindSolutionButton() throws Throwable {
 		try {
 			caseToKnowledgePageValidator.click_FindSolutionBtn();
@@ -597,7 +619,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Click on select hyperlink from one solution's record$")
+	@When("^Click on select hyperlink from one solution's record$")
 	public void clickOnSelectHyperlinkFromOneSolutionSRecord() throws Throwable {
 		try {
 			caseToKnowledgePageValidator.click_HyperLinkInSolutionGrid();
@@ -615,7 +637,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("^Click on close case button under system information grid$")
+	@When("^Click on close case button under system information grid$")
 	public void clickOnCloseCaseButtonUnderSystemInformationGrid() throws Throwable {
 		try {
 			caseToKnowledgePageValidator.click_closeCaseUnderSysInfoGrid();
@@ -631,7 +653,7 @@ public class CaseToKnowledge_Steps extends Selenide {
 		}
 	}
 
-	@Given("^select  value from the status field$")
+	@When("^select  value from the status field$")
 	public void selectValueFromTheStatusField() throws Throwable {
 		try {
 			JSONObject input = CommonUtil.readJsonObject("CasesToKnowledge", "caseToKnowledge");
@@ -703,7 +725,52 @@ public class CaseToKnowledge_Steps extends Selenide {
 			Reporters.failureReport("clicking on Switch to Salesforce Lightening Button", "Failed to click on Switch to Salesforce Lightening Button");
 			Assert.fail("Failed to click on Switch to Salesforce Lightening Button");
 		}
+		
+		
+	}
+	@Then("new Task Should be created")
+	public void new_Task_Should_be_created() throws Throwable {
+		try{
+			boolean flag = caseToKnowledgePageValidator.isDisplayed_newTaskCreated();		
+			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").pass("clicked on New button successfully");		
+			if(flag)
+				{
+				Reporters.successReport("Task Should be created","New Task Created successfully");
+				
+				}
+			else
+			{
+				Reporters.failureReport("Task Should be created", "FFailed to create Task");
+			}
+		}
+		catch(Exception e)
+		{
+			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").fail("Failed to click on New button").addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			Reporters.failureReport("Task Should be created", "Failed to create Task");
+		}
 
 	}
+	
+	@Then("Cases Page should be open")
+	public void Cases_Page_should_be_open() throws Throwable {
+		try{
+			boolean flag = caseToKnowledgePageValidator.isDisplayed_CasesPage();		
+			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").pass("clicked on New button successfully");		
+			if(flag)
+				{
+				Reporters.successReport("Cases Page should be open","Opened Cases Page successfully");
+				
+				}
+			else
+			{
+				Reporters.failureReport("Cases Page should be open", "Failed to Open Cases Page");
+			}
+		}
+		catch(Exception e)
+		{
+			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").fail("Failed to click on New button").addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			Reporters.failureReport("Cases Page should be ope", "Failed to Open Cases Page");
+		}
 
+	}
 }
