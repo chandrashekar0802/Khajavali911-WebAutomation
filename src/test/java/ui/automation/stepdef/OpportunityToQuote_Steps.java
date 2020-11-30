@@ -43,14 +43,14 @@ public class OpportunityToQuote_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("OpportunityToQuote", "createOpportunity");
 			String opportunityName = input.get("opportunityName").toString();
 			opportunityToQuotePageValidator.enter_Data_opportunityName(opportunityName);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering opportunity name")
-					.pass("Entered opportunity Name successfully");*/
-Reporters.successReport("Entering opportunity name","Entered opportunity Name successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering opportunity name")
+					.pass("Entered opportunity Name successfully");
+//Reporters.successReport("Entering opportunity name","Entered opportunity Name successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering opportunity name")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering opportunity name")
 					.fail("Failed to Enter opportunity name")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering opportunity name", "Failed to Enter opportunity name");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering opportunity name", "Failed to Enter opportunity name");
 			Assert.fail("Failed to Enter opportunity name");
 		}
 	}
@@ -61,15 +61,15 @@ Reporters.successReport("Entering opportunity name","Entered opportunity Name su
 			JSONObject input = CommonUtil.readJsonObject("OpportunityToQuote", "createOpportunity");
 			String accountName = input.get("accountName").toString();
 			opportunityToQuotePageValidator.enter_Data_acctName(accountName);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering account name")
-					.pass("Entered account Name successfully");*/
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering account name")
+					.pass("Entered account Name successfully");
 
-Reporters.successReport("Entering account name","Entered account Name successfully");
+//Reporters.successReport("Entering account name","Entered account Name successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering account name")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering account name")
 					.fail("Failed to enter account name")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering account name", "Failed to enter account name");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering account name", "Failed to enter account name");
 			Assert.fail("Failed to enter account name");
 
 		}
@@ -87,14 +87,14 @@ Reporters.successReport("Entering account name","Entered account Name successful
 			String afterDate = formatter.format(dateAsObjAfterAMonth);
 			ClosingDate = afterDate;
 			opportunityToQuotePageValidator.enter_Data_closeDate(afterDate);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Close Date")
-					.pass("Entered Close Date successfully");*/
-Reporters.successReport("Entering Close Date","Entered Close Date successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Close Date")
+					.pass("Entered Close Date successfully");
+//Reporters.successReport("Entering Close Date","Entered Close Date successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Close Date")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Close Date")
 					.fail("Failed to Enter Close Date")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering Close Date", "Failed to Enter Close Date");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering Close Date", "Failed to Enter Close Date");
 			Assert.fail("Failed to Enter Close Date");
 
 		}
@@ -106,13 +106,13 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 			JSONObject input = CommonUtil.readJsonObject("OpportunityToQuote", "createOpportunity");
 			String stage = input.get("stage").toString();
 			opportunityToQuotePageValidator.select_stage_Drop(stage);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering stage")
-					.pass("Entered stage successfully");*/
-			Reporters.successReport("Entering stage","Entered stage successfully");			
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering stage")
+					.pass("Entered stage successfully");
+			//Reporters.successReport("Entering stage","Entered stage successfully");			
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering stage").fail("Failed to Enter stage")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering stage", "Failed to Enter stage");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering stage").fail("Failed to Enter stage")
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering stage", "Failed to Enter stage");
 			Assert.fail("Failed to Enter stage");
 
 		}
@@ -124,13 +124,13 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 			JSONObject input = CommonUtil.readJsonObject("OpportunityToQuote", "createOpportunity");
 			String type = input.get("type").toString();
 			opportunityToQuotePageValidator.select_type_Drop(type);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering type")
-					.pass("Entered type successfully");*/
-			Reporters.successReport("Entering type","Entered type successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering type")
+					.pass("Entered type successfully");
+			//Reporters.successReport("Entering type","Entered type successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering type").fail("Failed to Enter type")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering type", "Failed to Enter type");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering type").fail("Failed to Enter type")
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering type", "Failed to Enter type");
 			Assert.fail("Failed to Enter type");
 
 		}
@@ -142,14 +142,14 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 			JSONObject input = CommonUtil.readJsonObject("OpportunityToQuote", "createOpportunity");
 			String probability = input.get("probability").toString();
 			opportunityToQuotePageValidator.enter_Data_probability(probability);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering probability")
-					.pass("Entered probability successfully");*/
-			Reporters.successReport("Entering probability","Entered probability successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering probability")
+					.pass("Entered probability successfully");
+			//Reporters.successReport("Entering probability","Entered probability successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering probability")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering probability")
 					.fail("Failed to Enter probability")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering probability", "Failed to Enter probability");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering probability", "Failed to Enter probability");
 			Assert.fail("Failed to Enter probability");
 
 		}
@@ -161,13 +161,13 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 			JSONObject input = CommonUtil.readJsonObject("OpportunityToQuote", "createOpportunity");
 			String Amount = input.get("Amount").toString();
 			opportunityToQuotePageValidator.enter_Data_amount(Amount);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Amount")
-					.pass("Entered Amount successfully");*/
-			Reporters.successReport("Entering Amount","Entered Amount successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Amount")
+					.pass("Entered Amount successfully");
+			//Reporters.successReport("Entering Amount","Entered Amount successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Amount")
-					.fail("Failed to Enter Amount").addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering Amount", "Failed to Enter Amount");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Amount")
+					.fail("Failed to Enter Amount").addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering Amount", "Failed to Enter Amount");
 			Assert.fail("Failed to Enter Amount");
 
 		}
@@ -179,14 +179,14 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 			JSONObject input = CommonUtil.readJsonObject("OpportunityToQuote", "createOpportunity");
 			String risksCompetitionComments = input.get("risksCompetitionComments").toString();
 			opportunityToQuotePageValidator.enter_Data_riskCompetitionComments(risksCompetitionComments);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering risks,Competition and Comments")
-					.pass("Entered risks,Competition and Comments successfully");*/
-			Reporters.successReport("Entering risks,Competition and Comments","Entered risks,Competition and Comments successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering risks,Competition and Comments")
+					.pass("Entered risks,Competition and Comments successfully");
+			//Reporters.successReport("Entering risks,Competition and Comments","Entered risks,Competition and Comments successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering risks,Competition and Comments")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering risks,Competition and Comments")
 					.fail("Failed to Enter risks,Competition and Comments")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering risks,Competition and Comments", "Failed to Enter risks,Competition and Comments");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering risks,Competition and Comments", "Failed to Enter risks,Competition and Comments");
 			Assert.fail("Failed to Enter risks,Competition and Comments");
 
 		}
@@ -196,13 +196,13 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 	public void enter_the(String amount) throws Throwable {
 		try {
 			opportunityToQuotePageValidator.enter_Data_amount(amount);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Amount")
-					.pass("Entered Amount successfully");*/
-			Reporters.successReport("Entering Amount","Entered Amount successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Amount")
+					.pass("Entered Amount successfully");
+			//Reporters.successReport("Entering Amount","Entered Amount successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Amount")
-					.fail("Failed to Enter Amount").addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering Amount", "Failed to Enter Amount");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Amount")
+					.fail("Failed to Enter Amount").addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering Amount", "Failed to Enter Amount");
 			Assert.fail("Failed to Enter Amount");
 
 		}
@@ -212,13 +212,13 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 	public void enter_the_value_for_Stage_field(String stage) throws Throwable {
 		try {
 			opportunityToQuotePageValidator.select_stage_Drop(stage);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering stage")
-					.pass("Entered stage successfully");*/
-			Reporters.successReport("Entering stage","Entered stage successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering stage")
+					.pass("Entered stage successfully");
+			//Reporters.successReport("Entering stage","Entered stage successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering stage").fail("Failed to Enter stage")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering stage", "Failed to Enter stage");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering stage").fail("Failed to Enter stage")
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering stage", "Failed to Enter stage");
 			Assert.fail("Failed to Enter stage");
 
 		}
@@ -231,14 +231,14 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 			JavascriptExecutor js = (JavascriptExecutor) Driver.browser;
 			js.executeScript("window.scrollBy(0,200)");
 			opportunityToQuotePageValidator.click_productsDrpdownInRightPane_link();
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on Products tab")
-					.pass("Clicked on Products tab successfully");*/
-			Reporters.successReport("Clicking on Products tab","Clicked on Products tab successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on Products tab")
+					.pass("Clicked on Products tab successfully");
+			//Reporters.successReport("Clicking on Products tab","Clicked on Products tab successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on Products tab")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on Products tab")
 					.fail("Failed to Click on Products tab")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Clicking on Products tab", "Failed to Click on Products tab");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Clicking on Products tab", "Failed to Click on Products tab");
 			Assert.fail("Failed to Click on Products tab");
 
 		}
@@ -248,14 +248,14 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 	public void clickOnChoosePriceBookFromDropDown() throws Throwable {
 		try {
 			opportunityToQuotePageValidator.click_choosePriceBookInProductDrpdwn();
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on Choose Price Book")
-					.pass("Clicked on Choose Price Book successfully");*/
-			Reporters.successReport("Clicking on Choose Price Book","Clicked on Choose Price Book successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on Choose Price Book")
+					.pass("Clicked on Choose Price Book successfully");
+			//Reporters.successReport("Clicking on Choose Price Book","Clicked on Choose Price Book successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on Choose Price Book")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on Choose Price Book")
 					.fail("Failed to Click on Choose Price Book")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Clicking on Choose Price Book", "Failed to Click on Choose Price Book");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Clicking on Choose Price Book", "Failed to Click on Choose Price Book");
 			Assert.fail("Failed to Click on Choose Price Book");
 
 		}
@@ -268,14 +268,14 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 			opportunityToQuotePageValidator.click_productsDrpdownInRightPane_link();
 			Selenide.smallwaitTime();
 			opportunityToQuotePageValidator.click_addProductInDrpdwn();
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on Add Products")
-					.pass("Clicked on Add Products successfully");*/
-			Reporters.successReport("Clicking on Add Products","Clicked on Add Products successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on Add Products")
+					.pass("Clicked on Add Products successfully");
+			//Reporters.successReport("Clicking on Add Products","Clicked on Add Products successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on Add Products")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on Add Products")
 					.fail("Failed to Click on Add Products")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Clicking on Add Products", "Failed to Click on Add Products");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Clicking on Add Products", "Failed to Click on Add Products");
 			Assert.fail("Failed to Click on Add Products");
 
 		}
@@ -288,14 +288,14 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 			String productCheckbox = input.get("productCheckbox").toString();
 			opportunityToQuotePageValidator.click_CheckBoxForProductNameInAddProduct(productCheckbox);
 			opportunityToQuotePageValidator.click_Next_Btn();
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on Checkbox")
-					.pass("Clicked on checkbox and then clicked on next button successfully");*/
-			Reporters.successReport("Clicking on Checkbox","Clicked on checkbox and then clicked on next button successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on Checkbox")
+					.pass("Clicked on checkbox and then clicked on next button successfully");
+			//Reporters.successReport("Clicking on Checkbox","Clicked on checkbox and then clicked on next button successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on Checkbox")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on Checkbox")
 					.fail("Failed to Click on Checkbox")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Clicking on Checkbox", "Failed to Click on Checkbox");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Clicking on Checkbox", "Failed to Click on Checkbox");
 			Assert.fail("Failed to Click on Checkbox");
 
 		}
@@ -307,14 +307,14 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 			JSONObject input = CommonUtil.readJsonObject("OpportunityToQuote", "createOpportunity");
 			String Quantity = input.get("Quantity").toString();
 			opportunityToQuotePageValidator.enter_Data_quantity(Quantity);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "entering Quantity")
-					.pass("entered Quantity successfully");*/
-			Reporters.successReport("entering Quantity","entered Quantity successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "entering Quantity")
+					.pass("entered Quantity successfully");
+			//Reporters.successReport("entering Quantity","entered Quantity successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "entering Quantity")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "entering Quantity")
 					.fail("Failed to enter Quantity")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("entering Quantity", "Failed to enter Quantity");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("entering Quantity", "Failed to enter Quantity");
 			Assert.fail("Failed to enter Quantity");
 
 		}
@@ -327,13 +327,13 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 			SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
 			String todayDate = formatter.format(date);
 			opportunityToQuotePageValidator.enter_Data_date(todayDate);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "entering  Date")
-					.pass("entered  Date successfully");*/
-			Reporters.successReport("entering  Date","entered  Date successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "entering  Date")
+					.pass("entered  Date successfully");
+			//Reporters.successReport("entering  Date","entered  Date successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "entering  Date").fail("Failed to enter  Date")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("entering  Date", "Failed to enter  Date");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "entering  Date").fail("Failed to enter  Date")
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("entering  Date", "Failed to enter  Date");
 			Assert.fail("Failed to enter  Date");
 
 		}
@@ -351,10 +351,10 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 			js.executeScript("window.scrollBy(0,500)");
 
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "scrolling to Quotes")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "scrolling to Quotes")
 					.fail("Failed to scroll to Quotes")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("scrolling to Quotes", "Failed to scroll to Quotes");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("scrolling to Quotes", "Failed to scroll to Quotes");
 			Assert.fail("Failed to scroll to Quotes");
 
 		}
@@ -364,16 +364,16 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 	public void selectOneValidPriceBookCheckboxAndClickOnSave() throws Throwable {
 		try {
 			opportunityToQuotePageValidator.click_saveBtnInChoosePriceBook_Btn();
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "click on Save")
-					.pass("clicked on Save button successfully");*/
-			Reporters.successReport("click on Save","clicked on Save button successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "click on Save")
+					.pass("clicked on Save button successfully");
+			//Reporters.successReport("click on Save","clicked on Save button successfully");
 			Selenide.smallwaitTime();
 
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "click on Save")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "click on Save")
 					.fail("Failed to click on Save")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("click on Save", "Failed to click on Save");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("click on Save", "Failed to click on Save");
 			Assert.fail("Failed to click on Save");
 
 		}
@@ -385,14 +385,14 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 			waitTime();
 			opportunityToQuotePageValidator.click_QuoteDrpdwnInRightsidePane_Link();
 			opportunityToQuotePageValidator.click_NewQuoteInQuoteDrpdwn();
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on new quote")
-					.pass("clicked on New quote successfully");*/
-			Reporters.successReport("Clicking on new quote","clicked on New quote successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on new quote")
+					.pass("clicked on New quote successfully");
+			//Reporters.successReport("Clicking on new quote","clicked on New quote successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on new quote")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on new quote")
 					.fail("Failed to click on New quote")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Clicking on new quote", "Failed to click on New quote");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Clicking on new quote", "Failed to click on New quote");
 			Assert.fail("Failed to click on New quote");
 
 		}
@@ -404,14 +404,14 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 			JSONObject input = CommonUtil.readJsonObject("OpportunityToQuote", "createOpportunity");
 			String quoteName = input.get("quoteName").toString();
 			opportunityToQuotePageValidator.enter_data__quoteName(quoteName);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Quote Name")
-					.pass("Entered Quote Name successfully");*/
-			Reporters.successReport("Entering Quote Name","Entered Quote Name successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Quote Name")
+					.pass("Entered Quote Name successfully");
+			//Reporters.successReport("Entering Quote Name","Entered Quote Name successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Quote Name")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Quote Name")
 					.fail("Failed to Enter Quote Name")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering Quote Name", "Failed to Enter Quote Name");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering Quote Name", "Failed to Enter Quote Name");
 			Assert.fail("Failed to Enter Quote Name");
 
 		}
@@ -429,15 +429,15 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 			String afterDate = formatter.format(dateAsObjAfterAMonth);
 			ClosingDate = afterDate;
 			opportunityToQuotePageValidator.enter_Data_ExpirationDate(afterDate);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Expiration Date")
-					.pass("Entered Expiration Date successfully");*/
-			Reporters.successReport("Entering Expiration Date","Entered Expiration Date successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Expiration Date")
+					.pass("Entered Expiration Date successfully");
+			//Reporters.successReport("Entering Expiration Date","Entered Expiration Date successfully");
 
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Expiration Date")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Expiration Date")
 					.fail("Failed to enter Expiration Date")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering Expiration Date", "Failed to enter Expiration Date");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering Expiration Date", "Failed to enter Expiration Date");
 			Assert.fail("Failed to enter Expiration Date");
 
 		}
@@ -449,14 +449,14 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 			JSONObject input = CommonUtil.readJsonObject("OpportunityToQuote", "createOpportunity");
 			String status = input.get("status").toString();
 			opportunityToQuotePageValidator.select_status_Drop(status);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Status")
-					.pass("Entered Status successfully");*/
-			Reporters.successReport("Entering Status","Entered Status successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Status")
+					.pass("Entered Status successfully");
+			//Reporters.successReport("Entering Status","Entered Status successfully");
 
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Status")
-					.fail("Failed to Enter Status").addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering Status", "Failed to Enter Status");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Status")
+					.fail("Failed to Enter Status").addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering Status", "Failed to Enter Status");
 			Assert.fail("Failed to Enter Status");
 
 		}
@@ -466,10 +466,10 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 	public void enterTheValueForBillToStreetField() throws Throwable {
 		try {
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button")
 					.fail("Failed to click on New button")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("clicking on New button", "Failed to click on New button");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("clicking on New button", "Failed to click on New button");
 			Assert.fail("Failed to click on New button");
 
 		}
@@ -485,26 +485,26 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 				String productCheckbox = input.get("productCheckbox").toString();
 				opportunityToQuotePageValidator.click_CheckBoxForProductNameInAddProduct(productCheckbox);
 				opportunityToQuotePageValidator.click_Next_Btn();
-				/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on Checkbox")
-						.pass("Clicked on checkbox and then clicked on next button successfully");*/
-				Reporters.successReport("Clicking on Checkbox","Clicked on checkbox and then clicked on next button successfully");
+				BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on Checkbox")
+						.pass("Clicked on checkbox and then clicked on next button successfully");
+				//Reporters.successReport("Clicking on Checkbox","Clicked on checkbox and then clicked on next button successfully");
 
 				JSONObject input1 = CommonUtil.readJsonObject("OpportunityToQuote", "createOpportunity");
 				String Quantity1 = input1.get("Quantity1").toString();
 				opportunityToQuotePageValidator.enter_Data_quantity(Quantity1);
-				/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "entering Quantity")
-						.pass("entered Quantity successfully");*/
-				Reporters.successReport("entering Quantity","entered Quantity successfully");
+				BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "entering Quantity")
+						.pass("entered Quantity successfully");
+				//Reporters.successReport("entering Quantity","entered Quantity successfully");
 				opportunityToQuotePageValidator.click_Save_Button();
-				/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click save")
-						.pass("Click on save button successfully");*/
-				Reporters.successReport("Click save","Click on save button successfully");
+				BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click save")
+						.pass("Click on save button successfully");
+				//Reporters.successReport("Click save","Click on save button successfully");
 
 			}
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Add Products").fail("Failed to Add Products")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Clicking on Checkbox", "Failed to Add Products");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Add Products").fail("Failed to Add Products")
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Clicking on Checkbox", "Failed to Add Products");
 			Assert.fail("Failed to Add Products");
 
 		}
@@ -516,17 +516,17 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 			JSONObject input = CommonUtil.readJsonObject("OpportunityToQuote", "createOpportunity");
 			String quoteName = input.get("quoteName").toString();
 			opportunityToQuotePageValidator.click_FirstQuote_Name(quoteName);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Open one Quote from existing Quotes")
-					.pass("Opened one Quote successfully");*/
-			Reporters.successReport("Open one Quote from existing Quotes","Opened one Quote successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Open one Quote from existing Quotes")
+					.pass("Opened one Quote successfully");
+			//Reporters.successReport("Open one Quote from existing Quotes","Opened one Quote successfully");
 
 		}
 
 		catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Open one Quote from existing Quotes")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Open one Quote from existing Quotes")
 					.fail("Failed to Open one Quote from existing Quotes")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Open one Quote from existing Quotes", "Failed to Open one Quote from existing Quotes");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Open one Quote from existing Quotes", "Failed to Open one Quote from existing Quotes");
 			Assert.fail("Failed to Open one Quote from existing Quotes");
 
 		}
@@ -539,18 +539,21 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").pass("clicked on New button successfully");		
 			if(flag)
 				{
-				Reporters.successReport("Quote Should be Created","Quote Created successfully");
+				BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Quote Should be Created").pass("Quote Created successfully");
+				//Reporters.successReport("Quote Should be Created","Quote Created successfully");
 				
 				}
 			else
 			{
-				Reporters.failureReport("Quote Should be Created", "Quote Created successfully");
+				BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Quote Should be Created").fail("Failed to Create Quote").addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+
+				//Reporters.failureReport("Quote Should be Created", "Quote Created successfully");
 			}
 		}
 		catch(Exception e)
 		{
-			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "clicking on New button").fail("Failed to click on New button").addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
-			Reporters.failureReport("Quote Should be Created", "Failed to Create Quote");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Quote Should be Created").fail("Failed to Create Quote").addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Quote Should be Created", "Failed to Create Quote");
 		}
 
 	}
@@ -559,15 +562,15 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 		try {
 			waitTime();
 			opportunityToQuotePageValidator.click_createPDFbutton();
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on Create PDF button")
-					.pass("Click on Create PDF button successfully");*/
-			Reporters.successReport("Click on Create PDF button","Click on Create PDF button successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on Create PDF button")
+					.pass("Click on Create PDF button successfully");
+			//Reporters.successReport("Click on Create PDF button","Click on Create PDF button successfully");
 
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on Create PDF button")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on Create PDF button")
 					.fail("Failed to Click on Create PDF button")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Click on Create PDF button", "Failed to Click on Create PDF button");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Click on Create PDF button", "Failed to Click on Create PDF button");
 			Assert.fail("Failed to Click on Create PDF button");
 		}
 	}
@@ -579,14 +582,14 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 			waitTime();
 			waitTime();
 			opportunityToQuotePageValidator.click_saveToQuoteButton();
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on Save to Quote")
-					.pass("Clicked on Save to Quote successfully");*/
-			Reporters.successReport("Click on Save to Quote","Clicked on Save to Quote successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on Save to Quote")
+					.pass("Clicked on Save to Quote successfully");
+			//Reporters.successReport("Click on Save to Quote","Clicked on Save to Quote successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on Save to Quote")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on Save to Quote")
 					.fail("Failed to Click on Save to Quote")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Click on Save to Quote", "Failed to Click on Save to Quote");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Click on Save to Quote", "Failed to Click on Save to Quote");
 			Assert.fail("Failed to Click on Save to Quote");
 		}
 	}
@@ -600,22 +603,22 @@ Reporters.successReport("Entering Close Date","Entered Close Date successfully")
 			String quoteName = input.get("quoteName").toString();
 			String pdfName = opportunityToQuotePageValidator.get_PdfName();
 			if (pdfName.contains(quoteName)) {
-				/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "PDF should be  saved under Quote PDF's")
-						.pass("PDF saved under Quote PDF's successfully");*/
-				Reporters.successReport("PDF should be  saved under Quote PDF's","PDF saved under Quote PDF's successfully");
+				BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "PDF should be  saved under Quote PDF's")
+						.pass("PDF saved under Quote PDF's successfully");
+				//Reporters.successReport("PDF should be  saved under Quote PDF's","PDF saved under Quote PDF's successfully");
 
 			} else {
-				/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "PDF should be  saved under Quote PDF's")
+				BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "PDF should be  saved under Quote PDF's")
 						.fail("Failed to save PDF under Quote PDF's")
-						.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-				Reporters.failureReport("PDF should be  saved under Quote PDF's", "Failed to save PDF under Quote PDF's");
+						.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+				//Reporters.failureReport("PDF should be  saved under Quote PDF's", "Failed to save PDF under Quote PDF's");
 
 			}
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "PDF should be  saved under Quote PDF's")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "PDF should be  saved under Quote PDF's")
 					.fail("Failed to save PDF under Quote PDF's")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("PDF should be  saved under Quote PDF's", "Failed to save PDF under Quote PDF's");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("PDF should be  saved under Quote PDF's", "Failed to save PDF under Quote PDF's");
 			Assert.fail("Failed to save PDF under Quote PDF's");
 		}
 	}

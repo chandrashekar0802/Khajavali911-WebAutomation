@@ -47,15 +47,15 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			String firstName = input.get("firstName").toString();
 			String alteredName = firstName + rand.nextInt(10);
 			leadsToOpportunityPageValidator.enter_Data_firstName(alteredName);
-			//BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering first name")
-					//.pass("Entered first name successfully");
-			Reporters.successReport("Entering first name","Entered first name successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering first name")
+					.pass("Entered first name successfully");
+			//Reporters.successReport("Entering first name","Entered first name successfully");
 
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering first name")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering first name")
 					.fail("Failed to Enter first name")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering first name", "Entered first name successfully");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering first name", "Entered first name successfully");
 			Assert.fail("Failed to Enter first name");
 		}
 	}
@@ -68,15 +68,15 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			String lastName = input.get("lastName").toString();
 			String alteredName = lastName + rand.nextInt(10);
 			leadsToOpportunityPageValidator.enter_Data_lastName(alteredName);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering last name")
-					.pass("Entered last name successfully");*/
-			Reporters.successReport("Entering last name","Entered last name successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering last name")
+					.pass("Entered last name successfully");
+			//Reporters.successReport("Entering last name","Entered last name successfully");
 
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering last name")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering last name")
 					.fail("Failed to Enter last name")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering last name", "Entered last name successfully");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering last name", "Entered last name successfully");
 			Assert.fail("Failed to Enter first name");
 		}
 	}
@@ -87,14 +87,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
 			String company = input.get("Company").toString();
 			leadsToOpportunityPageValidator.enter_Data_company(company);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering company name")
-					.pass("Entered company name successfully");*/
-			Reporters.successReport("Entering company name","Entered company name successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering company name")
+					.pass("Entered company name successfully");
+			//Reporters.successReport("Entering company name","Entered company name successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering company name")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering company name")
 					.fail("Failed to Enter company name")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering company name", "Failed to Enter company name");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering company name", "Failed to Enter company name");
 			Assert.fail("Failed to Enter company name");
 		}
 	}
@@ -104,14 +104,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		try {
 			String phone = Selenide.generateRandomNumber(10);
 			leadsToOpportunityPageValidator.enter_Data_phone(phone);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering phone number")
-					.pass("Entered phone number successfully");*/
-			Reporters.successReport("Entering phone number","Entered phone number successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering phone number")
+					.pass("Entered phone number successfully");
+			//Reporters.successReport("Entering phone number","Entered phone number successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering phone number")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering phone number")
 					.fail("Failed to Enter phone number")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering phone number", "Failed to Enter phone number");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering phone number", "Failed to Enter phone number");
 			Assert.fail("Failed to Enter phone number");
 		}
 	}
@@ -122,14 +122,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
 			String leadSource = input.get("leadSource").toString();
 			leadsToOpportunityPageValidator.select_LeasSource_Drop(leadSource);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering lead Source")
-					.pass("Entered lead Source successfully");*/
-			Reporters.successReport("Entering lead Source","Entered lead Source successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering lead Source")
+					.pass("Entered lead Source successfully");
+			//Reporters.successReport("Entering lead Source","Entered lead Source successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering lead Source")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering lead Source")
 					.fail("Failed to Enter lead Source")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering lead Source", "Failed to Enter lead Source");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering lead Source", "Failed to Enter lead Source");
 			Assert.fail("Failed to Enter lead Source");
 		}
 	}
@@ -140,16 +140,16 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
 			String ISTrepresentative = input.get("ISTrepresentative").toString();
 			leadsToOpportunityPageValidator.select_ISTRepresentative_Drop(ISTrepresentative);
-			/*BaseUtil.scenarioDef
+			BaseUtil.scenarioDef
 					.createNode(new GherkinKeyword("Given"), "Entering the value for IST Representative field")
-					.pass("Entered the value for IST Representative field successfully");*/
-			Reporters.successReport("Entering the value for IST Representative field","Entered the value for IST Representative field successfully");
+					.pass("Entered the value for IST Representative field successfully");
+			//Reporters.successReport("Entering the value for IST Representative field","Entered the value for IST Representative field successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef
+			BaseUtil.scenarioDef
 					.createNode(new GherkinKeyword("Given"), "Entering the value for IST Representative field")
 					.fail("Failed to Enter the value for IST Representative field")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering the value for IST Representative field", "Failed to Enter the value for IST Representative field");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering the value for IST Representative field", "Failed to Enter the value for IST Representative field");
 			Assert.fail("Failed to Enter the value for IST Representative field");
 		}
 	}
@@ -160,14 +160,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
 			String campaign = input.get("campaign").toString();
 			leadsToOpportunityPageValidator.select_Campaign_Drop(campaign);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for campaign field")
-					.pass("Entered the value for campaign field successfully");*/
-			Reporters.successReport("Entering the value for campaign field","Entered the value for campaign field successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for campaign field")
+					.pass("Entered the value for campaign field successfully");
+			//Reporters.successReport("Entering the value for campaign field","Entered the value for campaign field successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for campaign field")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for campaign field")
 					.fail("Failed to Enter the value for campaign field")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering the value for campaign field", "Failed to Enter the value for campaign field");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering the value for campaign field", "Failed to Enter the value for campaign field");
 			Assert.fail("Failed to Enter the value for campaign field");
 		}
 	}
@@ -178,17 +178,17 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
 			String verticalGrouping = input.get("verticalGrouping").toString();
 			leadsToOpportunityPageValidator.select_vertical_groupingDrop(verticalGrouping);
-			/*BaseUtil.scenarioDef
+			BaseUtil.scenarioDef
 					.createNode(new GherkinKeyword("Given"), "Entering the value for Vertical Grouping field")
-					.pass("Entered the value for Vertical Grouping field successfully");*/
-			Reporters.successReport("Entering the value for Vertical Grouping field","Entered the value for Vertical Grouping field successfully");
+					.pass("Entered the value for Vertical Grouping field successfully");
+			//Reporters.successReport("Entering the value for Vertical Grouping field","Entered the value for Vertical Grouping field successfully");
 
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef
+			BaseUtil.scenarioDef
 					.createNode(new GherkinKeyword("Given"), "Entering the value for Vertical Grouping field")
 					.fail("Failed to Enter the value for Vertical Grouping field")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering the value for Vertical Grouping field", "Failed to Enter the value for Vertical Grouping field");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering the value for Vertical Grouping field", "Failed to Enter the value for Vertical Grouping field");
 			Assert.fail("Failed to Enter the value for Vertical Grouping field");
 		}
 	}
@@ -199,16 +199,16 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
 			String SubVertical = input.get("SubVertical").toString();
 			leadsToOpportunityPageValidator.select_sub_vertical_oneDrop(SubVertical);
-			/*BaseUtil.scenarioDef
+			BaseUtil.scenarioDef
 					.createNode(new GherkinKeyword("Given"), "Entering the value for Sub Vertical one field")
-					.pass("Entered the value for Sub Vertical one field successfully");*/
-			Reporters.successReport("Entering the value for Sub Vertical one field","Entered the value for Sub Vertical one field successfully");
+					.pass("Entered the value for Sub Vertical one field successfully");
+			//Reporters.successReport("Entering the value for Sub Vertical one field","Entered the value for Sub Vertical one field successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef
+			BaseUtil.scenarioDef
 					.createNode(new GherkinKeyword("Given"), "Entering the value for Sub Vertical one field")
 					.fail("Failed to Enter the value for Sub Vertical one field")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering the value for Sub Vertical one field", "Failed to Enter the value for Sub Vertical one field");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering the value for Sub Vertical one field", "Failed to Enter the value for Sub Vertical one field");
 			Assert.fail("Failed to Enter the value for Sub Vertical one field");
 		}
 	}
@@ -219,14 +219,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
 			String Vertical = input.get("Vertical").toString();
 			leadsToOpportunityPageValidator.select_vertical_Drop(Vertical);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for Vertical field")
-					.pass("Entered the value for Vertical field successfully");*/
-			Reporters.successReport("Entering the value for Vertical field","Entered the value for Vertical field successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for Vertical field")
+					.pass("Entered the value for Vertical field successfully");
+			//Reporters.successReport("Entering the value for Vertical field","Entered the value for Vertical field successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for Vertical field")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for Vertical field")
 					.fail("Failed to Enter the value for Vertical field")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering the value for Vertical field", "Failed to Enter the value for Vertical field");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering the value for Vertical field", "Failed to Enter the value for Vertical field");
 			Assert.fail("Failed to Enter the value for Vertical field");
 		}
 	}
@@ -237,14 +237,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
 			String Revenue = input.get("Revenue").toString();
 			leadsToOpportunityPageValidator.enter_Data_Revenue(Revenue);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for Revenue field")
-					.pass("Entered the value for Revenue field successfully");*/
-			Reporters.successReport("Entering the value for Revenue field","Entered the value for Revenue field successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for Revenue field")
+					.pass("Entered the value for Revenue field successfully");
+			//Reporters.successReport("Entering the value for Revenue field","Entered the value for Revenue field successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for Revenue field")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for Revenue field")
 					.fail("Failed to Enter the value for Revenue field")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering the value for Revenue field", "Failed to Enter the value for Revenue field");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering the value for Revenue field", "Failed to Enter the value for Revenue field");
 			Assert.fail("Failed to Enter the value for Revenue field");
 		}
 	}
@@ -255,14 +255,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
 			String rating = input.get("rating").toString();
 			leadsToOpportunityPageValidator.select_Rating_Drop(rating);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for rating field")
-					.pass("Entered the value for rating field successfully");*/
-			Reporters.successReport("Entering the value for rating field","Entered the value for rating field successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for rating field")
+					.pass("Entered the value for rating field successfully");
+			//Reporters.successReport("Entering the value for rating field","Entered the value for rating field successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for rating field")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for rating field")
 					.fail("Failed to Enter the value for rating field")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering the value for rating field", "Failed to Enter the value for rating field");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering the value for rating field", "Failed to Enter the value for rating field");
 			Assert.fail("Failed to Enter the value for rating field");
 		}
 	}
@@ -273,14 +273,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
 			String street = input.get("street").toString();
 			leadsToOpportunityPageValidator.enter_Data_Street(street);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for Street field")
-					.pass("Entered the value for  Street field successfully");*/
-			Reporters.successReport("Entering the value for Street field","Entered the value for  Street field successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for Street field")
+					.pass("Entered the value for  Street field successfully");
+			//Reporters.successReport("Entering the value for Street field","Entered the value for  Street field successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for Street field")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for Street field")
 					.fail("Failed to Enter the value for Street field")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering the value for Street field", "Failed to Enter the value for Street field");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering the value for Street field", "Failed to Enter the value for Street field");
 			Assert.fail("Failed to Enter the value for Street field");
 		}
 	}
@@ -291,14 +291,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
 			String city = input.get("city").toString();
 			leadsToOpportunityPageValidator.enter_Data_City(city);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for city field")
-					.pass("Entered the value for city field successfully");*/
-			Reporters.successReport("Entering the value for city field","Entered the value for city field successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for city field")
+					.pass("Entered the value for city field successfully");
+			//Reporters.successReport("Entering the value for city field","Entered the value for city field successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for city field")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for city field")
 					.fail("Failed to Enter the value for city field")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering the value for city field", "Failed to Enter the value for city field");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering the value for city field", "Failed to Enter the value for city field");
 			Assert.fail("Failed to Enter the value for city field");
 		}
 	}
@@ -309,14 +309,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
 			String stateProvince = input.get("stateProvince").toString();
 			leadsToOpportunityPageValidator.enter_Data_State(stateProvince);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for state field")
-					.pass("Entered the value for state field successfully");*/
-			Reporters.successReport("Entering the value for state field","Entered the value for state field successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for state field")
+					.pass("Entered the value for state field successfully");
+			//Reporters.successReport("Entering the value for state field","Entered the value for state field successfully");
 			} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for state field")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for state field")
 					.fail("Failed to Enter the value for state field")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-				Reporters.failureReport("Entering the value for state field", "Failed to Enter the value for state field");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+				//Reporters.failureReport("Entering the value for state field", "Failed to Enter the value for state field");
 			Assert.fail("Failed to Enter the value for state field");
 		}
 	}
@@ -327,14 +327,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
 			String zipPostalCode = input.get("zipPostalCode").toString();
 			leadsToOpportunityPageValidator.enter_Data_Postal(zipPostalCode);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for Postal Code field")
-					.pass("Entered the value for Postal Code field successfully");*/
-			Reporters.successReport("Entering the value for Postal Code field","Entered the value for Postal Code field successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for Postal Code field")
+					.pass("Entered the value for Postal Code field successfully");
+			//Reporters.successReport("Entering the value for Postal Code field","Entered the value for Postal Code field successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for Postal Code field")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for Postal Code field")
 					.fail("Failed to Enter the value for Postal Code field")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering the value for Postal Code field", "Failed to Enter the value for Postal Code field");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering the value for Postal Code field", "Failed to Enter the value for Postal Code field");
 			Assert.fail("Failed to Enter the value for Postal Code field");
 		}
 	}
@@ -345,14 +345,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
 			String country = input.get("country").toString();
 			leadsToOpportunityPageValidator.enter_Data_Country(country);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for country field")
-					.pass("Entered the value for country field successfully");*/
-			Reporters.successReport("Entering the value for country field","Entered the value for country field successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for country field")
+					.pass("Entered the value for country field successfully");
+			//Reporters.successReport("Entering the value for country field","Entered the value for country field successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for country field")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for country field")
 					.fail("Failed to Enter the value for country field")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering the value for country field", "Failed to Enter the value for country field");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering the value for country field", "Failed to Enter the value for country field");
 			Assert.fail("Failed to Enter the value for country field");
 		}
 	}
@@ -363,14 +363,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
 			String Region = input.get("Region").toString();
 			leadsToOpportunityPageValidator.select_Region_Drop(Region);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for Region field")
-					.pass("Entered the value for Region field successfully");*/
-			Reporters.successReport("Entering the value for Region field","Entered the value for Region field successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for Region field")
+					.pass("Entered the value for Region field successfully");
+			//Reporters.successReport("Entering the value for Region field","Entered the value for Region field successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for Region field")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering the value for Region field")
 					.fail("Failed to Enter the value for Region field")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering the value for Region field", "Failed to Enter the value for Region field");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering the value for Region field", "Failed to Enter the value for Region field");
 			Assert.fail("Failed to Enter the value for Region field");
 		}
 	}
@@ -379,14 +379,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 	public void click_on_one_existing_lead_on_the_Home_screen() throws Throwable {
 		try {
 			leadsToOpportunityPageValidator.click_firstLeadInLeadsHomeScreen_link();
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on one Lead name")
-					.pass("Clicked on one Lead name successfully");*/
-			Reporters.successReport("Clicking on one Lead name","Clicked on one Lead name successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on one Lead name")
+					.pass("Clicked on one Lead name successfully");
+			//Reporters.successReport("Clicking on one Lead name","Clicked on one Lead name successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on one Lead name")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Clicking on one Lead name")
 					.fail("Failed to Click on one Lead name")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Clicking on one Lead name", "Failed to Click on one Lead name");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Clicking on one Lead name", "Failed to Click on one Lead name");
 			Assert.fail("Failed to Click on one Lead name");
 		}
 	}
@@ -398,14 +398,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			waitTime();
 			smallwaitTime();
 			boolean flag = leadsToOpportunityPageValidator.click_Convert_Tab();
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on Convert tab")
-					.pass("Clicked on Convert tab successfully");*/
-			Reporters.successReport("Click on Convert tab","Clicked on Convert tab successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on Convert tab")
+					.pass("Clicked on Convert tab successfully");
+			//Reporters.successReport("Click on Convert tab","Clicked on Convert tab successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on Convert tab")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on Convert tab")
 					.fail("Failed to Click on Convert tab")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Click on Convert tab", "Failed to Click on Convert tab");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Click on Convert tab", "Failed to Click on Convert tab");
 			Assert.fail("Failed to Click on Convert tab");
 		}
 	}
@@ -419,17 +419,22 @@ public class LeadsToOpportunity_Steps extends Selenide {
 					.pass("Clicked on Convert tab successfully");*/
 			if(flag)
 			{
-			Reporters.successReport("Convert Lead Window should open","Convert Lead Window opened successfully");
+				BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Convert Lead Window should open")
+				.pass("Convert Lead Window opened successfully");
+			//Reporters.successReport("Convert Lead Window should open","Convert Lead Window opened successfully");
 			}
 			else
 			{
-				Reporters.failureReport("Convert Lead Window should open", "Failed to open convert Lead Window");
+				BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Convert Lead Window should open")
+				.fail("Failed to open convert Lead Window")
+				.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+				//Reporters.failureReport("Convert Lead Window should open", "Failed to open convert Lead Window");
 			}
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on Convert tab")
-					.fail("Failed to Click on Convert tab")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Convert Lead Window should open", "Failed to open convert Lead Window");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Convert Lead Window should open")
+					.fail("Failed to open convert Lead Window")
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Convert Lead Window should open", "Failed to open convert Lead Window");
 			Assert.fail("Failed to open convert Lead Window");
 		}
 	}
@@ -442,17 +447,22 @@ public class LeadsToOpportunity_Steps extends Selenide {
 					.pass("Clicked on Convert tab successfully");*/
 			if(flag)
 			{
-			Reporters.successReport("Lead converted Message Should appear","Lead converted Message appeared successfully");
+				BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Lead converted Message Should appear")
+				.pass("Lead converted Message appeared successfully");
+			//Reporters.successReport("Lead converted Message Should appear","Lead converted Message appeared successfully");
 			}
 			else
 			{
-				Reporters.failureReport("Lead converted Message Should appear", "Failed to get Lead converted Message");
+				BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Lead converted Message Should appear")
+				.fail("Failed to get Lead converted Message")
+				.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+				//Reporters.failureReport("Lead converted Message Should appear", "Failed to get Lead converted Message");
 			}
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on Convert tab")
-					.fail("Failed to Click on Convert tab")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Lead converted Message Should appear", "Failed to get Lead converted Message");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Lead converted Message Should appear")
+					.fail("Failed to get Lead converted Message")
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Lead converted Message Should appear", "Failed to get Lead converted Message");
 			Assert.fail("Failed to get Lead converted Message");
 		}
 	}
@@ -462,14 +472,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
 			String leadStatus = input.get("leadStatus").toString();
 			leadsToOpportunityPageValidator.select_LeadStatus_Dropdown(leadStatus);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "selecting Lead Status")
-					.pass("selected Lead Status successfully");*/
-			Reporters.successReport("selecting Lead Status","selected Lead Status successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "selecting Lead Status")
+					.pass("selected Lead Status successfully");
+			//Reporters.successReport("selecting Lead Status","selected Lead Status successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "selecting Lead Status")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "selecting Lead Status")
 					.fail("Failed to select Lead Status")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("selecting Lead Status", "Failed to select Lead Status");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("selecting Lead Status", "Failed to select Lead Status");
 			Assert.fail("Failed to select Lead Status");
 		}
 	}
@@ -480,14 +490,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
 			String salutation = input.get("salutation").toString();
 			leadsToOpportunityPageValidator.select_Salutation_Dropdown(salutation);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Salutation")
-					.pass("Entered Salutation successfully");*/
-			Reporters.successReport("Entering Salutation","Entered Salutation successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Salutation")
+					.pass("Entered Salutation successfully");
+			//Reporters.successReport("Entering Salutation","Entered Salutation successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Salutation")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Salutation")
 					.fail("Failed to Enter Salutation")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering Salutation", "Failed to Enter Salutation");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering Salutation", "Failed to Enter Salutation");
 			Assert.fail("Failed to Enter Salutation");
 		}
 
@@ -499,13 +509,13 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
 			String fax = input.get("fax").toString();
 			leadsToOpportunityPageValidator.enter_Data_fax(fax);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Fax ")
-					.pass("Entered Fax successfully");*/
-			Reporters.successReport("Entering Fax ","Entered Fax successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Fax ")
+					.pass("Entered Fax successfully");
+			//Reporters.successReport("Entering Fax ","Entered Fax successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Fax").fail("Failed to Enter Fax")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering Fax ", "Failed to Enter Fax");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Fax").fail("Failed to Enter Fax")
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering Fax ", "Failed to Enter Fax");
 			Assert.fail("Failed to Enter Fax");
 		}
 	}
@@ -516,13 +526,13 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
 			String title = input.get("title").toString();
 			leadsToOpportunityPageValidator.enter_Data_Title(title);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Title")
-					.pass("Entered Title successfully");*/
-			Reporters.successReport("Entering Title","Entered Title successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Title")
+					.pass("Entered Title successfully");
+			//Reporters.successReport("Entering Title","Entered Title successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Title").fail("Failed to Enter Title")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering Title", "Failed to Enter Title");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Title").fail("Failed to Enter Title")
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering Title", "Failed to Enter Title");
 			Assert.fail("Failed to Enter Title");
 		}
 
@@ -534,14 +544,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
 			String website = input.get("website").toString();
 			leadsToOpportunityPageValidator.enter_Data_Website(website);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering website")
-					.pass("Entered website successfully");*/
-			Reporters.successReport("Entering website","Entered website successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering website")
+					.pass("Entered website successfully");
+			//Reporters.successReport("Entering website","Entered website successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering website")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering website")
 					.fail("Failed to Enter website")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering website", "Failed to Enter website");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering website", "Failed to Enter website");
 			Assert.fail("Failed to Enter website");
 		}
 	}
@@ -555,13 +565,13 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			String email = input.get("email").toString().trim();
 			String emailAddress = generatedString + email;
 			leadsToOpportunityPageValidator.enter_Data_email(emailAddress);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Email")
-					.pass("Entered Email successfully");*/
-			Reporters.successReport("Entering Email","Entered Email successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Email")
+					.pass("Entered Email successfully");
+			//Reporters.successReport("Entering Email","Entered Email successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Email").fail("Failed to Enter Email")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering Email", "Failed to Enter Email");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Email").fail("Failed to Enter Email")
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering Email", "Failed to Enter Email");
 			Assert.fail("Failed to Enter Email");
 		}
 	}
@@ -572,14 +582,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
 			String ownership = input.get("ownership").toString();
 			leadsToOpportunityPageValidator.select_ownership_Dropdown(ownership);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering ownership")
-					.pass("Entered ownership successfully");*/
-			Reporters.successReport("Entering ownership","Entered ownership successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering ownership")
+					.pass("Entered ownership successfully");
+			//Reporters.successReport("Entering ownership","Entered ownership successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering ownership")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering ownership")
 					.fail("Failed to Enter ownership")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering ownership", "Failed to Enter ownership");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering ownership", "Failed to Enter ownership");
 			Assert.fail("Failed to Enter ownership");
 		}
 	}
@@ -590,14 +600,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
 			String revenueRange = input.get("revenueRange").toString();
 			leadsToOpportunityPageValidator.select_revenueRange_Dropdown(revenueRange);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering revenue range")
-//					.pass("Entered revenue range successfully");*/
-			Reporters.successReport("Entering revenue range","Entered revenue range successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering revenue range")
+					.pass("Entered revenue range successfully");
+			//Reporters.successReport("Entering revenue range","Entered revenue range successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering revenue range")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering revenue range")
 					.fail("Failed to Enter revenue range")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering revenue range", "Failed to Enter revenue range");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering revenue range", "Failed to Enter revenue range");
 			Assert.fail("Failed to Enter revenue range");
 		}
 	}
@@ -608,14 +618,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
 			String contactlocation = input.get("contactlocation").toString();
 			leadsToOpportunityPageValidator.enter_Data_contactLocation(contactlocation);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Contact Locaton")
-					.pass("Entered Contact Locaton successfully");*/
-			Reporters.successReport("Entering Contact Locaton","Entered Contact Locaton successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Contact Locaton")
+					.pass("Entered Contact Locaton successfully");
+			//Reporters.successReport("Entering Contact Locaton","Entered Contact Locaton successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Contact Locaton")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Contact Locaton")
 					.fail("Failed to Enter Contact Locaton")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering Contact Locaton", "Failed to Enter Contact Locaton");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering Contact Locaton", "Failed to Enter Contact Locaton");
 			Assert.fail("Failed to Enter Contact Locaton");
 		}
 	}
@@ -626,13 +636,13 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
 			String bdm = input.get("bdm").toString();
 			leadsToOpportunityPageValidator.select_BDM_Dropdown(bdm);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering BDM")
-					.pass("Entered BDM successfully");*/
-			Reporters.successReport("Entering BDM","Entered BDM successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering BDM")
+					.pass("Entered BDM successfully");
+			//Reporters.successReport("Entering BDM","Entered BDM successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering BDM").fail("Failed to Enter BDM")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering BDM", "Failed to Enter BDM");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering BDM").fail("Failed to Enter BDM")
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering BDM", "Failed to Enter BDM");
 			Assert.fail("Failed to Enter BDM");
 		}
 	}
@@ -643,14 +653,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			JSONObject input = CommonUtil.readJsonObject("LeadsToOpportunity", "leadsToOpportunity");
 			String businessUnit = input.get("businessUnit").toString();
 			leadsToOpportunityPageValidator.select_BusinesUnit_Dropdown(businessUnit);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Business Unit")
-					.pass("Entered Business Unit successfully");*/
-			Reporters.successReport("Entering Business Unit","Entered Business Unit successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Business Unit")
+					.pass("Entered Business Unit successfully");
+			//Reporters.successReport("Entering Business Unit","Entered Business Unit successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Business Unit")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering Business Unit")
 					.fail("Failed to Enter Business Unit")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering Business Unit", "Failed to Enter Business Unit");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering Business Unit", "Failed to Enter Business Unit");
 			Assert.fail("Failed to Enter Business Unit");
 		}
 	}
@@ -659,14 +669,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 	public void changeLeadStatusFieldValueTo(String leadStatus) throws Throwable {
 		try {
 			leadsToOpportunityPageValidator.select_LeadStatus_Dropdown(leadStatus);
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering lead Source")
-					.pass("Entered lead Source successfully");*/
-			Reporters.successReport("Entering lead Source","Entered lead Source successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering lead Source")
+					.pass("Entered lead Source successfully");
+			//Reporters.successReport("Entering lead Source","Entered lead Source successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering lead Source")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Entering lead Source")
 					.fail("Failed to Enter lead Source")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Entering lead Source", "Failed to Enter lead Source");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Entering lead Source", "Failed to Enter lead Source");
 			Assert.fail("Failed to Enter lead Source");
 		}
 	}
@@ -676,14 +686,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		try {
 			smallwaitTime();
 			leadsToOpportunityPageValidator.click_CreateNewRadioBtnInAccount_Btn();
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Select radio button")
-					.pass("Selected radio button for Account create New successfully");*/
-			Reporters.successReport("Select radio button","Selected radio button for Account create New successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Select radio button")
+					.pass("Selected radio button for Account create New successfully");
+			//Reporters.successReport("Select radio button","Selected radio button for Account create New successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Select radio button")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Select radio button")
 					.fail("Failed to Select radio button")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Select radio button", "Failed to Select radio button");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Select radio button", "Failed to Select radio button");
 			Assert.fail("Failed to Select radio button");
 		}
 	}
@@ -693,14 +703,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		try {
 			smallwaitTime();
 			leadsToOpportunityPageValidator.click_chooseExistingRadioBtnInContact_Btn();
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Select radio button")
-					.pass("Selected radio button for Contact choose existing successfully");*/
-			Reporters.successReport("Select radio button","Selected radio button for Contact choose existing successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Select radio button")
+					.pass("Selected radio button for Contact choose existing successfully");
+			//Reporters.successReport("Select radio button","Selected radio button for Contact choose existing successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Select radio button")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Select radio button")
 					.fail("Failed to Select radio button for Contact choose existing")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Select radio button", "Failed to Select radio button for Contact choose existing");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Select radio button", "Failed to Select radio button for Contact choose existing");
 			Assert.fail("Failed to Select radio button for Contact choose existing");
 		}
 	}
@@ -712,14 +722,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			smallwaitTime();
 			leadsToOpportunityPageValidator.click_FirstRecordIncontactSearchInChooseExistingRadioBtnInContact();
 			smallwaitTime();
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "select one contact name")
-					.pass("Searched for matching contact  and selected one contact name form list successfully");*/
-			Reporters.successReport("select one contact name","Searched for matching contact  and selected one contact name form list successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "select one contact name")
+					.pass("Searched for matching contact  and selected one contact name form list successfully");
+			//Reporters.successReport("select one contact name","Searched for matching contact  and selected one contact name form list successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "select one contact name")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "select one contact name")
 					.fail("Failed to select one contact name")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("select one contact name", "Failed to select one contact name");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("select one contact name", "Failed to select one contact name");
 			Assert.fail("Failed to select one contact name");
 		}
 	}
@@ -728,14 +738,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 	public void click_on_convert_button() throws Throwable {
 		try {
 			leadsToOpportunityPageValidator.click_Convert_Btn();
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on convert button")
-					.pass("Clicked on convert button successfully");*/
-			Reporters.successReport("Click on convert button","Clicked on convert button successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on convert button")
+					.pass("Clicked on convert button successfully");
+			//Reporters.successReport("Click on convert button","Clicked on convert button successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on convert button")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on convert button")
 					.fail("Failed to Click on convert button")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Click on convert button", "Failed to Click on convert button");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Click on convert button", "Failed to Click on convert button");
 			Assert.fail("Failed to Click on convert button");
 		}
 	}
@@ -744,14 +754,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 	public void clickOnHyperlinkOfAccountNameInAccountTableOnYourLeadHasBeenConvertedLayoutSceen() throws Throwable {
 		try {
 			leadsToOpportunityPageValidator.click_acctNameHyperLinkAccountTableOnYourLeadHasBeenConvertedLayoutSceen();
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on hyperlink of Account name")
-					.pass("Clicked on hyperlink of Account name successfully");*/
-			Reporters.successReport("Click on hyperlink of Account name","Clicked on hyperlink of Account name successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on hyperlink of Account name")
+					.pass("Clicked on hyperlink of Account name successfully");
+			//Reporters.successReport("Click on hyperlink of Account name","Clicked on hyperlink of Account name successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on hyperlink of Account name")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on hyperlink of Account name")
 					.fail("Failed to Click on hyperlink of Account name")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Click on hyperlink of Account name", "Failed to Click on hyperlink of Account name");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Click on hyperlink of Account name", "Failed to Click on hyperlink of Account name");
 			Assert.fail("Failed to Click on hyperlink of Account name");
 		}
 	}
@@ -768,14 +778,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			js.executeScript("window.scrollBy(0,500)");
 			smallwaitTime();
 			leadsToOpportunityPageValidator.click_accontHistoryHyperLink();
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on Account History hyperlink")
-					.pass("Clicked on Account History hyperlink successfully");*/
-			Reporters.successReport("Click on Account History hyperlink","Clicked on Account History hyperlink successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on Account History hyperlink")
+					.pass("Clicked on Account History hyperlink successfully");
+			//Reporters.successReport("Click on Account History hyperlink","Clicked on Account History hyperlink successfully");
 			} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on Account History hyperlink")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Click on Account History hyperlink")
 					.fail("Failed to Click on Account History hyperlink")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-				Reporters.failureReport("Click on Account History hyperlink", "Failed to Click on Account History hyperlink");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+				//Reporters.failureReport("Click on Account History hyperlink", "Failed to Click on Account History hyperlink");
 			Assert.fail("Failed to Click on Account History hyperlink");
 		}
 	}
@@ -786,23 +796,23 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			boolean isPresent = leadsToOpportunityPageValidator
 					.isDisplayed_LeadConvertRecordOnTheAccountHistoryScreen();
 			if (isPresent) {
-				/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Check the lead convert record")
-						.pass("Check the lead convert record on the Account History screen successfully");*/
-				Reporters.successReport("Check the lead convert record","Check the lead convert record on the Account History screen successfully");
+				BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Check the lead convert record")
+						.pass("Check the lead convert record on the Account History screen successfully");
+				//Reporters.successReport("Check the lead convert record","Check the lead convert record on the Account History screen successfully");
 			} else {
-				/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Check the lead convert record")
+				BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Check the lead convert record")
 						.fail("Failed to Check the lead convert record")
-						.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-				Reporters.failureReport("Check the lead convert record", "Failed to Check the lead convert record");
+						.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+				//Reporters.failureReport("Check the lead convert record", "Failed to Check the lead convert record");
 
 			}
 			Driver.browser.navigate().refresh();
 			smallwaitTime();
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Check the lead convert record")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Check the lead convert record")
 					.fail("Failed to Check the lead convert record")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Check the lead convert record", "Failed to Check the lead convert record");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Check the lead convert record", "Failed to Check the lead convert record");
 			Assert.fail("Failed to Check the lead convert record");
 		}
 	}
@@ -811,14 +821,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 	public void selectRadioButtonForAccountChooseExisting() throws Throwable {
 		try {
 			leadsToOpportunityPageValidator.click_chooseExistingRadioBtnInAccount_Btn();
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "click radio button")
-					.pass("clicked radio button Choose existing for Account successfully");*/
-			Reporters.successReport("click radio button","clicked radio button Choose existing for Account successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "click radio button")
+					.pass("clicked radio button Choose existing for Account successfully");
+			//Reporters.successReport("click radio button","clicked radio button Choose existing for Account successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "click radio button")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "click radio button")
 					.fail("Failed to click radio button")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("click radio button", "Failed to click radio button");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("click radio button", "Failed to click radio button");
 			Assert.fail("Failed to click radio button");
 		}
 	}
@@ -830,14 +840,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			smallwaitTime();
 			leadsToOpportunityPageValidator.click_FirstRecordInAccountSearchInChooseExistingRadioBtnInAccount();
 			selectedAccountNameInAccountSearch = leadsToOpportunityPageValidator.selectedAccountName_AccountSearch();
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "select one Account name")
-					.pass("Searched for matching contact  and selected one Account name form list successfully");*/
-			Reporters.successReport("select one Account name","Searched for matching contact  and selected one Account name form list successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "select one Account name")
+					.pass("Searched for matching contact  and selected one Account name form list successfully");
+			//Reporters.successReport("select one Account name","Searched for matching contact  and selected one Account name form list successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "select one Account name")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "select one Account name")
 					.fail("Failed to select one Account name")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("select one Account name", "Failed to select one Account name");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("select one Account name", "Failed to select one Account name");
 			Assert.fail("Failed to select one Account name");
 		}
 	}
@@ -846,14 +856,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 	public void selectRadioButtonForContactCreateNew() throws Throwable {
 		try {
 			leadsToOpportunityPageValidator.click_CreateNewRadioBtnInContact_Btn();
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Select radio button")
-					.pass("Selected radio button for Contact create New successfully");*/
-			Reporters.successReport("Select radio button","Selected radio button for Contact create New successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Select radio button")
+					.pass("Selected radio button for Contact create New successfully");
+			//Reporters.successReport("Select radio button","Selected radio button for Contact create New successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Select radio button")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Select radio button")
 					.fail("Failed to Select radio button")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Select radio button", "Failed to Select radio button");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Select radio button", "Failed to Select radio button");
 			Assert.fail("Failed to Select radio button");
 		}
 	}
@@ -862,14 +872,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 	public void selectRadioButtonForOpportunityChooseExisting() throws Throwable {
 		try {
 			leadsToOpportunityPageValidator.click_chooseExistingRadioBtnInOpportunity_Btn();
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "click radio button")
-					.pass("clicked radio button Choose existing for Opportunity successfully");*/
-			Reporters.successReport("click radio button","clicked radio button Choose existing for Opportunity successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "click radio button")
+					.pass("clicked radio button Choose existing for Opportunity successfully");
+			//Reporters.successReport("click radio button","clicked radio button Choose existing for Opportunity successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "click radio button")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "click radio button")
 					.fail("Failed to click radio button")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("click radio button", "Failed to click radio button");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("click radio button", "Failed to click radio button");
 			Assert.fail("Failed to click radio button");
 		}
 	}
@@ -879,14 +889,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		try {
 			leadsToOpportunityPageValidator
 					.click_selectFirstRecordInOpportunitySearchInChooseExistingRadioBtnInOpportunity();
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "click radio button")
-					.pass("clicked one radio button from Choose existing for Opportunity successfully");*/
-			Reporters.successReport("Select one record from Opportunity grid","Select one record from Opportunity grid successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "click radio button")
+					.pass("clicked one radio button from Choose existing for Opportunity successfully");
+			//Reporters.successReport("Select one record from Opportunity grid","Select one record from Opportunity grid successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "click radio button")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "click radio button")
 					.fail("Failed to click radio button")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Select one record from Opportunity grid", "Failed to Select one record from Opportunity grid");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Select one record from Opportunity grid", "Failed to Select one record from Opportunity grid");
 			Assert.fail("Failed to Select one record from Opportunity grid");
 		}
 	}
@@ -895,14 +905,14 @@ public class LeadsToOpportunity_Steps extends Selenide {
 	public void selectRadioButtonForOpportunityCreateNew() throws Throwable {
 		try {
 			leadsToOpportunityPageValidator.click_CreateNewRadioBtnInOpportunity_Btn();
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Select radio button")
-					.pass("Selected radio button for Opportunity create New successfully");*/
-			Reporters.successReport("Select radio button","Selected radio button for Opportunity create New successfully");
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Select radio button")
+					.pass("Selected radio button for Opportunity create New successfully");
+			//Reporters.successReport("Select radio button","Selected radio button for Opportunity create New successfully");
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Select radio button")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Select radio button")
 					.fail("Failed to Select radio button")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Select radio button", "Failed to Select radio button");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Select radio button", "Failed to Select radio button");
 			Assert.fail("Failed to Select radio button");
 		}
 	}
@@ -917,9 +927,9 @@ public class LeadsToOpportunity_Steps extends Selenide {
 		leadsToOpportunityPageValidator.selectByClickingContact(selectedAccountNameInAccountSearch);
 		smallwaitTime();
 		// leadsToOpportunityPageValidator.click_FirstRecordIncontactSearchInChooseExistingRadioBtnInContact();
-		/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "select one contact name")
-				.pass("Searched for matching contact  and selected one contact name form list successfully");*/
-		Reporters.successReport("select one contact name","Searched for matching contact  and selected one contact name form list successfully");
+		BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "select one contact name")
+				.pass("Searched for matching contact  and selected one contact name form list successfully");
+		//Reporters.successReport("select one contact name","Searched for matching contact  and selected one contact name form list successfully");
 	}
 
 	@Then("^Check the Lead convert record on the Account History screen$")
@@ -928,22 +938,22 @@ public class LeadsToOpportunity_Steps extends Selenide {
 			boolean isPresent = leadsToOpportunityPageValidator
 					.isDisplayed_LeadConvertRecordOnTheAccountHistoryScreen1();
 			if (isPresent) {
-				/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Then"), "Check the lead convert record")
-						.pass("Check the lead convert record on the Account History screen successfully");*/
-				Reporters.successReport("Check the lead convert record","Check the lead convert record on the Account History screen successfully");
+				BaseUtil.scenarioDef.createNode(new GherkinKeyword("Then"), "Check the lead convert record")
+						.pass("Check the lead convert record on the Account History screen successfully");
+				//Reporters.successReport("Check the lead convert record","Check the lead convert record on the Account History screen successfully");
 			} else {
-				/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Then"), "Check the lead convert record")
+				BaseUtil.scenarioDef.createNode(new GherkinKeyword("Then"), "Check the lead convert record")
 						.fail("Failed to Check the lead convert record")
-						.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-				Reporters.failureReport("Check the lead convert record", "Failed to Check the lead convert record");
+						.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+				//Reporters.failureReport("Check the lead convert record", "Failed to Check the lead convert record");
 			}
 			Driver.browser.navigate().refresh();
 			smallwaitTime();
 		} catch (Exception e) {
-			/*BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Check the lead convert record")
+			BaseUtil.scenarioDef.createNode(new GherkinKeyword("Given"), "Check the lead convert record")
 					.fail("Failed to Check the lead convert record")
-					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());*/
-			Reporters.failureReport("Check the lead convert record", "Failed to Check the lead convert record");
+					.addScreenCaptureFromPath(extentreportUtil.ExtentReportScreenShot());
+			//Reporters.failureReport("Check the lead convert record", "Failed to Check the lead convert record");
 			Assert.fail("Failed to Check the lead convert record");
 		}
 	}

@@ -121,8 +121,7 @@ public class ITestListernerImpl implements ITestListener {
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}
-					
+			}					
 	} 
 
 
