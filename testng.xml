@@ -2,11 +2,20 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Automation Test Report" data-provider-thread-count="2">
  
-  <test name="Automation Test Report">
+  <test name="Automation Report">
+    
     <classes>
-      <class name="ui.automation.testrunner.testrunner"/>
+      <class name="com.ds.automation.executionengine.testrunner"/>
     </classes>
+    
   </test> 
+  <test name="Automation Test Report">
+    
+    <classes>
+      <class name="com.ds.automation.executionengine.LeadsTestRunner"/>
+    </classes>
+    
+  </test>
    <!-- Test completed-->
  
  <!-- <listeners>

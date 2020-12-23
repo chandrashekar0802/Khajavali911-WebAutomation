@@ -1,5 +1,5 @@
 
-@tag
+@Leads
 Feature: Create Lead and Convert
  Scenario: Create and convert Lead to an Opportunity
     Given Give user login to Salesforce with the correct credentials
