@@ -1,7 +1,8 @@
 
 @tag
+
 Feature: Create Opportunity
-Scenario: Testing Opportunity record creation
+Scenario: Opportunity Record Creation
     Given Give user login to Salesforce with the correct credentials
 		When Click on Opportunities tab
     And Click on New button

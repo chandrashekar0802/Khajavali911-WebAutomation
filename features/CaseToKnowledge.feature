@@ -1,6 +1,6 @@
-@tag
+@Leads
 Feature: Create Case
-Scenario: Testing cases record creation
+Scenario: Case creation
     Given Give user login to Salesforce with the correct credentials
     When Click on Case Object
     And Click on Cases New button
