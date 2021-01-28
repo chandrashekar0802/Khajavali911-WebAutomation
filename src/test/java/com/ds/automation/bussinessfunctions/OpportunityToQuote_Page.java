@@ -13,41 +13,41 @@ public class OpportunityToQuote_Page extends BasePageElementMap {
 	}
 
 	public WebElement opportunityNameField() throws Throwable {
-		return Selenide.getElement(By.xpath("//span[text()='Opportunity Name']/../following-sibling::input[1]"), 15);
+		return Selenide.getElement(By.xpath("//input[@name='Name']"), 15);
 	}
 
 	public WebElement accountNameField() throws Throwable {
-		return Selenide.getElement(By.xpath("//span[text()='Account Name']/../following-sibling::div[1]//input"), 15);
+		return Selenide.getElement(By.xpath("//label[text()='Account Name']/following-sibling::div[1]//input"), 15);
 	}
 
 	public WebElement johnsonInvmntLtd() throws Throwable {
-		return Selenide.getElement(By.xpath("(//div[@title='Johnson Investments Ltd'])[1]"), 10);
+		return Selenide.getElement(By.xpath("(//lightning-base-combobox-formatted-text[@title='Johnson Investments Ltd'])[1]/../.."), 10);//(//div[@title='Johnson Investments Ltd'])[1]
 	}
 
 	public WebElement closeDateField() throws Throwable {
-		return Selenide.getElement(By.xpath("//span[text()='Close Date']/../following-sibling::div[1]/input"), 15);
+		return Selenide.getElement(By.xpath("//input[@name='CloseDate']"), 15);
 	}
 
 	public WebElement probabilityField() throws Throwable {
-		return Selenide.getElement(By.xpath("//span[text()='Probability (%)']/../following-sibling::input[1]"), 15);
+		return Selenide.getElement(By.xpath("//input[@name='Probability']"), 15);
 	}
 
 	public WebElement amountField() throws Throwable {
-		return Selenide.getElement(By.xpath("//span[text()='Amount']/../following-sibling::input[1]"), 15);
+		return Selenide.getElement(By.xpath("//input[@name='Amount']"), 15);
 	}
 
 	public WebElement riskCompetitionCommentsField() throws Throwable {
 		return Selenide.getElement(
-				By.xpath("//span[text()='Risks, Competition and Comments']/../following-sibling::input[1]"), 15);
+				By.xpath("//input[@name='Risks_and_Competition__c']"), 15);
 	}
 
-	public @FindBy(xpath = "//span[text()='Stage']/../following-sibling::div[1]//a") WebElement stageDrpDwnBtn;
+	public @FindBy(xpath = "//label[text()='Stage']/following-sibling::div[1]//input") WebElement stageDrpDwnBtn;
 
 	public boolean selectstageDrpDwnBtn(String str) throws Throwable {
 		return Selenide.SelectItemFromNonSelectListDropDown1(str, stageDrpDwnBtn);
 	}
 
-	public @FindBy(xpath = "//span[text()='Type']/../following-sibling::div[1]//a") WebElement typeDrpDwnBtn;
+	public @FindBy(xpath = "//label[text()='Type']/following-sibling::div[1]//input") WebElement typeDrpDwnBtn;
 
 	public boolean selectTypeDrpDwnBtn(String str) throws Throwable {
 		return Selenide.SelectItemFromNonSelectListDropDown1(str, typeDrpDwnBtn);

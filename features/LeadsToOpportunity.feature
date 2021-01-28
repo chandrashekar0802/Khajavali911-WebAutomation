@@ -23,6 +23,7 @@ Feature: Create Lead and Convert
     And Enter the value for Campaign field
     And Enter the value for Contact Locaton field
     And Enter the value for BDM field
+    #And Enter the value for Sub vertical one field
     And Enter the value for vertical Grouping field
     And Enter the value for vertical field
     And Enter the value for Sub vertical one field

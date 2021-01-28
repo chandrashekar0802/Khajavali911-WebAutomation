@@ -368,7 +368,7 @@ public class Selenide extends BaseUtil{
 		try {
 			//LOG.info("Class name :: " + getCallerClassName() + " Method name :: " + getCallerMethodName());
 			//LOG.info("Method : " + getCallerMethodName() + "  ::  Locator : " + locatorName);
-			WebDriverWait wait = new WebDriverWait(Driver.browser, 3);
+			WebDriverWait wait = new WebDriverWait(Driver.browser, 4);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 			flag = Driver.browser.findElement(locator).isDisplayed();
 		} catch (Exception e) {
@@ -462,10 +462,11 @@ public class Selenide extends BaseUtil{
 		try
 		{
 			locator.click();
-			Thread.sleep(1500);
-			if(Driver.browser.findElement(By.xpath("(//a[text()='"+desiredValue+"'])[1]")).isDisplayed())
+			Thread.sleep(1500);//(//a[text()='"+desiredValue+"'])[1]
+			if(Driver.browser.findElement(By.xpath("(//span[text()='"+desiredValue+"'])[last()]")).isDisplayed())
 			{
-				Driver.browser.findElement(By.xpath("(//a[text()='"+desiredValue+"'])[1]")).click();
+				jSClick(Driver.browser.findElement(By.xpath("(//span[text()='"+desiredValue+"'])[last()]")));
+				//Driver.browser.findElement(By.xpath("(//span[text()='"+desiredValue+"'])[last()]")).click();
 				flag =true;
 			}
 
@@ -485,9 +486,9 @@ public class Selenide extends BaseUtil{
 		{
 			locator.click();
 			Thread.sleep(1000);
-			if(Driver.browser.findElement(By.xpath("(//a[text()='"+desiredValue+"'])[2]")).isDisplayed())
+			if(Driver.browser.findElement(By.xpath("(//a[text()='"+desiredValue+"'])[last()]")).isDisplayed()) //(//a[text()='"+desiredValue+"'])[2]
 			{
-				Driver.browser.findElement(By.xpath("(//a[text()='"+desiredValue+"'])[2]")).click();
+				Driver.browser.findElement(By.xpath("(//a[text()='"+desiredValue+"'])[last()]")).click();
 				flag =true;
 			}
 

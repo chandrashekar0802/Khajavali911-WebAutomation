@@ -70,7 +70,7 @@ public class SalesForce_Page  extends BasePageElementMap{
 		return Selenide.isElementDisplayed(By.xpath("//div[@class='forceVisualMessageQueue']"),"New Case Creation Sucess Msg");  	 
 	}
 	public WebElement saveButton() throws Throwable {
-		return Selenide.getElement(By.xpath("//button[@title='Save']"),15);  	 
+		return Selenide.getElement(By.xpath("(//button[@name='SaveEdit'] | //span[text()='Save'])[last()]"),15); //button[@name='SaveEdit'] 	 
 	}
 	public WebElement editButton() throws Throwable {
 		return Selenide.getElement(By.xpath("//button[text()='Edit']"),15); 		

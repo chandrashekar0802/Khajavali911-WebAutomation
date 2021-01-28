@@ -72,7 +72,7 @@ public class CaseToKnowledge_Page extends BasePageElementMap {
 	public @FindBy(xpath = "//span[text()='Case Origin']/../following-sibling::div[1]//a") WebElement originDrpDwnBtn;
 
 	public boolean selectoriginDrpDwnBtn(String str) throws Throwable {
-		return Selenide.SelectItemFromNonSelectListDropDown1(str, originDrpDwnBtn);
+		return Selenide.SelectItemFromNonSelectListDropDown2(str, originDrpDwnBtn);
 	}
 
 	public @FindBy(xpath = "//span[text()='Priority']/../following-sibling::div[1]//a") WebElement priorityDrpDwnBtn;
